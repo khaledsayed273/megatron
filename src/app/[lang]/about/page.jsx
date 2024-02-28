@@ -85,7 +85,6 @@ async function page({ params: { lang } }) {
             </div>
           </div>
         </div>
-
         <div className="grid md:grid-cols-2 gap-12 mt-10">
           <div className='flex justify-center items-center order-2 md:order-1'>
             <div className='relative h-[300px] xl:h-full w-full xl:w-9/12  overflow-hidden rounded-3xl md:rounded-ss-[170px] md:rounded-ee-[170px]'>
@@ -97,7 +96,6 @@ async function page({ params: { lang } }) {
             <p className='text-sm'>As time went on, it became evident that the industry had much more to offer than just exam-focused applications. People began approaching FutureSphere, seeking guidance on how to develop their own apps, what it takes to succeed, and how to navigate the complex world of mobile applications. In response to this growing demand for expertise and support, FutureSphere expanded its services and evolved into a comprehensive resource for aspiring app creators - a company known as FutureSphere.</p>
           </div>
         </div>
-
       </div>
 
       <div>

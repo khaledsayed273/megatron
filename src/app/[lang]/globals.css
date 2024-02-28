@@ -102,3 +102,18 @@ body {
 .mySwiperAbout .swiper-slide-active {
     transform: scale(1.4) !important;
 }
+
+
+/*swiperProjectsImages */
+.swiperProjectsImages{
+    height: 300px;
+}
+
+.swiperProjectsImages .swiper-slide{
+    width: 200px;
+    height: 200px;
+}
+
+.swiperProjectsImages .swiper-pagination-bullet{
+    background-color: #da9835;
+}

@@ -23,6 +23,11 @@ function Navbar({lang ,navbarTranslate}) {
         },
         {
             id: 4,
+            name: navbarTranslate.blogs,
+            path: `/${lang}/blogs`,
+        },
+        {
+            id: 5,
             name: navbarTranslate.projects,
             path: `/${lang}/projects`,
         }

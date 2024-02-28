@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function page() {
@@ -14,6 +15,7 @@ function page() {
                         <h4 className='mt-3 font-semibold'>Sales and Business</h4>
                     </div>
                     <p className='mt-3 text-xs md:text-sm text-black/85'>Explore the incredible potential of artificial intelligence (AI) in revolutionizing healthcare. Discover how AI-driven technologies are enhancing diagnostics, personalized medicine, and patient outcomes. Dive into real-world examples and gain insights into the future of healthcare.</p>
+                    <Link className='ms-auto flex justify-end font-semibold capitalize mt-5 text-amber-600 underline decoration-amber-600' href={"service/1"}>read more</Link>
                 </div>
                 <div className="bg-white p-5 rounded-lg">
                     <div className='flex flex-col justify-center items-center'>
@@ -24,6 +26,8 @@ function page() {
                         <h4 className='mt-3 font-semibold'>Customer Support</h4>
                     </div>
                     <p className='mt-3 text-xs md:text-sm text-black/85'>Explore the incredible potential of artificial intelligence (AI) in revolutionizing healthcare. Discover how AI-driven technologies are enhancing diagnostics, personalized medicine, and patient outcomes. Dive into real-world examples and gain insights into the future of healthcare.</p>
+                    <Link className='ms-auto flex justify-end font-semibold capitalize mt-5 text-amber-600 underline decoration-amber-600' href={"service/2"}>read more</Link>
+
                 </div>
             </div>
         </div>
