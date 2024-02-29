@@ -66,7 +66,7 @@ function Footer({ lang, navbarTranslate }) {
                         </div>
                     </div>
 
-                    <div className='text-white mt-10 sm:mt-20 sm:mb-7 flex flex-col sm:flex-row justify-between px-3'>
+                    <div className='text-white mt-10 sm:mt-20 sm:mb-16 flex flex-col sm:flex-row justify-between px-3'>
                         <span className='text-sm text-center sm:text-start'>© 2024 FutureSphere. All rights reserved.</span>
                         <div className='mt-7 sm:mt-0 flex justify-center'>
                             <Link className='mx-3' href={"/"}>
