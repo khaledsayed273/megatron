@@ -65,7 +65,6 @@ async function page({ params: { lang } }) {
       <h1 className='text-white text-xl md:text-5xl text-center md:text-balance leading-8	md:leading-tight'>To revolutionize industries through innovative technology solutions, driving positive change and empowering individuals and businesses</h1>
       <p className='text-center px-5 text-white mt-4 text-sm font-light xl:px-40'>At FutureSphere our mission is to empower individuals and businesses through innovative technology solutions that enrich lives, foster growth, and drive positive change. We are dedicated to pushing the boundaries of what is possible, creating transformative experiences that make a lasting impact in a rapidly evolving digital landscape.</p>
       <div className='flex justify-center items-center mt-5 mb-10'>
-        <Link className='me-3 bg-white px-6 py-1.5 rounded-full font-bold capitalize' href={"/signup"}>signup</Link>
         <Link className='px-4 sm:px-6 py-1.5 text-white rounded-full font-bold capitalize btnOrange' href={"/contactUs"}>contact us</Link>
       </div>
       <div className='relative w-full h-[250px] sm:h-[400px] overflow-hidden rounded-2xl md:h-[500px]  xl:h-[750px] '>
@@ -190,7 +189,6 @@ async function page({ params: { lang } }) {
       </div>
 
       <div className='flex justify-center items-center mt-5 mb-10'>
-        <Link className='me-3 bg-white px-6 py-1.5 rounded-full font-bold capitalize' href={"/signup"}>signup</Link>
         <Link className='px-4 sm:px-6 py-1.5 text-white rounded-full font-bold capitalize btnOrange' href={"/contactUs"}>contact us</Link>
       </div>
 

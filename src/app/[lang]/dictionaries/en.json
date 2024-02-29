@@ -4,6 +4,7 @@
         "service":"service",
         "about":"about",
         "blogs":"blogs",
+        "careers": "careers",
         "projects":"projects",
         "contactUs":"contact us"
     }

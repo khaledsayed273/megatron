@@ -43,7 +43,7 @@ body {
 /* Swiper in about page*/
 .mySwiperAbout {
     margin-top: 100px;
-    height: 300px;
+    height: 350px;
 }
 
 .mySwiperAbout .swiper-wrapper {
@@ -61,7 +61,7 @@ body {
 
 .mySwiperAbout .swiper-button-next,
 .mySwiperAbout .swiper-button-prev {
-    top: 250px !important;
+    top: 300px !important;
     user-select: none;
 
 }
@@ -83,10 +83,12 @@ body {
 }
 
 .mySwiperAbout .swiper-button-prev::after {
-    content: "⬅" !important;
+    content: "➞" !important;
     color: white;
     font-size: 25px !important;
     font-weight: bold;
+    transform: rotatey(180deg);
+
 }
 
 .mySwiperAbout .swiper-button-prev {
@@ -97,6 +99,7 @@ body {
     width: 50px !important;
     height: 50px !important;
     border-radius: 50%;
+
 }
 
 .mySwiperAbout .swiper-slide-active {

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import headerImg from "../../../../../public/images/header-img.jpeg"
+import Link from 'next/link'
 
 function Header() {
     return (
@@ -20,8 +21,7 @@ function Header() {
                     </p>
                 </div>
                 <div className='flex justify-center mt-3'>
-                    <button className='mx-3 p-2 px-7 md:px-8 rounded-full font-bold capitalize text-sm md:text-base bg-white text-black'>signup</button>
-                    <button className='mx-3 p-2 px-7 md:px-8 rounded-full font-bold capitalize text-sm md:text-base btnOrange text-white'> contact us</button>
+                    <Link href={"/contactUs"} className='mx-3 p-2 px-7 md:px-8 rounded-full font-bold capitalize text-sm md:text-base btnOrange text-white'> contact us</Link>
                 </div>
             </div>
             {/* End */}

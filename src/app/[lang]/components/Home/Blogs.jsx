@@ -45,14 +45,14 @@ function Blogs() {
                         <h2 className='capitalize font-semibold text-sm md:text-lg'>{item.title}</h2>
                         <p className='mt-3 font-medium text-sm leading-6'>{item.discreption}</p>
                         <div className='flex justify-end'>
-                            <Link className='capitalize font-medium mt-3  border-black/70 border-b-2' href={"/blog-details"}>read more</Link>
+                            <Link className='capitalize font-medium mt-3  border-black/70 border-b-2' href={`/blogs/${item.id}`}>read more</Link>
                         </div>
                     </div>
                 ))}
             </div>
 
             <div className='flex justify-center mt-7'>
-                <Link className='text-white btnOrange py-2 px-9 capitalize font-bold rounded-full' href={"/blog"}>view all</Link>
+                <Link className='text-white btnOrange py-2 px-9 capitalize font-bold rounded-full' href={"/blogs"}>view all</Link>
             </div>
         </div>
     )

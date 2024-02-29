@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
+
 import { EffectCoverflow, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,24 +12,15 @@ import Link from 'next/link';
 function SwiperAbout({ data }) {
 
     const [k, setK] = useState("")
-    const [next, setNext] = useState("")
-    const [prev, setPrev] = useState("")
 
     useEffect(() => {
         setK(document.querySelector(".swiper-slide-active"))
-        setNext(document.querySelector(".swiper-button-next"))
-        setPrev(document.querySelector(".swiper-button-prev"))
     }, [])
 
-    if (next) {
-        next.onclick = () => {
-            setK(document.querySelector(".swiper-slide-active"))
-        }
-        prev.onclick = () => {
-            setK(document.querySelector(".swiper-slide-active"))
-        }
+    const handleChange = () => {
+        setK(document.querySelector(".swiper-slide-active"))
     }
-
+    
     return (
         <>
             <div className='bg-white md:w-3/4 mx-auto p-10 rounded-xl relative mt-10'>
@@ -57,6 +49,7 @@ function SwiperAbout({ data }) {
 
 
             <Swiper
+                onSlideChange={handleChange}
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}

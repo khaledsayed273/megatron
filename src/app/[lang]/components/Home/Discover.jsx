@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import img from "../../../../../public/images/header-img.jpeg"
+import Link from 'next/link'
 
 function Discover() {
     return (
@@ -35,7 +36,7 @@ function Discover() {
             </div>
             {/* contact btns */}
             <div className='flex items-center justify-center'>
-                <button className='btnOrange text-sm md:text-base text-white font-semibold capitalize px-6 py-2 rounded-full'>contact us</button>
+                <Link href={"/contactUs"} className='btnOrange text-sm md:text-base text-white font-semibold capitalize px-6 py-2 rounded-full'>contact us</Link>
                 <button className='ms-4 flex items-center text-sm md:text-base text-white capitalize font-semibold'>view all
                     <svg className='ms-4' width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" clipRule="evenodd" d="M6.96028 6.14234C7.17996 6.36202 7.17996 6.71812 6.96028 6.93779L1.22541 12.6727C1.00573 12.8923 0.649631 12.8923 0.429956 12.6727L0.164756 12.4075C-0.0549187 12.1878 -0.0549187 11.8317 0.164756 11.612L5.23671 6.54007L0.164756 1.46812C-0.0549186 1.24844 -0.0549186 0.892341 0.164756 0.672667L0.429956 0.407467C0.649631 0.187792 1.00573 0.187792 1.22541 0.407467L6.96028 6.14234Z" fill="white" />
@@ -55,12 +56,8 @@ function Discover() {
                             thrive in the digital era and shape a better future for all.
                         </p>
                         <div className='flex items-center justify-start mt-7 '>
-                            <button className='btnOrange text-sm md:text-base text-white font-semibold capitalize px-6 py-2 rounded-full'>contact us</button>
-                            <button className='ms-4 flex items-center text-sm md:text-base text-black capitalize font-semibold'>sign up
-                                <svg className='ms-4' width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M6.96028 6.14234C7.17996 6.36202 7.17996 6.71812 6.96028 6.93779L1.22541 12.6727C1.00573 12.8923 0.649631 12.8923 0.429956 12.6727L0.164756 12.4075C-0.0549187 12.1878 -0.0549187 11.8317 0.164756 11.612L5.23671 6.54007L0.164756 1.46812C-0.0549186 1.24844 -0.0549186 0.892341 0.164756 0.672667L0.429956 0.407467C0.649631 0.187792 1.00573 0.187792 1.22541 0.407467L6.96028 6.14234Z" fill="#000008" />
-                                </svg>
-                            </button>
+                            <Link href={"/contactUs"} className='btnOrange text-sm md:text-base text-white font-semibold capitalize px-6 py-2 rounded-full'>contact us</Link>
+                            
                         </div>
                     </div>
                     <div className='relative overflow-hidden mx-auto lg:ms-auto lg:mx-0 order-1 lg:order-2  rounded-3xl h-[220px] w-full sm:w-3/4 lg:h-[420px] lg:w-[440px] xl:h-[447px] xl:w-[600px]'>
