@@ -3,8 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import logo from "../../../../public/images/logo.png"
+import { useParams, usePathname } from 'next/navigation'
 
 function Navbar({ lang, navbarTranslate }) {
+    const pathName = usePathname()
+    const params = useParams()
 
     const nav = [
         {
@@ -45,6 +48,7 @@ function Navbar({ lang, navbarTranslate }) {
         setShow(!show)
     }
 
+
     return (
         <nav data-aos="fade-down" data-aos-duration="1000" className='container mx-auto my-4 p-2 px-4  '>
             <div className={`border border-gray-400 rounded-2xl w-full ${show ? "pb-3 md:pb-0" : "pb-0"}  px-4 flex flex-col md:flex-row items-center`}>
@@ -64,7 +68,7 @@ function Navbar({ lang, navbarTranslate }) {
                     <div className='flex justify-center grow'>
                         <ul className='flex flex-col md:flex-row mt-5 md:mt-0 items-center'>
                             {nav.map((item) => (
-                                <li className='mx-3 my-3 md:my-0 font-semibold text-white capitalize' key={item.id}>
+                                <li className={`mx-3 my-3 md:my-0 font-semibold ${pathName === item.path || pathName === `${item.path}/${params.details}`? "text-orange-600" : "text-white"}  capitalize`} key={item.id}>
                                     <Link onClick={() => setShow(false)} href={`${item.path}`}>{item.name}</Link>
                                 </li>
                             ))}
