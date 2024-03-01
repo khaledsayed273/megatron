@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.figma.com",
+        hostname: "dashboard.megatron-soft.com",
         port: "",
         pathname: "/**",
       },

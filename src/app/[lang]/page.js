@@ -8,8 +8,11 @@ import Services from "./components/Home/Services";
 import img from "../../../public/images/download.jpg"
 import img2 from "../../../public/images/8464a2ee2e9e7405ca2ba0a7f097f92d.jpg"
 import img3 from "../../../public/images/345ba3a36dabf573a2bc6abca60fc5ee.jpg"
+import API from "@/api/API";
 
-export default function Home() {
+
+
+export default async function Home() {
 
   const data = [
     {
@@ -32,8 +35,9 @@ export default function Home() {
     }
   ]
 
+
   return (
-    <main className="container mx-auto px-5 my-10">
+    <main  className="container mx-auto px-5 my-10">
       <Header />
       <Discover />
       <Projects data={data} />

@@ -30,14 +30,14 @@ function Blogs() {
     ]
 
     return (
-        <div>
-            <div className='flex justify-center'>
+        <div >
+            <div  className='flex justify-center'>
                 <span className='btnOrange text-white flex mx-auto font-bold px-12 py-2 rounded-full capitalize'>blogs</span>
             </div>
             <h1 className='capitalize text-center text-white my-10 text-xl lg:text-4xl'>from our latest blogs</h1>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 xl:gap-9">
                 {blogs.map((item) => (
-                    <div key={item.id} className='bg-white p-6 rounded-xl'>
+                    <div data-aos-duration="1000" data-aos="fade-right" key={item.id} className='bg-white p-6 rounded-xl'>
                         <div className='relative overflow-hidden rounded-xl w-full h-[200px]'>
                             <Image sizes='(max-width:992px) , 100vw' fill src={item.image} alt='image' />
                         </div>
@@ -51,7 +51,7 @@ function Blogs() {
                 ))}
             </div>
 
-            <div className='flex justify-center mt-7'>
+            <div data-aos-duration="1000" data-aos="fade-right" className='flex justify-center mt-7'>
                 <Link className='text-white btnOrange py-2 px-9 capitalize font-bold rounded-full' href={"/blogs"}>view all</Link>
             </div>
         </div>

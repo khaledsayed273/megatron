@@ -2,7 +2,7 @@ import React from 'react'
 import img from "../../../../public/images/EmailBackground.jpg"
 function EmailComponent() {
     return (
-        <div className='container mx-auto p-5 my-7'>
+        <div data-aos="fade-right" className='container mx-auto p-5 my-7'>
             <div style={{ backgroundImage: `url(${img.src})` }} className='h-[400px] relative rounded-2xl p-5 bg-cover bg-center'>
                 <div className='flex justify-center items-center z-50 flex-col absolute left-0 top-0 w-full h-full px-5'>
                     <svg width="59" height="57" viewBox="0 0 59 57" fill="none" xmlns="http://www.w3.org/2000/svg">

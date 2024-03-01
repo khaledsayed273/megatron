@@ -10,7 +10,10 @@ import imageCover from "../../../../public/images/about/cover.jpg"
 import firstImageAboutUs from "../../../../public/images/about/firstImageAboutUs.jpg"
 import secoundImageAboutUs from "../../../../public/images/about/secoundImageAboutUs.jpg"
 import Form from './components/Form'
+
 function page() {
+
+  const baseUrl = process.env.baseUrl
 
   const data2 = [
     {
@@ -38,14 +41,17 @@ function page() {
 
   const styleImage = "relative -rotate-45 w-[70px] lg:w-[90px] h-[70px] lg:h-[90px] hover:scale-110 duration-300"
 
+
   return (
-    <div className='container mx-auto px-3'>
-      <h1 className='text-center text-white text-xl md:text-4xl capitalize mb-3'>contact us</h1>
+
+    <div  className='container mx-auto px-3'>
+
+      <h1  className='text-center text-white text-xl md:text-4xl capitalize mb-3'>contact us</h1>
       <p className='text-center text-white text-xs md:text-sm'>At FutureSphere our mission is to empower individuals and businesses through innovative technology solutions that enrich lives, foster growth, and drive positive change.</p>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 mt-10 gap-3">
         <div className='xl:col-span-2  '>
-          <Form />
-          <div className='bg-white rounded-xl   my-7'>
+          <Form baseUrl={baseUrl} />
+          <div  data-aos="fade-right" className='bg-white rounded-xl   my-7'>
             <div className="grid lg:grid-cols-3 p-5  gap-7">
               <div className='flex flex-col items-center justify-center'>
                 <svg width="46" height="38" viewBox="0 0 46 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +79,7 @@ function page() {
           </div>
         </div>
         {/* images */}
-        <div className='my-10 md:mt-5'>
+        <div data-aos="fade-up" className='my-10 md:mt-5'>
           <div className='flex items-center justify-center'>
             <div className={styleImage}>
               <Image priority fill sizes='(min-width: 992px) , 100vw' alt='image1' src={img1} />
@@ -101,17 +107,15 @@ function page() {
             </div>
           </div>
         </div>
-
-
       </div>
 
-      <div className='my-8'>
+      <div data-aos="fade-right" className='my-8'>
         <div className='flex justify-center'>
           <span className='capitalize font-bold text-orange-600 bg-white px-8 py-1.5 rounded-full'>our offices</span>
         </div>
         <h3 className='text-white text-center capitalize mt-7 text-xl md:text-3xl'>discover our global network of offices</h3>
         <p className='text-white text-center capitalize text-xs md:text-sm mt-5'>experience our expansive network of offices across the world, connecting you to our exceptional services wherever you are.</p>
-        <div className='bg-white p-7 mt-7  grid md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl'>
+        <div data-aos="fade-right" className='bg-white p-7 mt-7  grid md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl'>
           {data2.map((item) => (
             <div key={item.id} className='xl:px-5'>
               <div className='relative overflow-hidden rounded-xl w-full h-[200px] md:h-[250px] lg:h-[300px]'>
@@ -125,35 +129,36 @@ function page() {
         </div>
       </div>
 
-      <div className="my-16">
+      <div data-aos="fade-right" className="my-16">
         <div className='flex justify-center'>
           <span className='capitalize font-bold text-orange-600 bg-white px-8 py-1.5 rounded-full'>FAQs</span>
         </div>
         <h3 className='text-white text-center capitalize mt-7 text-xl md:text-3xl'>answers to some of your questions</h3>
         <p className='text-white text-center capitalize text-xs md:text-sm mt-5'>Don’t find the answers you were looking for? Contact us at <span className='text-amber-600 mt-2 inline-block'>futuresphere@gmail.com</span></p>
         <div className="grid md:grid-cols-2 gap-10 mt-10">
-            <div className="bg-white p-5 md:p-7 rounded-xl">
-              <h2 className='text-amber-600 font-semibold'>What is included in the startup website template?</h2>
-              <p className='mt-7 text-xs md:text-sm'>Our startup website template includes a range of essential features and components, such as responsive design, customizable layouts, pre-built sections, integration with popular CMS platforms, and access to a library of high-quality images and icons.</p>
-            </div>
-            <div className="bg-white p-5 md:p-7 rounded-xl">
-              <h2 className='text-amber-600 font-semibold'>Can I customize the template to match my brand&apos;s identity?</h2>
-              <p className='mt-7 text-xs md:text-sm'>Absolutely! Our startup website template provides easy customization options, allowing you to personalize the colors, fonts, logo, and overall look and feel to align with your brand identity. You can create a unique and captivating online presence that reflects your startup&apos;s vision.</p>
-            </div>
+          <div className="bg-white p-5 md:p-7 rounded-xl">
+            <h2 className='text-amber-600 font-semibold'>What is included in the startup website template?</h2>
+            <p className='mt-7 text-xs md:text-sm'>Our startup website template includes a range of essential features and components, such as responsive design, customizable layouts, pre-built sections, integration with popular CMS platforms, and access to a library of high-quality images and icons.</p>
+          </div>
+          <div className="bg-white p-5 md:p-7 rounded-xl">
+            <h2 className='text-amber-600 font-semibold'>Can I customize the template to match my brand&apos;s identity?</h2>
+            <p className='mt-7 text-xs md:text-sm'>Absolutely! Our startup website template provides easy customization options, allowing you to personalize the colors, fonts, logo, and overall look and feel to align with your brand identity. You can create a unique and captivating online presence that reflects your startup&apos;s vision.</p>
+          </div>
         </div>
         <div className="grid md:grid-cols-2 gap-10 mt-10">
-            <div className="bg-white p-5 md:p-7 rounded-xl">
-              <h2 className='text-amber-600 font-semibold'>Is the template optimized for search engines (SEO)?</h2>
-              <p className='mt-7 text-xs md:text-sm'>Yes, our startup website template is designed with SEO best practices in mind. It includes clean code structure, fast loading times, meta tag optimization, and schema markup implementation. These elements contribute to better search engine visibility, helping your website rank higher in search results and attract more organic traffic.</p>
-            </div>
-            <div className="bg-white p-5 md:p-7 rounded-xl">
-              <h2 className='text-amber-600 font-semibold'>Do you offer support and updates for the template?</h2>
-              <p className='mt-7 text-xs md:text-sm'>Absolutely! We provide dedicated customer support to address any queries or concerns you may have while working with our startup website template. Additionally, we regularly release updates to ensure compatibility with the latest web technologies, security patches, and feature enhancements, ensuring your website stays up-to-date and optimized.</p>
-            </div>
+          <div className="bg-white p-5 md:p-7 rounded-xl">
+            <h2 className='text-amber-600 font-semibold'>Is the template optimized for search engines (SEO)?</h2>
+            <p className='mt-7 text-xs md:text-sm'>Yes, our startup website template is designed with SEO best practices in mind. It includes clean code structure, fast loading times, meta tag optimization, and schema markup implementation. These elements contribute to better search engine visibility, helping your website rank higher in search results and attract more organic traffic.</p>
+          </div>
+          <div className="bg-white p-5 md:p-7 rounded-xl">
+            <h2 className='text-amber-600 font-semibold'>Do you offer support and updates for the template?</h2>
+            <p className='mt-7 text-xs md:text-sm'>Absolutely! We provide dedicated customer support to address any queries or concerns you may have while working with our startup website template. Additionally, we regularly release updates to ensure compatibility with the latest web technologies, security patches, and feature enhancements, ensuring your website stays up-to-date and optimized.</p>
+          </div>
         </div>
       </div>
 
     </div>
+
   )
 }
 

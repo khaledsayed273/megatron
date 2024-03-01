@@ -39,12 +39,12 @@ function Footer({ lang, navbarTranslate }) {
     ]
 
     return (
-        <div style={{ backgroundImage: `url(${background.src})` }} className='relative bg-cover bg-center px-5 mt-20 md:px-10 w-full h-[500px] sm:h-[300px]'>
+        <div data-aos="fade-down" style={{ backgroundImage: `url(${background.src})` }} className='relative bg-cover bg-center px-5 mt-20 md:px-10 w-full h-[500px] sm:h-[300px]'>
             <div className='absolute w-full h-full left-0 top-0 bg-black opacity-80'>
             </div>
             <div className='z-50 absolute left-0 top-0 right-0 bottom-0 '>
                 <div className='container mx-auto h-full flex flex-col justify-center'>
-                    <div className='flex items-start flex-col sm:flex-row sm:items-center w-full  sm:mt-28'>
+                    <div data-aos-duration="1000" data-aos="fade-right" className='flex items-start flex-col sm:flex-row sm:items-center w-full  sm:mt-28'>
                         <div className='flex items-center flex-col sm:flex-row sm:items-center justify-between w-full sm:border-t sm:border-b'>
                             <div className='mx-auto sm:me-auto sm:ms-0'>
                                 <Link href={`/`} className='relative inline-block w-[90px] h-[77px] mt-1'>
@@ -52,10 +52,10 @@ function Footer({ lang, navbarTranslate }) {
                                 </Link>
                             </div>
 
-                            <div className='px-5 sm:px-0'>
-                                <ul className='text-white flex flex-col sm:flex-row'>
+                            <div  className='px-5 sm:px-0'>
+                                <ul  className='text-white flex flex-col sm:flex-row'>
                                     {nav.map((item) => (
-                                        <li className='sm:me-5 text-center my-3' key={item.id}>
+                                        <li  className='sm:me-5 text-center my-3' key={item.id}>
                                             <Link className='capitalize font-semibold' href={`${item.path}`}>
                                                 {item.name}
                                             </Link>
@@ -66,12 +66,12 @@ function Footer({ lang, navbarTranslate }) {
                         </div>
                     </div>
 
-                    <div className='text-white mt-10 sm:mt-20 sm:mb-16 flex flex-col sm:flex-row justify-between px-3'>
-                        <span className='text-sm text-center sm:text-start'>© 2024 FutureSphere. All rights reserved.</span>
+                    <div  className='text-white mt-10 sm:mt-20 sm:mb-16 flex flex-col sm:flex-row justify-between px-3'>
+                        <span className='text-sm text-center sm:text-start'>© 2024 Megatron. All rights reserved.</span>
                         <div className='mt-7 sm:mt-0 flex justify-center'>
-                            <Link className='mx-3' href={"/"}>
-                                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19.6886 2.72191C18.9643 3.04375 18.1871 3.26098 17.3686 3.3576C18.2025 2.85791 18.8431 2.06652 19.1452 1.12375C18.3637 1.58529 17.5003 1.92375 16.5803 2.10345C15.8431 1.31883 14.7932 0.828369 13.6314 0.828369C11.4 0.828369 9.59262 2.63637 9.59262 4.86714C9.59262 5.18345 9.62769 5.49237 9.69723 5.78775C6.33908 5.61791 3.36308 4.00991 1.37108 1.56683C1.02338 2.16375 0.823385 2.85791 0.823385 3.5976C0.823385 5.00068 1.53723 6.23575 2.62031 6.96068C1.95815 6.93914 1.33538 6.7576 0.790769 6.45606V6.50529C0.790769 8.46345 2.18154 10.0961 4.03015 10.4671C3.69169 10.5594 3.33477 10.6087 2.96554 10.6087C2.70523 10.6087 2.45292 10.5841 2.20677 10.5367C2.72 12.1404 4.21292 13.3084 5.97908 13.3416C4.59754 14.4247 2.856 15.0708 0.963692 15.0708C0.637539 15.0708 0.315692 15.0524 0 15.0154C1.78831 16.1601 3.91139 16.8284 6.19262 16.8284C13.6215 16.8284 17.6849 10.6745 17.6849 5.33606C17.6849 5.16129 17.68 4.98652 17.6726 4.81298C18.4622 4.24375 19.1465 3.53298 19.6886 2.72191Z" fill="white" />
+                            <Link className='mx-3' target='_blank' href={"https://wa.me/+201208799985"}>
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="19" height="19" viewBox="0,0,256,256">
+                                    <g fill="#fffbfb" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.682,0 -23,10.318 -23,23c0,3.96 1.023,7.854 2.963,11.29l-2.926,10.44c-0.096,0.343 -0.003,0.711 0.245,0.966c0.191,0.197 0.451,0.304 0.718,0.304c0.08,0 0.161,-0.01 0.24,-0.029l10.896,-2.699c3.327,1.786 7.074,2.728 10.864,2.728c12.682,0 23,-10.318 23,-23c0,-12.682 -10.318,-23 -23,-23zM36.57,33.116c-0.492,1.362 -2.852,2.605 -3.986,2.772c-1.018,0.149 -2.306,0.213 -3.72,-0.231c-0.857,-0.27 -1.957,-0.628 -3.366,-1.229c-5.923,-2.526 -9.791,-8.415 -10.087,-8.804c-0.295,-0.389 -2.411,-3.161 -2.411,-6.03c0,-2.869 1.525,-4.28 2.067,-4.864c0.542,-0.584 1.181,-0.73 1.575,-0.73c0.394,0 0.787,0.005 1.132,0.021c0.363,0.018 0.85,-0.137 1.329,1.001c0.492,1.168 1.673,4.037 1.819,4.33c0.148,0.292 0.246,0.633 0.05,1.022c-0.196,0.389 -0.294,0.632 -0.59,0.973c-0.296,0.341 -0.62,0.76 -0.886,1.022c-0.296,0.291 -0.603,0.606 -0.259,1.19c0.344,0.584 1.529,2.493 3.285,4.039c2.255,1.986 4.158,2.602 4.748,2.894c0.59,0.292 0.935,0.243 1.279,-0.146c0.344,-0.39 1.476,-1.703 1.869,-2.286c0.393,-0.583 0.787,-0.487 1.329,-0.292c0.542,0.194 3.445,1.604 4.035,1.896c0.59,0.292 0.984,0.438 1.132,0.681c0.148,0.242 0.148,1.41 -0.344,2.771z"></path></g></g>
                                 </svg>
                             </Link>
                             <Link className='mx-3' target='_blank' href={"https://www.facebook.com/profile.php?id=61556677687858&mibextid=ZbWKwL"}>

@@ -2,8 +2,16 @@ import Image from 'next/image'
 import React from 'react'
 import img1 from "../../../../public/images/single-service/1.jpg"
 import ProjectsBlogs from './components/ProjectsBlogs'
+import API from '@/api/API'
 
-function page() {
+async function getData(lang) {
+    const res = await API.get(`/blogs/`, {
+        headers: { "X-localization": lang }
+    })
+    return res
+}
+
+async function page({ params }) {
 
     const data = [
         {
@@ -71,6 +79,9 @@ function page() {
         },
     ]
 
+    const data2 = await getData(params.lang)
+    // console.log(data2.data);
+
     return (
         <div className='container mx-auto px-3'>
             <h1 className='text-center my-5 text-white text-xl md:text-3xl'>Discover Insights and Inspiration</h1>
@@ -86,7 +97,9 @@ function page() {
                 </div>
             </div>
 
-            <ProjectsBlogs data={data} />
+            {data2.status && (
+                <ProjectsBlogs data={data2.data} />
+            )}
 
         </div>
     )

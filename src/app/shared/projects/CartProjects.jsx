@@ -6,7 +6,7 @@ function CartProjects({ data }) {
     return (
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16'>
             {data.map((item) => (
-                <div key={item.id} className='bg-white p-5 rounded-xl mx-auto w-11/12 sm:w-2/3 md:w-full'>
+                <div data-aos-duration="1000" data-aos="zoom-in" key={item.id} className='bg-white p-5 rounded-xl mx-auto w-11/12 sm:w-2/3 md:w-full'>
                     <div className='relative h-[220px] w-full overflow-hidden rounded-xl mb-7'>
                         <Image sizes='(min-width:992px) , 100vw' fill src={item.img} alt={item.title} />
                     </div>
