@@ -31,10 +31,10 @@ function Blogs() {
 
     return (
         <div >
-            <div  className='flex justify-center'>
+            <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
                 <span className='btnOrange text-white flex mx-auto font-bold px-12 py-2 rounded-full capitalize'>blogs</span>
             </div>
-            <h1 className='capitalize text-center text-white my-10 text-xl lg:text-4xl'>from our latest blogs</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000" className='capitalize text-center text-white my-10 text-xl lg:text-4xl'>from our latest blogs</h1>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 xl:gap-9">
                 {blogs.map((item) => (
                     <div data-aos-duration="1000" data-aos="fade-up" key={item.id} className='bg-white p-6 rounded-xl'>

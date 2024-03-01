@@ -81,7 +81,7 @@ function Services() {
 
     return (
         <div>
-            <div className='my-10 bg-white p-6 md:p-8 lg:p-10 rounded-3xl'>
+            <div data-aos="fade-up" data-aos-duration="1000" className='my-10 bg-white p-6 md:p-8 lg:p-10 rounded-3xl'>
 
                 <section className="pb-5 pt-5 dark:bg-dark lg:pb-[20px] lg:pt-[5px]">
                     <div data-aos-duration="1000" data-aos="fade-up" className="mb-5">
