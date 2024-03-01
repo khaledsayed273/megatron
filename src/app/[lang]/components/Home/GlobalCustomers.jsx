@@ -20,7 +20,7 @@ function GlobalCustomers() {
     }, []);
 
     return (
-        <div data-aos-duration="1000" data-aos="fade-right">
+        <div data-aos-duration="1000" data-aos="fade-up">
             <div className="flex justify-center">
                 <span className='mx-auto flex my-10 capitalize text-white font-semibold btnOrange px-6 py-2 rounded-full'>testimonials</span>
             </div>
@@ -31,7 +31,7 @@ function GlobalCustomers() {
                     <div  className="container mx-auto">
                         <Swiper slidesPerView={1} ref={sliderRef}>
                             <SwiperSlide>
-                                <div data-aos-duration="1000" data-aos="fade-right" className='grid md:grid-cols-2 gap-7 lg:gap-10'>
+                                <div data-aos-duration="1000" data-aos="fade-up" className='grid md:grid-cols-2 gap-7 lg:gap-10'>
                                     <div className='relative overflow-hidden rounded-xl w-full h-[200px] sm:h-[250px] md:h-[300px]'>
                                         <Image fill sizes='(max-width:992px) , 100vw' src={img} alt="image" />
                                     </div>

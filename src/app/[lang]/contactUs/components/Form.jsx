@@ -44,7 +44,7 @@ function Form({ baseUrl }) {
 
     return (
         <>
-                <div data-aos="fade-right" className="bg-white  rounded-xl p-5 md:p-7">
+                <div data-aos="fade-up" className="bg-white  rounded-xl p-5 md:p-7">
                     <form>
                         <div data-aos="fade-up" data-aos-duration="1000" className="grid md:grid-cols-2 gap-4">
                             <div >
@@ -75,14 +75,14 @@ function Form({ baseUrl }) {
                             </div>
                         </div>
                         <label data-aos="fade-up" data-aos-duration="1000" className='inline-block text-sm font-medium leading-6 text-gray-900 capitalize' htmlFor="messages">messages</label>
-                        <textarea data-aos="fade-right" data-aos-duration="1000" value={message} onChange={(e) => setMessage(e.target.value)} id="messages" className="resize-none rounded-md w-full h-[200px] mt-5  p-3 block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"></textarea>
+                        <textarea data-aos="fade-up" data-aos-duration="1000" value={message} onChange={(e) => setMessage(e.target.value)} id="messages" className="resize-none rounded-md w-full h-[200px] mt-5  p-3 block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"></textarea>
             
-                        <div data-aos="fade-right" data-aos-duration="1000" className='flex flex-col sm:flex-row items-center justify-between mt-5'>
-                            <div data-aos="fade-right" data-aos-duration="1000" className="flex h-6 items-center ">
+                        <div data-aos="fade-up" data-aos-duration="1000" className='flex flex-col sm:flex-row items-center justify-between mt-5'>
+                            <div data-aos="fade-up" data-aos-duration="1000" className="flex h-6 items-center ">
                                 <input id="comments" name="comments" type="checkbox" className="h-4 w-4 rounded border-gray-300  text-indigo-600 accent-amber-600 focus:ring-indigo-600" />
                                 <label htmlFor="comments" className="font-medium ms-2 text-xs lg:text-sm select-none text-gray-900">I agree with terms of usage and privacy policy.</label>
                             </div>
-                            <button data-aos="fade-right" data-aos-duration="1000" onClick={HandleSend} className='capitalize mt-4 sm:mt-0  font-semibold btnOrange text-white px-8 py-1.5 rounded-full'>submit</button>
+                            <button data-aos="fade-up" data-aos-duration="1000" onClick={HandleSend} className='capitalize mt-4 sm:mt-0  font-semibold btnOrange text-white px-8 py-1.5 rounded-full'>submit</button>
                         </div>
                     </form>
                     <Toaster richColors expand={true} position="top-right" />

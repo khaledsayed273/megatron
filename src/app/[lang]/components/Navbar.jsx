@@ -46,7 +46,7 @@ function Navbar({ lang, navbarTranslate }) {
     }
 
     return (
-        <nav data-aos="fade-right" data-aos-duration="1000" className='container mx-auto my-4 p-2 px-4  '>
+        <nav data-aos="fade-down" data-aos-duration="1000" className='container mx-auto my-4 p-2 px-4  '>
             <div className={`border border-gray-400 rounded-2xl w-full ${show ? "pb-3 md:pb-0" : "pb-0"}  px-4 flex flex-col md:flex-row items-center`}>
                 <div className='flex  justify-between items-center w-full md:w-auto'>
                     <Link href={`/${lang}`} className='relative w-[90px] h-[77px]'>

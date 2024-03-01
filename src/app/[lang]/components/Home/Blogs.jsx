@@ -37,21 +37,21 @@ function Blogs() {
             <h1 className='capitalize text-center text-white my-10 text-xl lg:text-4xl'>from our latest blogs</h1>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 xl:gap-9">
                 {blogs.map((item) => (
-                    <div data-aos-duration="1000" data-aos="fade-right" key={item.id} className='bg-white p-6 rounded-xl'>
+                    <div data-aos-duration="1000" data-aos="fade-up" key={item.id} className='bg-white p-6 rounded-xl'>
                         <div data-aos="zoom-in" data-aos-duration="1000" className='relative overflow-hidden rounded-xl w-full h-[200px]'>
                             <Image sizes='(max-width:992px) , 100vw' fill src={item.image} alt='image' />
                         </div>
-                        <h1 data-aos="fade-right" data-aos-duration="1000" className='text-white btnOrange my-4 inline-block px-3 py-1 rounded-full capitalize '>{item.head}</h1>
-                        <h2 data-aos="fade-right" data-aos-duration="1000" className='capitalize font-semibold text-sm md:text-lg'>{item.title}</h2>
-                        <p data-aos="fade-right" data-aos-duration="1000" className='mt-3 font-medium text-sm leading-6'>{item.discreption}</p>
-                        <div data-aos="fade-right" data-aos-duration="1000" className='flex justify-end'>
+                        <h1 data-aos="fade-up" data-aos-duration="1000" className='text-white btnOrange my-4 inline-block px-3 py-1 rounded-full capitalize '>{item.head}</h1>
+                        <h2 data-aos="fade-up" data-aos-duration="1000" className='capitalize font-semibold text-sm md:text-lg'>{item.title}</h2>
+                        <p data-aos="fade-up" data-aos-duration="1000" className='mt-3 font-medium text-sm leading-6'>{item.discreption}</p>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-end'>
                             <Link className='capitalize font-medium mt-3  border-black/70 border-b-2' href={`/blogs/${item.id}`}>read more</Link>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <div data-aos-duration="1000" data-aos="fade-right" className='flex justify-center mt-7'>
+            <div data-aos-duration="1000" data-aos="fade-up" className='flex justify-center mt-7'>
                 <Link className='text-white btnOrange py-2 px-9 capitalize font-bold rounded-full' href={"/blogs"}>view all</Link>
             </div>
         </div>

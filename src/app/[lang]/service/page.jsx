@@ -15,12 +15,12 @@ async function page({ params: { lang } }) {
 
     return (
         <div className='container mx-auto px-3'>
-            <h1 data-aos-duration="1000" data-aos="fade-right" className='text-center text-white text-xl md:text-4xl capitalize mb-3 mt-7'>Discover the Tools that Drive Success</h1>
-            <p data-aos-duration="1000" data-aos="fade-right" className='text-center text-white text-xs md:text-sm mt-7'>Explore our captivating blog filled with thought-provoking articles and inspiring content that will ignite your creativity and expand your knowledge.</p>
+            <h1 data-aos-duration="1000" data-aos="fade-up" className='text-center text-white text-xl md:text-4xl capitalize mb-3 mt-7'>Discover the Tools that Drive Success</h1>
+            <p data-aos-duration="1000" data-aos="fade-up" className='text-center text-white text-xs md:text-sm mt-7'>Explore our captivating blog filled with thought-provoking articles and inspiring content that will ignite your creativity and expand your knowledge.</p>
             {data.status ? (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20">
                     {data?.data.data.map((item) => (
-                        <div data-aos-duration="1000" data-aos="fade-right" key={item.id} className="bg-white p-5 rounded-lg">
+                        <div data-aos-duration="1000" data-aos="fade-up" key={item.id} className="bg-white p-5 rounded-lg">
                             <div className='flex flex-col justify-center items-center'>
                                 {item.image ? (<div dangerouslySetInnerHTML={{ __html: item.image }}></div>) : (
                                     <svg width="40" height="35" viewBox="0 0 46 38" fill="none" xmlns="http://www.w3.org/2000/svg">

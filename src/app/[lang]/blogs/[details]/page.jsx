@@ -33,25 +33,25 @@ async function page({ params }) {
                     <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[200px] md:h-[300px] w-full xl:w-5/6 mx-auto rounded-ss-[100px]  md:rounded-ss-[200px] rounded-ee-[100px] md:rounded-ee-[200px] overflow-hidden'>
                         <Image priority className='object-none' sizes='(min-width:992px) , 100vw' fill src={dataDetails.data.image} alt='img' />
                     </div>
-                    <div data-aos="fade-right" data-aos-duration="1000">
-                        <span data-aos="fade-right" data-aos-duration="1000" className='btnOrange px-5 py-2 text-white capitalize font-bold rounded-full'>{dataDetails.data.category.name}</span>
-                        <h3 data-aos="fade-right" data-aos-duration="1000" className='mt-10 text-xl lg:text-3xl text-white'>{dataDetails.data.title}</h3>
-                        <p data-aos="fade-right" data-aos-duration="1000" className='text-white mt-10 text-xs md:text-sm'>{dataDetails.data.short_description}</p>
+                    <div data-aos="fade-up" data-aos-duration="1000">
+                        <span data-aos="fade-up" data-aos-duration="1000" className='btnOrange px-5 py-2 text-white capitalize font-bold rounded-full'>{dataDetails.data.category.name}</span>
+                        <h3 data-aos="fade-up" data-aos-duration="1000" className='mt-10 text-xl lg:text-3xl text-white'>{dataDetails.data.title}</h3>
+                        <p data-aos="fade-up" data-aos-duration="1000" className='text-white mt-10 text-xs md:text-sm'>{dataDetails.data.short_description}</p>
                     </div>
                 </div>
 
-                <div data-aos="fade-right" data-aos-duration="1000" className='lg:w-9/12 border mx-auto mt-10 p-8 md:p-10 rounded-2xl'>
-                    <span data-aos="fade-right" data-aos-duration="1000" className='uppercase text-amber-600 font-bold'>Maximizing Product Success: Key Strategies for Product Managers</span>
-                    <p data-aos="fade-right" data-aos-duration="1000" className='text-xs md:text-sm mt-5 text-white'>To excel in the role of Product Manager, the following education and experience are typically required:</p>
-                    <ol data-aos="fade-right" data-aos-duration="1000" className='list-disc md:ms-5 mt-3 text-xs md:text-sm'>
+                <div data-aos="fade-up" data-aos-duration="1000" className='lg:w-9/12 border mx-auto mt-10 p-8 md:p-10 rounded-2xl'>
+                    <span data-aos="fade-up" data-aos-duration="1000" className='uppercase text-amber-600 font-bold'>Maximizing Product Success: Key Strategies for Product Managers</span>
+                    <p data-aos="fade-up" data-aos-duration="1000" className='text-xs md:text-sm mt-5 text-white'>To excel in the role of Product Manager, the following education and experience are typically required:</p>
+                    <ol data-aos="fade-up" data-aos-duration="1000" className='list-disc md:ms-5 mt-3 text-xs md:text-sm'>
                         <li className='text-white mb-1'>Bachelor&apos;s degree in Business Administration, Computer Science, Engineering, or a related field (or equivalent work experience)</li>
                         <li className='text-white mb-1'>Proven experience of at least 3 years in product management or related roles, preferably in the technology industry</li>
                         <li className='text-white mb-1'>Experience with Agile development methodologies and product lifecycle manageme</li>
                     </ol>
 
-                    <span data-aos="fade-right" data-aos-duration="1000" className='capitalize mt-7 inline-block text-amber-600 font-semibold'>Develop a Strategic Product Roadmap: Guiding Your Product&apos;s Journey</span>
-                    <p data-aos="fade-right" data-aos-duration="1000" className='text-xs md:text-sm mt-5 text-white'>As a Product Manager, you should possess the following technical skills:</p>
-                    <ol data-aos="fade-right" data-aos-duration="1000" className='list-disc md:ms-5 mt-3 text-xs md:text-sm'>
+                    <span data-aos="fade-up" data-aos-duration="1000" className='capitalize mt-7 inline-block text-amber-600 font-semibold'>Develop a Strategic Product Roadmap: Guiding Your Product&apos;s Journey</span>
+                    <p data-aos="fade-up" data-aos-duration="1000" className='text-xs md:text-sm mt-5 text-white'>As a Product Manager, you should possess the following technical skills:</p>
+                    <ol data-aos="fade-up" data-aos-duration="1000" className='list-disc md:ms-5 mt-3 text-xs md:text-sm'>
                         <li className='text-white mb-1'>Strong understanding of product development processes and principles</li>
                         <li className='text-white mb-1'>Proficiency in using project management tools such as JIRA or Asana</li>
                         <li className='text-white mb-1'>Familiarity with prototyping tools like Sketch, Adobe XD, or InVision</li>
@@ -64,7 +64,7 @@ async function page({ params }) {
                     <ProjectsBlogs data={data?.data} />
                 )}
 
-                <div data-aos="fade-right" data-aos-duration="1000" className='flex justify-center items-center mb-10'>
+                <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center items-center mb-10'>
                     <Link className='text-white px-6 py-1.5 capitalize btnOrange font-bold rounded-full me-5' href={"/contactUs"}>contact us</Link>
                     <Link className='text-white capitalize font-bold flex items-center' href={"/blogs"}>
                         <span className='me-5'>view all</span>

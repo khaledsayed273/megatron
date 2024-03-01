@@ -23,7 +23,7 @@ function Services() {
 
     const nextPrevComponent = () => {
         return (
-            <div data-aos-duration="1000" data-aos="fade-right" className=" mt-7 z-10 flex items-end justify-end gap-5 ">
+            <div data-aos-duration="1000" data-aos="fade-up" className=" mt-7 z-10 flex items-end justify-end gap-5 ">
                 <div className="prev-arrow cursor-pointer" onClick={handlePrev}>
                     <button className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-stroke border-amber-500  text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:hover:drop-shadow-none">
                         <svg
@@ -84,10 +84,10 @@ function Services() {
             <div className='my-10 bg-white p-6 md:p-8 lg:p-10 rounded-3xl'>
 
                 <section className="pb-5 pt-5 dark:bg-dark lg:pb-[20px] lg:pt-[5px]">
-                    <div data-aos-duration="1000" data-aos="fade-right" className="mb-5">
+                    <div data-aos-duration="1000" data-aos="fade-up" className="mb-5">
                         <Link className="capitalize text-white btnOrange py-2 px-6 rounded-full" href={"/services"}>services</Link>
                     </div>
-                    <div data-aos-duration="1000" data-aos="fade-right" className="container mx-auto">
+                    <div data-aos-duration="1000" data-aos="fade-up" className="container mx-auto">
                         <Swiper slidesPerView={1} ref={sliderRef}>
                             {data.map((item) => (
                                 <SwiperSlide  key={item.id}>
