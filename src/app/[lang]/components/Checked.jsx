@@ -33,7 +33,7 @@ function Checked({ lang }) {
     }
 
     return (
-        <div className='container mx-auto px-5'>
+        <div data-aos="fade-right" data-aos-duration="1000" className='container mx-auto px-5'>
             <div className="flex justify-end items-center">
                 <span className='text-white me-3 capitalize'>{lang === "ar" ? "english":"العربية"}</span>
                 <div className="relative inline-block w-8 h-4 rounded-full cursor-pointer">

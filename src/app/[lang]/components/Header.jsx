@@ -8,7 +8,7 @@ export default async function Header({ lang }) {
     return (
         <>
             <Navbar lang={lang} navbarTranslate={navbarTranslate.navBar} />
-            <Checked lang={lang} />
+            <Checked  lang={lang} />
         </>
 
     )

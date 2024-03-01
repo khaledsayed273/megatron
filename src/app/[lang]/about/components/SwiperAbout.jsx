@@ -23,7 +23,7 @@ function SwiperAbout({ data }) {
     
     return (
         <>
-            <div className='bg-white md:w-3/4 mx-auto p-10 rounded-xl relative mt-10'>
+            <div data-aos="fade-right" data-aos-duration="1000" className='bg-white md:w-3/4 mx-auto p-10 rounded-xl relative mt-10'>
                 <p className='text-sm text-center font-semibold'>{data[k?.id - 1]?.about}</p>
                 <p className='text-center mt-7 font-bold'>John Wick</p>
                 <div className='flex justify-center mt-5'>
@@ -49,6 +49,7 @@ function SwiperAbout({ data }) {
 
 
             <Swiper
+            data-aos="zoom-in" data-aos-duration="2000"
                 onSlideChange={handleChange}
                 effect={'coverflow'}
                 grabCursor={true}

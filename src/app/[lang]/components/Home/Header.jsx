@@ -20,27 +20,27 @@ function Header() {
                         Empowering Innovation for a Digital Tomorrow
                     </p>
                 </div>
-                <div className='flex justify-center mt-3'>
+                <div data-aos="fade-right" data-aos-duration="1000" className='flex justify-center mt-3'>
                     <Link href={"/contactUs"} className='mx-3 p-2 px-7 md:px-8 rounded-full font-bold capitalize text-sm md:text-base btnOrange text-white'> contact us</Link>
                 </div>
             </div>
             {/* End */}
             <div data-aos-duration="1000" data-aos="fade-right" className='bg-white rounded-3xl flex justify-between items-center flex-col md:flex-row flex-wrap py-2 px-10 my-10 lg:mx-16'>
-                <div className='text-amber-500 text-center my-7'>
+                <div data-aos="fade-right" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold'>50K</h1>
                     <h5 className='text-lg md:text-xl lg:text-2xl '>New users per month</h5>
                 </div>
-                <div className='text-amber-500 text-center my-7'>
+                <div data-aos="fade-right" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold'>150K</h1>
                     <h5 className='text-lg md:text-xl lg:text-2xl '>Active Users</h5>
                 </div>
-                <div className='text-amber-500 text-center my-7'>
+                <div data-aos="fade-right" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold '>98%</h1>
                     <h5 className='text-lg md:text-xl lg:text-2xl '>Satisfied Customers</h5>
                 </div>
             </div>
 
-            <div className='flex justify-center'>
+            <div data-aos="fade-right" data-aos-duration="1000" className='flex justify-center'>
                 <span className='btnOrange capitalize rounded-full flex mx-auto text-white font-semibold py-2 px-8'>features</span>
             </div>
         </header>
