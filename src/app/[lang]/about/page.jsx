@@ -72,8 +72,8 @@ async function page({ params: { lang } }) {
         data-aos-easing="linear"
         data-aos-duration="500" className='flex justify-center items-center mt-5 mb-10'>
         <Link data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1000" className='px-4 sm:px-6 py-1.5 text-white rounded-full font-bold capitalize btnOrange' href={"/contactUs"}>contact us</Link>
+          data-aos-easing="linear"
+          data-aos-duration="1000" className='px-4 sm:px-6 py-1.5 text-white rounded-full font-bold capitalize btnOrange' href={"/contactUs"}>contact us</Link>
       </div>
       <div data-aos="zoom-in"
         data-aos-easing="linear"
@@ -101,7 +101,7 @@ async function page({ params: { lang } }) {
               <Image priority sizes='(min-width:992px) , 100vw' fill src={secoundImageAboutUs} alt='secoundImageAboutUs' />
             </div>
           </div>
-          <div  className='order-1 md:order-2'>
+          <div className='order-1 md:order-2'>
             <p data-aos="fade-up" data-aos-duration="1000" className='mt-5 mb-7 text-sm'>This success prompted Vasily to establish FutureSphere, an app development company with a strong focus on creating profitable and impactful applications. Building on their initial achievement, FutureSphere expanded their educational app portfolio to include exams such as SAT, GMAT, MCAT, and more, catering to the needs of a broader audience.</p>
             <p data-aos="fade-up" data-aos-duration="1000" className='text-sm'>As time went on, it became evident that the industry had much more to offer than just exam-focused applications. People began approaching FutureSphere, seeking guidance on how to develop their own apps, what it takes to succeed, and how to navigate the complex world of mobile applications. In response to this growing demand for expertise and support, FutureSphere expanded its services and evolved into a comprehensive resource for aspiring app creators - a company known as FutureSphere.</p>
           </div>
@@ -114,7 +114,10 @@ async function page({ params: { lang } }) {
           <h2 data-aos="fade-up" data-aos-duration="1000" className='capitalize mt-6 text-white text-xl md:text-4xl'>guided by integrity and purpose</h2>
           <p data-aos="fade-up" data-aos-duration="1000" className='text-white text-sm md:text-base mt-5 text-center md:px-10 xl:px-32'>At FutureSphere, we are driven by a strong set of values that shape every aspect of our business, ensuring transparency, ethical practices, and a shared commitment to making a positive impact.</p>
         </div>
-        <div className='bg-white p-7 mt-10 rounded-xl'>
+        <div data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+          className='bg-white p-7 mt-10 rounded-xl'>
           <div className="flex flex-col md:flex-row items-center justify-center">
             <div data-aos="fade-up" data-aos-duration="1000" className='flex flex-col items-center justify-center my-5'>
               <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +152,7 @@ async function page({ params: { lang } }) {
               <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-sm md:px-10'>Putting our customers at the heart of everything we do, delivering exceptional experiences and exceeding their expectations.</p>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" className='flex flex-col items-center justify-center my-5'>
-              <svg  width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clipRule="evenodd" d="M20.4134 0.0612904C16.5867 0.49901 13.135 2.11354 10.5941 4.65453C9.47399 5.77467 8.76652 6.74107 8.76652 7.15106C8.76652 7.67716 8.92497 7.73142 10.462 7.7317C12.7323 7.73216 14.3495 8.0241 16.0749 8.74506C16.9989 9.13111 17.7695 9.57003 19.7118 10.8165C21.3074 11.8405 22.152 12.1775 23.2765 12.2388C23.903 12.273 24.2522 12.2445 24.6631 12.1259C25.2244 11.9638 26.237 11.4688 26.6371 11.1612L26.8602 10.9896L26.6371 10.8741C25.9633 10.5252 17.677 5.6679 17.7061 5.63887C17.7738 5.57111 19.681 5.79796 20.6363 5.98738C21.8771 6.23347 23.0461 6.62191 24.1251 7.14662C26.7064 8.402 28.8971 10.8011 30.0657 13.6524C30.3759 14.4094 30.5262 14.5722 30.9152 14.5722C31.2973 14.5722 31.578 14.2536 31.5072 13.8999C31.3283 13.0053 30.1906 10.9276 29.2085 9.70176L28.5824 8.92043L28.8713 8.07901C29.4418 6.41761 29.3312 4.83101 28.5323 3.21278C27.8054 1.74043 26.4585 0.581378 25.027 0.196351C24.3611 0.0171951 21.5247 -0.0658194 20.4134 0.0612904ZM9.20849 12.9751C8.47348 13.7682 7.39817 15.5769 6.8902 16.8748C6.6993 17.3626 6.50554 17.7881 6.45969 17.8205C6.41384 17.853 6.17866 17.9058 5.9371 17.9378C5.32753 18.0186 4.27109 18.3906 3.64423 18.745C3.35497 18.9087 2.78312 19.3783 2.37359 19.7887C1.17146 20.9933 0.580373 22.3551 0.577415 23.9276C0.575381 24.962 0.712382 25.4956 1.27259 26.6361C2.78626 29.7179 5.2264 32.35 8.1221 34.0248C9.70769 34.942 11.9591 35.7011 13.7893 35.9358C14.5245 36.0301 14.6512 36.0248 14.8552 35.8912C15.2903 35.6061 15.2529 35.3813 14.5875 34.28C13.5674 32.5914 12.9278 30.9353 12.653 29.2708C12.4738 28.1847 12.4567 27.484 12.5438 24.7872C12.6221 22.3622 12.5457 21.763 12.0234 20.702C11.6302 19.9034 10.7872 19.0594 9.93575 18.612C9.57781 18.4239 9.2598 18.27 9.22911 18.27C9.19842 18.27 9.17327 20.6703 9.17327 23.604C9.17327 27.2066 9.14286 28.9075 9.07963 28.8443C8.88679 28.6515 7.96106 26.3698 7.70555 25.4574C7.30212 24.0173 7.19341 23.2452 7.19461 21.8291C7.19711 18.9257 7.90486 16.9742 10.0911 13.8419C10.4226 13.3669 10.4444 13.1625 10.1902 12.9083C9.92179 12.6399 9.49202 12.6691 9.20849 12.9751ZM35.9605 16.3056C35.8821 16.3946 35.7034 16.6961 35.5632 16.9758C34.5457 19.0056 32.7908 21.0339 31.0501 22.1922C30.6254 22.4748 29.5559 23.0846 28.6732 23.5476C26.8371 24.5104 26.4058 24.7835 25.7819 25.378C25.1791 25.9523 24.8343 26.4666 24.5556 27.2071C24.3076 27.8662 24.1693 29.0873 24.2773 29.6637L24.3387 29.991L28.4733 27.6364C30.7472 26.3414 32.8365 25.1513 33.1161 24.9917L33.6246 24.7015L33.4499 24.9756C32.2762 26.8158 30.657 28.4996 28.9682 29.636C28.0782 30.2349 26.5799 30.915 25.6065 31.162C23.9304 31.5871 22.6029 31.6538 20.2095 31.4329C19.6161 31.3782 19.5324 31.3915 19.3544 31.5695C19.1151 31.8088 19.1011 32.1395 19.3189 32.4076C19.5396 32.6792 20.3155 32.7831 22.1616 32.7884C23.4594 32.792 24.7136 32.6922 25.1763 32.5483C25.2769 32.517 25.4558 32.6714 25.7291 33.0256C26.8138 34.4317 28.8129 35.3739 30.7043 35.3706C32.8255 35.367 34.4787 34.4037 35.6735 32.475C36.8464 30.5818 37.7362 28.3916 38.1749 26.3179C38.3967 25.2699 38.4207 24.9638 38.4224 23.1695C38.4241 21.357 38.4022 21.0788 38.1746 20.0103C37.796 18.2335 37.1091 16.4437 36.7272 16.2393C36.4579 16.0952 36.1201 16.1244 35.9605 16.3056Z" fill="#EF8A08" />
               </svg>
 
@@ -157,7 +160,7 @@ async function page({ params: { lang } }) {
               <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-sm md:px-10'>Operating with a focus on environmental and social responsibility, striving for a more sustainable future.</p>
             </div>
             <div data-aos="fade-up" data-aos-duration="1000" className='flex flex-col items-center justify-center my-5'>
-              <svg  width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clipRule="evenodd" d="M18.9917 0.0989994C18.361 0.295688 18.3284 0.350393 15.6224 5.76062C14.2267 8.55103 13.0801 10.8389 13.0745 10.8448C13.0688 10.8507 10.5356 11.2425 7.44511 11.7153C4.35456 12.1883 1.75261 12.6031 1.6629 12.6372C1.38482 12.743 0.952027 13.1717 0.811735 13.4805C0.64534 13.8467 0.637472 14.378 0.792691 14.766C0.882837 14.9912 1.87871 16.0117 5.0022 19.0794C8.56024 22.5737 9.09068 23.1225 9.07105 23.2893C9.05862 23.3947 8.65083 25.8633 8.16488 28.7751C7.18328 34.657 7.17408 34.755 7.55614 35.2992C7.86981 35.7459 8.32003 35.9783 8.87303 35.979C9.31031 35.9795 9.35869 35.9564 14.3568 33.3515C17.1302 31.9061 19.4439 30.7236 19.4984 30.7236C19.5529 30.7236 21.8499 31.8966 24.6028 33.3304C27.6516 34.9182 29.7243 35.9556 29.9053 35.9843C30.4669 36.0735 31.1349 35.7748 31.4631 35.2878C31.8539 34.7078 31.8767 34.95 30.8517 28.7793L29.9115 23.1189L34.0036 19.0686C36.8195 16.2814 38.1308 14.9341 38.2084 14.7484C38.3709 14.3595 38.352 13.775 38.1644 13.3874C37.989 13.0251 37.5518 12.6705 37.1518 12.5661C37.0064 12.5282 34.4224 12.1271 31.4095 11.6747C28.3967 11.2224 25.927 10.8481 25.9214 10.8431C25.9157 10.8382 24.7793 8.56757 23.3962 5.79739C21.5816 2.16324 20.8067 0.683257 20.6136 0.482745C20.4416 0.30407 20.2161 0.166131 19.9822 0.09672C19.5461 -0.0327638 19.4133 -0.0324696 18.9917 0.0989994Z" fill="#EF8A08" />
               </svg>
 
