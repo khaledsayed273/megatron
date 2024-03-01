@@ -15,6 +15,7 @@ async function getData2(details, lang) {
     const res = await API.get(`/blogs/${details}`, {
         headers: { "X-localization": lang }
     })
+
     return res
 }
 
@@ -24,10 +25,6 @@ async function page({ params }) {
     const data = await getData(params.lang)
     const data2 = await getData2(params.details, params.lang)
     const dataDetails = await data2.data
-
-    console.log(dataDetails.data);
-
- 
 
     return (
         dataDetails.status ? (
