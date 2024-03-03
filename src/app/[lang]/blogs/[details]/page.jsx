@@ -19,6 +19,8 @@ async function getData2(details, lang) {
     return res
 }
 
+export const revalidate = 30; 
+
 
 async function page({ params }) {
     
