@@ -37,7 +37,7 @@ export default async function Home() {
 
 
   return (
-    <main  className="container mx-auto px-5 my-10">
+    <main className="container mx-auto px-5 my-10">
       <Header />
       <Discover />
       <Projects data={data} />

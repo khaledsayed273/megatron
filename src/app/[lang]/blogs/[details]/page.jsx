@@ -32,7 +32,7 @@ async function page({ params }) {
 
     return (
         dataDetails.status ? (
-            <div className='container mx-auto px-3 mt-7'>
+            <main className='container mx-auto px-3 mt-7'>
                 <div className="grid md:grid-cols-2 gap-10">
                     <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[200px] md:h-[300px] w-full xl:w-5/6 mx-auto rounded-ss-[100px]  md:rounded-ss-[200px] rounded-ee-[100px] md:rounded-ee-[200px] overflow-hidden'>
                         <Image priority className='object-none' sizes='(min-width:992px) , 100vw' fill src={dataDetails.data.image} alt='img' />
@@ -79,7 +79,7 @@ async function page({ params }) {
 
                 </div>
 
-            </div>
+            </main>
         ) : (
         <div>
             <h1 className='text-center text-orange-600 capitalize font-bold my-20 text-xl md:text-3xl'>sorry something went wrong </h1>

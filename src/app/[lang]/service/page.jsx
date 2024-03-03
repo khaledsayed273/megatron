@@ -17,7 +17,7 @@ async function page({ params: { lang } }) {
     const data = await getData(lang)
 
     return (
-        <div className='container mx-auto px-3'>
+        <main className='container mx-auto px-3'>
             <h1 data-aos-duration="1000" data-aos="fade-up" className='text-center text-white text-xl md:text-4xl capitalize mb-3 mt-7'>Discover the Tools that Drive Success</h1>
             <p data-aos-duration="1000" data-aos="fade-up" className='text-center text-white text-xs md:text-sm mt-7'>Explore our captivating blog filled with thought-provoking articles and inspiring content that will ignite your creativity and expand your knowledge.</p>
             {data.status ? (
@@ -40,7 +40,7 @@ async function page({ params: { lang } }) {
             ) : <h1 className='text-center mt-16 font-bold text-orange-600'>Something wrong is happend please try again later</h1>
             }
 
-        </div>
+        </main>
     )
 }
 

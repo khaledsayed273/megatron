@@ -35,7 +35,7 @@ function page() {
     ]
 
     return (
-        <div className='container mx-auto px-3 mt-7'>
+        <main className='container mx-auto px-3 mt-7'>
             <h1 className='text-center text-white text-xl md:text-4xl capitalize mb-3'>join our team and shape the future</h1>
             <p className='text-center text-white text-xs md:text-sm mt-7'>Looking for an opportunity to showcase your web design skills? Join our team of talented designers, both remote and on-site, and bring your creativity to life. Collaborate with a dynamic group, create stunning websites, and make a lasting impact in the world of design, no matter where you are.</p>
             <div className="relative mx-auto mt-10 w-full sm:w-4/6 md:w-1/2 xl:w-2/5  h-[500px]">
@@ -130,7 +130,7 @@ function page() {
             <div className='flex justify-center items-center mt-10'>
                 <Link className='px-4 sm:px-6 py-1.5 text-white rounded-full font-bold capitalize btnOrange' href={"/contactUs"}>contact us</Link>
             </div>
-        </div>
+        </main>
     )
 }
 

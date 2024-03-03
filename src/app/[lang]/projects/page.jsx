@@ -64,7 +64,7 @@ function page() {
         },
     ]
     return (
-        <div className='container mx-auto px-3'>
+        <main className='container mx-auto px-3'>
             <h1 data-aos="fade-up" data-aos-duration="1000" className='text-center text-white text-xl md:text-4xl capitalize mb-3'>discover our projects</h1>
             <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-white text-xs md:text-sm'>explore our captivating blog filled with thought-provoking articles and inspiring content that will ignite your creativity and expand your knowledge.</p>
             <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
@@ -76,7 +76,7 @@ function page() {
                 </div>
             </div>
             <Projects data={data} title={true}/>
-        </div>
+        </main>
     )
 }
 

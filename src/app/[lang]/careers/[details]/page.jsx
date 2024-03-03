@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function page() {
     return (
-        <div className='container mx-auto px-3 mt-10'>
+        <main className='container mx-auto px-3 mt-10'>
 
             <div className='border px-5 md:px-10 rounded-xl flex flex-col md:flex-row items-center md:items-start justify-between  '>
 
@@ -61,7 +61,7 @@ function page() {
 
             </div>
 
-        </div>
+        </main>
     )
 }
 

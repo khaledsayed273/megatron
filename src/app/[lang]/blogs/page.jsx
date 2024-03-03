@@ -84,7 +84,7 @@ async function page({ params }) {
     const data2 = await getData(params.lang)
 
     return (
-        <div className='container mx-auto px-3'>
+        <main className='container mx-auto px-3'>
             <h1 data-aos="zoom-in" data-aos-duration="1000" className='text-center my-5 text-white text-xl md:text-3xl'>Discover Insights and Inspiration</h1>
             <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-white/70 text-xs md:text-sm mb-10 md:mb-16'>Explore our captivating blog filled with thought-provoking articles and inspiring content that will ignite your creativity and expand your knowledge.</p>
             <div className="grid md:grid-cols-2 gap-10">
@@ -102,7 +102,7 @@ async function page({ params }) {
                 <ProjectsBlogs data={data2.data} />
             )}
 
-        </div>
+        </main>
     )
 }
 

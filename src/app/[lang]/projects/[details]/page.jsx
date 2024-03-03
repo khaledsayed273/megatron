@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 function page({ params }) {
     return (
-        <div className='container mx-auto px-3 mt-10'>
+        <main className='container mx-auto px-3 mt-10'>
             <div className='relative w-full h-[220px] md:h-[300px] xl:h-[370px] overflow-hidden rounded-full'>
                 <Image priority sizes='(min-width:992px) , 100vw' fill src={img} alt='img' />
                 <div className='absolute bg-white bottom-0 left-1/2 -translate-x-1/2  px-6 py-2 font-bold md:text-xl rounded-t-xl text-orange-500'>
@@ -45,7 +45,7 @@ function page({ params }) {
 
             </div>
 
-        </div>
+        </main>
     )
 }
 

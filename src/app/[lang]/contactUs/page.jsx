@@ -44,7 +44,7 @@ function page() {
 
   return (
 
-    <div  className='container mx-auto mt-5 px-3'>
+    <main  className='container mx-auto mt-5 px-3'>
 
       <h1 data-aos="fade-up" data-aos-duration="1000"  className='text-center text-white text-xl md:text-4xl capitalize mb-3'>contact us</h1>
       <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-white text-xs md:text-sm'>At FutureSphere our mission is to empower individuals and businesses through innovative technology solutions that enrich lives, foster growth, and drive positive change.</p>
@@ -157,7 +157,7 @@ function page() {
         </div>
       </div>
 
-    </div>
+    </main>
 
   )
 }
