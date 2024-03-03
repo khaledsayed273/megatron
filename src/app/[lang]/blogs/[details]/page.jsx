@@ -19,7 +19,7 @@ async function getData2(details, lang) {
     return res
 }
 
-export const revalidate = 30; 
+export const revalidate = 60; 
 
 
 async function page({ params }) {
@@ -27,6 +27,8 @@ async function page({ params }) {
     const data = await getData(params.lang)
     const data2 = await getData2(params.details, params.lang)
     const dataDetails = await data2.data
+
+    console.log(dataDetails);
 
     return (
         dataDetails.status ? (

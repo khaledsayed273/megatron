@@ -8,7 +8,8 @@ async function getData(lang) {
     })
     return res
 }
-export const revalidate = 30; 
+
+export const revalidate = 60; 
 
 
 async function page({ params: { lang } }) {
