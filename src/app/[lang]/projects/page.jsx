@@ -3,66 +3,27 @@ import img from "../../../../public/images/download.jpg"
 import img2 from "../../../../public/images/8464a2ee2e9e7405ca2ba0a7f097f92d.jpg"
 import img3 from "../../../../public/images/345ba3a36dabf573a2bc6abca60fc5ee.jpg"
 import React from 'react'
+import API from '@/api/API'
 
 
-function page() {
+async function getData(lang) {
+    const res = await API.get("/projects", {
+        headers: { "X-localization": lang }
+    })
+    return res
+}
 
-    const data = [
-        {
-            id: 1,
-            title: "vintage platform",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img
-        },
-        {
-            id: 2,
-            title: "shahin application",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img2
-        },
-        {
-            id: 3,
-            title: "megatron web",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img3
-        },
-        {
-            id: 4,
-            title: "vintage platform",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img
-        },
-        {
-            id: 5,
-            title: "shahin application",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img2
-        },
-        {
-            id: 6,
-            title: "megatron web",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img3
-        },
-        {
-            id: 7,
-            title: "vintage platform",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img
-        },
-        {
-            id: 8,
-            title: "shahin application",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img2
-        },
-        {
-            id: 9,
-            title: "megatron web",
-            about: "The Future of AI in Healthcare: Transforming Patient Care",
-            img:img3
-        },
-    ]
+export const revalidate = +process.env.time; 
+
+
+async function page({ params: { lang } }) {
+
+    const data = await getData(lang)
+
+    // console.log(data.data);
+
+
+    
     return (
         <main className='container mx-auto px-3'>
             <h1 data-aos="fade-up" data-aos-duration="1000" className='text-center text-white text-xl md:text-4xl capitalize mb-3'>discover our projects</h1>
@@ -75,7 +36,12 @@ function page() {
                     <button className='me-2 text-xs md:text-sm capitalize bg-white text-yellow-700 font-bold px-3 py-1 rounded-full mt-3 '>cloud computing</button>
                 </div>
             </div>
-            <Projects data={data} title={true}/>
+            {data.status&& (
+               
+
+            <Projects data={data.data.data} title={true}/>
+            
+            )}
         </main>
     )
 }

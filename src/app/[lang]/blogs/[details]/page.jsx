@@ -19,7 +19,7 @@ async function getData2(details, lang) {
     return res
 }
 
-export const revalidate = 60; 
+export const revalidate = +process.env.time; 
 
 
 async function page({ params }) {

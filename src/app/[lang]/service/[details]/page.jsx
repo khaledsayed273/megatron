@@ -12,6 +12,9 @@ async function getData(details, lang) {
     return res
 }
 
+export const revalidate = +process.env.time; 
+
+
 async function page({ params }) {
 
 

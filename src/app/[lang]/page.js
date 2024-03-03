@@ -14,34 +14,40 @@ import API from "@/api/API";
 
 export default async function Home() {
 
-  const data = [
-    {
-      id: 1,
-      title: "vintage platform",
-      about: "The Future of AI in Healthcare: Transforming Patient Care",
-      img: img
-    },
-    {
-      id: 2,
-      title: "shahin application",
-      about: "The Future of AI in Healthcare: Transforming Patient Care",
-      img: img2
-    },
-    {
-      id: 3,
-      title: "megatron web",
-      about: "The Future of AI in Healthcare: Transforming Patient Care",
-      img: img3
-    }
-  ]
+  // const data = [
+  //   {
+  //     id: 1,
+  //     title: "vintage platform",
+  //     about: "The Future of AI in Healthcare: Transforming Patient Care",
+  //     img: img
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "shahin application",
+  //     about: "The Future of AI in Healthcare: Transforming Patient Care",
+  //     img: img2
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "megatron web",
+  //     about: "The Future of AI in Healthcare: Transforming Patient Care",
+  //     img: img3
+  //   }
+  // ]
+
+  const data = false
 
 
   return (
     <main className="container mx-auto px-5 my-10">
       <Header />
       <Discover />
-      <Projects data={data} />
+      {data && (
+        <Projects data={data} />
+      )}
+
       <GlobalCustomers />
+
       <Blogs />
       <Services />
     </main>

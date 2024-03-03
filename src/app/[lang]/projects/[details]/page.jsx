@@ -4,6 +4,16 @@ import img from "../../../../../public/images/project-details/7c9a40b581e8bd9728
 import SwiperImages from './components/SwiperImages'
 import Link from 'next/link'
 
+
+async function getData(lang) {
+    const res = await API.get("/projects", {
+        headers: { "X-localization": lang }
+    })
+    return res
+}
+
+export const revalidate = +process.env.time; 
+
 function page({ params }) {
     return (
         <main className='container mx-auto px-3 mt-10'>
