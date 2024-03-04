@@ -18,9 +18,6 @@ export default function RootLayout({ children, params }) {
 
   return (
     <html lang={params.lang}>
-      <head>
-        <link rel="icon" href="../favicon.ico" sizes="any" />
-      </head>
       <AOSInit />
       <body className={inter.className}>
         <Header lang={params.lang} />
