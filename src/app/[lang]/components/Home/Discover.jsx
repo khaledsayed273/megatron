@@ -42,7 +42,6 @@ function Discover() {
                         <path fillRule="evenodd" clipRule="evenodd" d="M6.96028 6.14234C7.17996 6.36202 7.17996 6.71812 6.96028 6.93779L1.22541 12.6727C1.00573 12.8923 0.649631 12.8923 0.429956 12.6727L0.164756 12.4075C-0.0549187 12.1878 -0.0549187 11.8317 0.164756 11.612L5.23671 6.54007L0.164756 1.46812C-0.0549186 1.24844 -0.0549186 0.892341 0.164756 0.672667L0.429956 0.407467C0.649631 0.187792 1.00573 0.187792 1.22541 0.407467L6.96028 6.14234Z" fill="white" />
                     </svg>
                 </button>
-
             </div>
             {/* contact card */}
             <div data-aos-duration="1000" data-aos="fade-up" className="bg-white px-7 py-12 rounded-3xl mt-10">
@@ -66,10 +65,9 @@ function Discover() {
                 </div>
             </div>
 
-            <div data-aos-duration="1000" data-aos="fade-up" className='flex justify-center'>
+            {/* <div data-aos-duration="1000" data-aos="fade-up" className='flex justify-center'>
                 <span className='btnOrange my-10 text-sm md:text-base text-white font-semibold capitalize px-6 py-2 rounded-full flex  mx-auto'>our clients</span>
-
-            </div>
+            </div> */}
         </div>
     )
 }

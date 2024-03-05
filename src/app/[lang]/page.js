@@ -45,9 +45,7 @@ export default async function Home() {
       {data && (
         <Projects data={data} />
       )}
-
       <GlobalCustomers />
-
       <Blogs />
       <Services />
     </main>
