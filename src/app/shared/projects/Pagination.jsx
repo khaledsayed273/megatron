@@ -1,19 +1,17 @@
 "use client"
-import React, { useState } from 'react'
+import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate';
 
-function Pagination({data, itemsPerPage }) {
-  // console.log(data);
-  // const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
-  const pageCount = Math.ceil(data.length / itemsPerPage);
-
+function Pagination({ data, itemsPerPage, total , numberPage  }) {
+  const router = useRouter()
+  const pageCount = Math.ceil(total / itemsPerPage);
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % data.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
+    const page = event.selected + 1
+    router.push(`${page }`)
   };
+
 
   return (
     <>
@@ -26,6 +24,7 @@ function Pagination({data, itemsPerPage }) {
         pageRangeDisplayed={2}
         pageCount={pageCount}
         previousLabel="< "
+        forcePage={numberPage -1}
         renderOnZeroPageCount={null}
       />
     </>

@@ -9,6 +9,7 @@ function Navbar({ lang, navbarTranslate }) {
     const pathName = usePathname()
     const params = useParams()
 
+
     const nav = [
         {
             id: 1,
@@ -38,7 +39,7 @@ function Navbar({ lang, navbarTranslate }) {
         {
             id: 6,
             name: navbarTranslate.projects,
-            path: `/${lang}/projects`,
+            path: `/${lang}/projects/page/${params.number ? params.number : 1}`,
         }
     ]
 
@@ -53,7 +54,7 @@ function Navbar({ lang, navbarTranslate }) {
         <nav  className='container mx-auto my-4 p-2 px-4 fixed top-0 right-0 left-0 z-50'>
             <div style={{background: "#0F1428"}} className={`border border-gray-400 rounded-2xl w-full ${show ? "pb-3 md:pb-0" : "pb-0"}  px-4 flex flex-col md:flex-row items-center`}>
                 <div className='flex  justify-between items-center w-full md:w-auto'>
-                    <Link ariaLabel="logoHeader" href={`/${lang}`} className='relative md:px-1 py-1.5'>
+                    <Link aria-label="logoHeader" href={`/${lang}`} className='relative md:px-1 py-1.5'>
                         <svg width="60" height="60" viewBox="0 0 909 609" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M771.334 508L838.334 556.5L771.334 605" stroke="#D25100" strokeWidth="8" />
                             <path d="M771.334 508L838.334 556.5L771.334 605" stroke="#D25100" strokeWidth="8" />
