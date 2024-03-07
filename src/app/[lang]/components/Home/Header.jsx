@@ -3,7 +3,7 @@ import React from 'react'
 import headerImg from "../../../../../public/images/header-img.jpeg"
 import Link from 'next/link'
 
-function Header() {
+function Header({translate}) {
     return (
         <header data-aos-duration="1000" data-aos="fade-up">
             {/* image */}
@@ -14,34 +14,34 @@ function Header() {
             <div data-aos-duration="1000" data-aos="fade-up">
                 <div className='mt-5 text-center text-white  p-3'>
                     <h3 className='text-lg sm:text-2xl lg:text-3xl xl:text-4xl '>
-                        Innovation in Cutting-Edge Technology: Revolutionising the Future
+                    {translate.home.header.title}
                     </h3>
                     <p className='mt-4 text-xs md:text-sm text-white/70'>
-                        Empowering Innovation for a Digital Tomorrow
+                    {translate.home.header.subTitle}
                     </p>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center mt-3'>
-                    <Link href={"/contactUs"} className='mx-3 p-2 px-7 md:px-8 rounded-full font-bold capitalize text-sm md:text-base btnOrange text-white'> contact us</Link>
+                    <Link href={"/contactUs"} className='mx-3 p-2 px-7 md:px-8 rounded-full font-bold capitalize text-sm md:text-base btnOrange text-white'>{translate.navBar.contactUs}</Link>
                 </div>
             </div>
             {/* End */}
             <div data-aos-duration="1000" data-aos="fade-up" className='bg-white rounded-3xl flex justify-between items-center flex-col md:flex-row flex-wrap py-2 px-10 my-10 lg:mx-16'>
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold'>50K</h1>
-                    <h5 className='text-lg md:text-xl lg:text-2xl '>New users per month</h5>
+                    <h5 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.newUser} </h5>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold'>150K</h1>
-                    <h5 className='text-lg md:text-xl lg:text-2xl '>Active Users</h5>
+                    <h5 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.activeUsers}</h5>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold '>98%</h1>
-                    <h5 className='text-lg md:text-xl lg:text-2xl '>Satisfied Customers</h5>
+                    <h5 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.satisfiedCustomers} </h5>
                 </div>
             </div>
 
             <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
-                <span className='btnOrange capitalize rounded-full flex mx-auto text-white font-semibold py-2 px-8'>features</span>
+                <span className='btnOrange capitalize rounded-full flex mx-auto text-white font-semibold py-2 px-8'>{translate.home.features}</span>
             </div>
         </header>
     )

@@ -5,14 +5,17 @@ import GlobalCustomers from "./components/Home/GlobalCustomers";
 import Blogs from "./components/Home/Blogs";
 import Services from "./components/Home/Services";
 
-import img from "../../../public/images/download.jpg"
-import img2 from "../../../public/images/8464a2ee2e9e7405ca2ba0a7f097f92d.jpg"
-import img3 from "../../../public/images/345ba3a36dabf573a2bc6abca60fc5ee.jpg"
+
 import API from "@/api/API";
+import { getDictionary } from "./dictionaries";
 
 
 
-export default async function Home() {
+export default async function Home({params}) {
+
+
+  const translate = await getDictionary(params.lang)
+
 
   // const data = [
   //   {
@@ -40,8 +43,8 @@ export default async function Home() {
 
   return (
     <main className="container mx-auto px-5 my-10">
-      <Header />
-      <Discover />
+      <Header translate={translate} />
+      <Discover translate={translate} />
       {data && (
         <Projects data={data} />
       )}

@@ -13,30 +13,12 @@ import img5 from "../../../../../../public/images/contact-us/4.jpg"
 import Image from 'next/image';
 
 
-function SwiperImages() {
+function SwiperImages({details}) {
 
-    const data = [
-        {
-            id: 1,
-            image: img1
-        },
-        {
-            id: 2,
-            image: img2
-        },
-        {
-            id: 3,
-            image: img3
-        },
-        {
-            id: 4,
-            image: img4
-        },
-        {
-            id: 5,
-            image: img5
-        },
-    ]
+    
+    const data = details.images
+    
+    
 
     return (
         <div className='my-16'>
@@ -58,7 +40,7 @@ function SwiperImages() {
             >
                 {data.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <Image fill priority sizes='(min-width:991px) , 100vw' src={item.image} alt='image' />
+                        <Image fill priority sizes='(min-width:991px) , 100vw' src={item.url} alt='image' />
                     </SwiperSlide>
                 ))}
 

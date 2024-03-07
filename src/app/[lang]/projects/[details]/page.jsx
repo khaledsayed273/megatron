@@ -39,7 +39,7 @@ async function page({ params }) {
                     <div className=" text-center text-white/80 text-sm mt-10" dangerouslySetInnerHTML={{ __html: details.description }}>
 
                     </div>
-                    <SwiperImages />
+                    <SwiperImages details={details} />
                 </>
             )}
 

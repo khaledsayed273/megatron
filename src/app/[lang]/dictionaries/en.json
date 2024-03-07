@@ -7,5 +7,30 @@
         "careers": "careers",
         "projects":"projects",
         "contactUs":"contact us"
+    },
+    "viewAll": "view all",
+    "home":{
+        "header": {
+            "title": "innovation in Cutting-Edge Technology: Revolutionising the Future",
+            "subTitle": "Empowering Innovation for a Digital Tomorrow"
+        },
+        "cart": {
+            "newUser": "New users per month",
+            "activeUsers": "Active Users",
+            "satisfiedCustomers": "Satisfied Customers"
+        },
+        "features": "features",
+        "discover":{
+            "title": "Discover the Tools that Drive Success",
+            "subTitle": "Unleash innovation and accelerate growth with our dynamic product.",
+            "cart": {
+                "titleCuttingEdge": "Cutting-Edge Innovation",
+                "subTitleCuttingEdge": "Experience groundbreaking technological advancements that push the boundaries of whats possible, revolutionizing industries and transforming the way we live and work.",
+                "titleSeamlessConnectivity": "Seamless Connectivity",
+                "subTitleSeamlessConnectivity": "Stay connected anytime, anywhere with our robust and reliable network infrastructure, ensuring uninterrupted communication and effortless access to the digital world.",
+                "titleIntuitiveUserInterface": "Intuitive User Interface",
+                "subTitleIntuitiveUserInterface": "Enjoy a seamless and intuitive user experience with our sleek and user-friendly interface, designed to simplify complex tasks and enhance productivity."
+            }
+        }
     }
 }
