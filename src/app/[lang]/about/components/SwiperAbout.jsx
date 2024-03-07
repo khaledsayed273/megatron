@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -11,21 +11,18 @@ import Link from 'next/link';
 
 function SwiperAbout({ data }) {
 
-    const [k, setK] = useState("")
+    const [k, setK] = useState(0)
 
-    useEffect(() => {
-        setK(document.querySelector(".swiper-slide-active"))
-    }, [])
 
-    const handleChange = () => {
-        setK(document.querySelector(".swiper-slide-active"))
+    const handleChange = (swiper) => {
+        setK(swiper.activeIndex);
     }
-    
+
     return (
         <>
             <div data-aos="fade-up" data-aos-duration="1000" className='bg-white md:w-3/4 mx-auto p-10 rounded-xl relative mt-10'>
-                <p className='text-sm text-center font-semibold'>{data[k?.id - 1]?.about}</p>
-                <p className='text-center mt-7 font-bold'>{data[k?.id - 1]?.name}</p>
+                <p className='text-sm text-center font-semibold'>{data[k]?.about}</p>
+                <p className='text-center mt-7 font-bold'>{data[k]?.name}</p>
                 <div className='flex justify-center mt-5'>
                     <Link className='mx-2' href={"/"}>
                         <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">

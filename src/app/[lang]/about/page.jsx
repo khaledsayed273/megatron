@@ -24,20 +24,20 @@ async function page({ params: { lang } }) {
       id: 2,
       about: "During a train ride, a moment of inspiration struck  didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
       img: secoundImageAboutUs,
-      name: "mohamed "
+      name: "mohamed"
 
     },
     {
       id: 3,
       about: "During  ride, a moment of inspiration struck  didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
       img: imageCover,
-      name: "khaled "
+      name: "khaled sayed"
     },
     {
       id: 4,
       about: "a train ride, a moment of inspiration struck  didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
       img: firstImageAboutUs,
-      name: "khaled "
+      name: "khaled sa"
     },
   ]
 
