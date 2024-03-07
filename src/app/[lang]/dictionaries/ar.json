@@ -8,16 +8,16 @@
         "projects": "مشاريع",
         "contactUs": "تواصل معنا"
     },
-    "viewAll": "view all",
+    "viewAll": "شاهد المزيد",
     "home":{
         "header": {
-            "title": "innovation in Cutting-Edge Technology: Revolutionising the Future",
-            "subTitle": "Empowering Innovation for a Digital Tomorrow"
+            "title": " احداث تطور تكنولوجي في المستقبل ",
+            "subTitle": "من اجل مستقبل افضل"
         },
         "cart": {
-            "newUser": "New users per month",
-            "activeUsers": "Active Users",
-            "satisfiedCustomers": "Satisfied Customers"
+            "newUser": "مشاريع",
+            "activeUsers": "عملاء",
+            "satisfiedCustomers": "نسبة الرضاء"
         },
         "features": "features",
         "discover":{

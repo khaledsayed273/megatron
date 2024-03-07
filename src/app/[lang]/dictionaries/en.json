@@ -15,8 +15,8 @@
             "subTitle": "Empowering Innovation for a Digital Tomorrow"
         },
         "cart": {
-            "newUser": "New users per month",
-            "activeUsers": "Active Users",
+            "newUser": "projects",
+            "activeUsers": "Client",
             "satisfiedCustomers": "Satisfied Customers"
         },
         "features": "features",
