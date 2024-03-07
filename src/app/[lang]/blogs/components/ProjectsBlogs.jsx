@@ -25,7 +25,7 @@ function ProjectsBlogs({ data , pageNumber }) {
                         </span>
                         <h1 data-aos="fade-up" data-aos-duration="1000" className='mt-7  font-bold lg:text-base '>{item.title}</h1>
                         <p data-aos="fade-up" data-aos-duration="1000" className='mt-5 text-sm overflow-auto max-h-[130px] mb-10'>{item.short_description}</p>
-                        <Link data-aos="fade-up" data-aos-duration="1000" className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-amber-600 text-amber-600 font-bold capitalize' href={`/blogs/${item.slug}`}>read more</Link>
+                        <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-amber-600 text-amber-600 font-bold capitalize' href={`/blogs/${item.slug}`}>read more</Link>
                     
                     </div>
                 ))}

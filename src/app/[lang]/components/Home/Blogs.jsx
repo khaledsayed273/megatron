@@ -44,7 +44,7 @@ function Blogs() {
                         <h1 data-aos="fade-up" data-aos-duration="1000" className='text-white btnOrange my-4 inline-block px-3 py-1 rounded-full capitalize '>{item.head}</h1>
                         <h2 data-aos="fade-up" data-aos-duration="1000" className='capitalize font-semibold text-sm md:text-lg'>{item.title}</h2>
                         <p data-aos="fade-up" data-aos-duration="1000" className='mt-3 font-medium text-sm leading-6'>{item.discreption}</p>
-                        <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-end'>
+                        <div  className='flex justify-end'>
                             <Link className='capitalize font-medium mt-3  border-black/70 border-b-2' href={`/blogs/${item.id}`}>read more</Link>
                         </div>
                     </div>

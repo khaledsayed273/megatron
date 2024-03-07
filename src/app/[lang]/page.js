@@ -9,12 +9,23 @@ import Services from "./components/Home/Services";
 import API from "@/api/API";
 import { getDictionary } from "./dictionaries";
 
+async function getData(lang) {
+  const res = await API.get(`/projects/latest/project`, {
+      headers: { "X-localization": lang }
+  })
+  return res
+}
+
+export const revalidate = +process.env.time; 
+
 
 
 export default async function Home({params}) {
 
 
   const translate = await getDictionary(params.lang)
+
+  const data = await getData()
 
 
   // const data = [
@@ -38,15 +49,14 @@ export default async function Home({params}) {
   //   }
   // ]
 
-  const data = false
 
 
   return (
     <main className="container mx-auto px-5 my-10">
       <Header translate={translate} />
       <Discover translate={translate} />
-      {data && (
-        <Projects data={data} />
+      {data.status && (
+        <Projects data={data.data} pagination={false} />
       )}
       <GlobalCustomers />
       <Blogs />

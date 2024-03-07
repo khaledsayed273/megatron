@@ -30,7 +30,7 @@ async function page({ params: { lang, number } }) {
                 </div>
             </div>
             {data.status && (
-                <Projects data={data.data.data} title={true} numberPage={number}/>
+                <Projects data={data.data.data} title={true} numberPage={number} pagination={true}/>
             )}
         </main>
     )
