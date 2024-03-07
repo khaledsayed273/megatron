@@ -44,7 +44,7 @@ function Footer({ lang, navbarTranslate }) {
             </div>
             <div className='z-50 absolute left-0 top-0 right-0 bottom-0 '>
                 <div className='container mx-auto h-full flex flex-col justify-center'>
-                    <div data-aos-duration="1000" data-aos="fade-right" className='flex items-start flex-col sm:flex-row sm:items-center w-full  sm:mt-28'>
+                    <div  className='flex items-start flex-col sm:flex-row sm:items-center w-full  sm:mt-28'>
                         <div className='flex items-center flex-col sm:flex-row sm:items-center justify-between w-full sm:border-t sm:border-b'>
                             <div className='mx-auto sm:me-auto sm:ms-0'>
                                 <Link aria-label="logoFooter" href={`/`} className='relative inline-block px-2 py-1 mt-1'>
