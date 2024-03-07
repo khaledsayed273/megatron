@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 function CartProjects({ data }) {
 
+
     return (
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16'>
             {data.map((item) => (
@@ -11,7 +12,7 @@ function CartProjects({ data }) {
                     <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[220px] w-full overflow-hidden rounded-xl mb-7'>
                         <Image sizes='(min-width:992px) , 100vw' fill src={item.image} alt={item.name} />
                     </div>
-                    <Link data-aos="fade-up" data-aos-duration="1000" className='bg-yellow-600 text-white p-2 px-3 my-5 rounded-full capitalize' href={`/projects/${item.services[0].slug}`}>
+                    <Link data-aos="fade-up" data-aos-duration="1000" className='bg-yellow-600 text-white p-2 px-3 my-5 rounded-full capitalize' href={`/projects/${item.slug}`}>
                         {item.name}
                     </Link>
 

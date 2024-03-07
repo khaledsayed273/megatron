@@ -3,12 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import NavPaginate from './NavPaginate'
+import Pagination from '@/app/shared/projects/Pagination'
 
-function ProjectsBlogs({ data }) {
+function ProjectsBlogs({ data , pageNumber }) {
     
     const dataMaping = data?.data?.data
     
-
     return (
         <div className='mt-10'>
             <NavPaginate />
@@ -29,6 +29,10 @@ function ProjectsBlogs({ data }) {
                     
                     </div>
                 ))}
+            </div>
+
+            <div data-aos-duration="1000" data-aos="fade-up">
+                <Pagination numberPage={pageNumber} data={dataMaping?.data} itemsPerPage={data?.data?.meta?.per_page} total={data?.data?.meta?.total} />
             </div>
 
         </div>

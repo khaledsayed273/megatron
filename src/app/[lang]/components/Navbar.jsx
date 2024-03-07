@@ -1,8 +1,6 @@
 "use client"
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import logo from "../../../../public/images/logo.png"
 import { useParams, usePathname } from 'next/navigation'
 
 function Navbar({ lang, navbarTranslate }) {
@@ -29,7 +27,7 @@ function Navbar({ lang, navbarTranslate }) {
         {
             id: 4,
             name: navbarTranslate.blogs,
-            path: `/${lang}/blogs`,
+            path: `/${lang}/blogs/page/${params.blogNumber ? params.blogNumber : 1}`,
         },
         // {
         //     id: 5,
@@ -48,7 +46,6 @@ function Navbar({ lang, navbarTranslate }) {
     const handleShow = () => {
         setShow(!show)
     }
-
 
     return (
         <nav  className='container mx-auto my-4 p-2 px-4 fixed top-0 right-0 left-0 z-50'>
