@@ -102,7 +102,7 @@ function Navbar({ lang, navbarTranslate }) {
                             ))}
                         </ul>
                     </div>
-                    <div className='my-2 md:my-1'>
+                    <div className='my-4 md:my-1'>
                         <Link href={"/contactUs"} className='text-white btnOrange px-6 py-1.5 rounded-2xl md:text-lg capitalize font-semibold'>{navbarTranslate.contactUs}</Link>
                     </div>
                 </div>

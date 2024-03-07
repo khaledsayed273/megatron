@@ -40,7 +40,7 @@ function SwiperAbout({ data }) {
                         </svg>
                     </Link>
                 </div>
-                <div className='absolute border-t-transparent border-l-transparent border-b-white border-r-white -bottom-6 border-[30px] w-[70px] h-[70px] rotate-45 left-1/2 right-1/2 -translate-x-1/2 '>
+                <div className='absolute -z-50 border-t-transparent border-l-transparent border-b-white border-r-white -bottom-6 border-[30px] w-[70px] h-[70px] rotate-45 left-1/2 right-1/2 -translate-x-1/2 '>
                 </div>
             </div>
 
