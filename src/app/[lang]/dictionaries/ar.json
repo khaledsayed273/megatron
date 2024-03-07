@@ -15,12 +15,12 @@
             "subTitle": "من اجل مستقبل افضل"
         },
         "cart": {
-            "newUser": "مشاريع",
-            "activeUsers": "عملاء",
+            "newUser": "مشاريعنا",
+            "activeUsers": "عدد العملاء",
             "satisfiedCustomers": "نسبة الرضاء"
         },
-        "features": "features",
-        "discover":{
+        "features": "مميزات",
+        "discover": {
             "title": "Discover the Tools that Drive Success",
             "subTitle": "Unleash innovation and accelerate growth with our dynamic product.",
             "cart": {
