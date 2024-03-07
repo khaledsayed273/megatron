@@ -16,7 +16,7 @@
         },
         "cart": {
             "newUser": "projects",
-            "activeUsers": "N o.Client",
+            "activeUsers": "Number Of Clients",
             "satisfiedCustomers": "Satisfied Customers"
         },
         "features": "features",
