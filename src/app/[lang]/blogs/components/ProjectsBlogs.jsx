@@ -1,18 +1,16 @@
-"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import NavPaginate from './NavPaginate'
 import Pagination from '@/app/shared/projects/Pagination'
 
-function ProjectsBlogs({ data , pageNumber }) {
-    
+function ProjectsBlogs({ data, pageNumber }) {
+
     const dataMaping = data?.data?.data
-    
+
     return (
         <div className='mt-10'>
             <NavPaginate />
-            
 
             <div className='grid md:grid-cols-2 mt-16 lg:grid-cols-3 gap-10 mb-16'>
                 {dataMaping?.map((item) => (
@@ -26,15 +24,14 @@ function ProjectsBlogs({ data , pageNumber }) {
                         <h1 data-aos="fade-up" data-aos-duration="1000" className='mt-7  font-bold lg:text-base '>{item.title}</h1>
                         <p data-aos="fade-up" data-aos-duration="1000" className='mt-5 text-sm overflow-auto max-h-[130px] mb-10'>{item.short_description}</p>
                         <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-amber-600 text-amber-600 font-bold capitalize' href={`/blogs/${item.slug}`}>read more</Link>
-                    
                     </div>
                 ))}
             </div>
-
-            <div data-aos-duration="1000" data-aos="fade-up">
-                <Pagination numberPage={pageNumber} data={dataMaping?.data} itemsPerPage={data?.data?.meta?.per_page} total={data?.data?.meta?.total} />
-            </div>
-
+            {dataMaping.length < data?.data?.meta?.total && (
+                <div data-aos-duration="1000" data-aos="fade-up">
+                    <Pagination numberPage={pageNumber} itemsPerPage={data?.data?.meta?.per_page} total={data?.data?.meta?.total} />
+                </div>
+            )}
         </div>
     )
 }

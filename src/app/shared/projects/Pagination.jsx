@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate';
 
 
-function Pagination({ data, itemsPerPage, total , numberPage  }) {
+function Pagination({ itemsPerPage, total , numberPage  }) {
   const router = useRouter()
   const pageCount = Math.ceil(total / itemsPerPage);
   const handlePageClick = (event) => {
