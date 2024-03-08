@@ -4,6 +4,7 @@ import img from "../../../../../public/images/project-details/7c9a40b581e8bd9728
 import SwiperImages from './components/SwiperImages'
 import Link from 'next/link'
 import API from '@/api/API'
+import Projects from '@/app/shared/projects/Project'
 
 
 async function getData(lang, slug) {
@@ -17,11 +18,23 @@ async function getData(lang, slug) {
     }
 }
 
+async function getRelatedProjects(lang, slug) {
+    try {
+        const res = await API.get(`/projects/latest/project`, {
+            headers: { "X-localization": lang }
+        })
+        return res
+    } catch (e) {
+        console.log(e);
+    }
+}
+
 export const revalidate = +process.env.time;
 
 async function page({ params }) {
 
     const data = await getData(params.lang, params.details)
+    const relatedProjects = await getRelatedProjects(params.lang, params.details)
     const details = await data?.data?.data
 
     return (
@@ -42,31 +55,11 @@ async function page({ params }) {
             )}
 
             <h3 className='text-center text-white text-xl md:text-4xl capitalize'>discover related projects</h3>
-            <p className='text-center text-white mt-5 text-sm'>Experience our expansive network of offices across the world, connecting you to our exceptional services wherever you are.</p>
+            <p className='text-center text-white mt-5 text-sm mb-10'>Experience our expansive network of offices across the world, connecting you to our exceptional services wherever you are.</p>
+            {relatedProjects.status && (
 
-            <div className="grid md:grid-cols-3 gap-10 my-10">
-                <div className='bg-white p-5 mx-auto w-11/12 sm:w-3/4 md:w-full rounded-xl'>
-                    <div className='relative w-full h-[200px] overflow-hidden rounded-xl'>
-                        <Image priority sizes='(min-width:992px) , 100vw' alt='image' fill src={img} />
-                    </div>
-                    <Link href={"/projects/2"} className='capitalize text-amber-600 font-bold mt-5 inline-block'>Vintage web</Link>
-                    <p className='mt-3 font-medium capitalize'>art gallery website.</p>
-                </div>
-                <div className='bg-white p-5 mx-auto w-11/12 sm:w-3/4 md:w-full rounded-xl'>
-                    <div className='relative w-full h-[200px] overflow-hidden rounded-xl'>
-                        <Image  sizes='(min-width:992px) , 100vw' alt='image' fill src={img} />
-                    </div>
-                    <Link href={"/projects/2"} className='capitalize text-amber-600 font-bold mt-5 inline-block'>Vintage web</Link>
-                    <p className='mt-3 font-medium capitalize'>art gallery website.</p>
-                </div>
-                <div className='bg-white p-5 mx-auto w-11/12 sm:w-3/4 md:w-full rounded-xl'>
-                    <div className='relative w-full h-[200px] overflow-hidden rounded-xl'>
-                        <Image sizes='(min-width:992px) , 100vw' alt='image' fill src={img} />
-                    </div>
-                    <Link href={"/projects/2"} className='capitalize text-amber-600 font-bold mt-5 inline-block'>Vintage web</Link>
-                    <p className='mt-3 font-medium capitalize'>art gallery website.</p>
-                </div>
-            </div>
+                <Projects data={relatedProjects?.data} />
+            )}
         </main>
     )
 }

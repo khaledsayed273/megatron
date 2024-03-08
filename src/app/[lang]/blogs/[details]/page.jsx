@@ -29,13 +29,13 @@ async function page({ params }) {
     const data2 = await getData2(params.details, params.lang)
     const dataDetails = await data2.data
 
-    
+
     return (
         dataDetails.status ? (
             <main className='container mx-auto px-3 mt-7'>
                 <div className="grid md:grid-cols-2 gap-10">
                     <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[200px] md:h-[300px] w-full xl:w-5/6 mx-auto rounded-ss-[100px]  md:rounded-ss-[200px] rounded-ee-[100px] md:rounded-ee-[200px] overflow-hidden'>
-                        <Image priority  className='object-none' sizes='(min-width:992px) , 100vw' fill src={dataDetails?.data?.image} alt={dataDetails.data.title}  />
+                        <Image priority className='object-none' sizes='(min-width:992px) , 100vw' fill src={dataDetails?.data?.image} alt={dataDetails.data.title} />
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000">
                         <span data-aos="fade-up" data-aos-duration="1000" className='btnOrange px-5 py-2 text-white capitalize font-bold rounded-full'>{dataDetails.data.category.name}</span>
@@ -45,8 +45,6 @@ async function page({ params }) {
                 </div>
 
                 <div dangerouslySetInnerHTML={{ __html: dataDetails?.data?.description }} data-aos="fade-up" data-aos-duration="1000" className={`lg:w-9/12 border mx-auto mt-10 px-8 md:px-10 pb-8 md:pb-10 pt-0 rounded-2xl ${styles.description}`}>
-
-
 
                 </div>
                 {data.status && (

@@ -55,6 +55,8 @@ export default async function Home({params}) {
     <main className="container mx-auto px-5 my-10">
       <Header translate={translate} />
       <Discover translate={translate} />
+      <h1 data-aos-duration="1000" data-aos="fade-up" className='text-center mb-10 text-white text-xl lg:text-4xl'> From our Latest projects </h1>
+
       {data.status && (
         <Projects data={data.data} pagination={false} />
       )}
