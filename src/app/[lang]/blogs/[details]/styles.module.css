@@ -31,8 +31,12 @@
 
 .description ol {
     list-style-type: inherit;
-
 }
+
+.description ol li{
+    margin: 10px 0;
+}
+
 
 .description>ol {
     margin-left: 15px;
