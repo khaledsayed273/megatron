@@ -17,6 +17,7 @@ function SwiperImages({details}) {
 
     
     const data = details.images
+
     
     
 
@@ -38,9 +39,9 @@ function SwiperImages({details}) {
                 modules={[EffectCoverflow, Pagination]}
                 className="swiperProjectsImages"
             >
-                {data.map((item) => (
-                    <SwiperSlide key={item.id}>
-                        <Image fill priority sizes='(min-width:991px) , 100vw' src={item.url} alt='image' />
+                {data.map((item , index) => (
+                    <SwiperSlide key={index}>
+                        <Image fill priority sizes='(min-width:991px) , 100vw' src={item.url} alt={`image-${index}`} />
                     </SwiperSlide>
                 ))}
 

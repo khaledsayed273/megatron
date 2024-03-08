@@ -24,8 +24,6 @@ async function page({ params }) {
     const data = await getData(params.lang, params.details)
     const details = await data?.data?.data
 
-    console.log(details);
-
     return (
         <main className='container mx-auto px-3 mt-10'>
             {data?.data?.status && (
@@ -49,14 +47,14 @@ async function page({ params }) {
             <div className="grid md:grid-cols-3 gap-10 my-10">
                 <div className='bg-white p-5 mx-auto w-11/12 sm:w-3/4 md:w-full rounded-xl'>
                     <div className='relative w-full h-[200px] overflow-hidden rounded-xl'>
-                        <Image sizes='(min-width:992px) , 100vw' alt='image' fill src={img} />
+                        <Image priority sizes='(min-width:992px) , 100vw' alt='image' fill src={img} />
                     </div>
                     <Link href={"/projects/2"} className='capitalize text-amber-600 font-bold mt-5 inline-block'>Vintage web</Link>
                     <p className='mt-3 font-medium capitalize'>art gallery website.</p>
                 </div>
                 <div className='bg-white p-5 mx-auto w-11/12 sm:w-3/4 md:w-full rounded-xl'>
                     <div className='relative w-full h-[200px] overflow-hidden rounded-xl'>
-                        <Image sizes='(min-width:992px) , 100vw' alt='image' fill src={img} />
+                        <Image  sizes='(min-width:992px) , 100vw' alt='image' fill src={img} />
                     </div>
                     <Link href={"/projects/2"} className='capitalize text-amber-600 font-bold mt-5 inline-block'>Vintage web</Link>
                     <p className='mt-3 font-medium capitalize'>art gallery website.</p>

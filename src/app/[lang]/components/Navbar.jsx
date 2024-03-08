@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useParams, usePathname } from 'next/navigation'
+import dynamic from 'next/dynamic';
+const AosInit = dynamic(() => import('../../shared/AosInit'), { ssr: true });
 
 function Navbar({ lang, navbarTranslate }) {
     const pathName = usePathname()
@@ -49,7 +51,8 @@ function Navbar({ lang, navbarTranslate }) {
 
     return (
         <nav className='container mx-auto my-4 p-2 px-4 fixed top-0 right-0 left-0 z-50'>
-            <div style={{background: "#0F1428"}} className={`border border-gray-400 rounded-2xl w-full ${show ? "pb-3 md:pb-0" : "pb-0"}  px-4 flex flex-col md:flex-row items-center`}>
+            {AosInit()}
+            <div style={{ background: "#0F1428" }} className={`border border-gray-400 rounded-2xl w-full ${show ? "pb-3 md:pb-0" : "pb-0"}  px-4 flex flex-col md:flex-row items-center`}>
                 <div className='flex  justify-between items-center w-full md:w-auto'>
                     <Link aria-label="logoHeader" href={`/${lang}`} className='relative md:px-1 py-1.5'>
                         <svg width="60" height="60" viewBox="0 0 909 609" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,6 +110,7 @@ function Navbar({ lang, navbarTranslate }) {
                     </div>
                 </div>
             </div>
+
         </nav>
     )
 }
