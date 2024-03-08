@@ -3,6 +3,7 @@ import React from 'react'
 import ProjectsBlogs from '../components/ProjectsBlogs'
 import Link from 'next/link'
 import API from '@/api/API'
+import styles from './styles.module.css'
 
 async function getData(lang) {
     const res = await API.get(`/blogs/`, {
@@ -19,23 +20,22 @@ async function getData2(details, lang) {
     return res
 }
 
-export const revalidate = +process.env.time; 
+export const revalidate = +process.env.time;
 
 
 async function page({ params }) {
-    
+
     const data = await getData(params.lang)
     const data2 = await getData2(params.details, params.lang)
     const dataDetails = await data2.data
 
-    console.log(dataDetails);
-
+    
     return (
         dataDetails.status ? (
             <main className='container mx-auto px-3 mt-7'>
                 <div className="grid md:grid-cols-2 gap-10">
                     <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[200px] md:h-[300px] w-full xl:w-5/6 mx-auto rounded-ss-[100px]  md:rounded-ss-[200px] rounded-ee-[100px] md:rounded-ee-[200px] overflow-hidden'>
-                        <Image priority className='object-none' sizes='(min-width:992px) , 100vw' fill src={dataDetails.data.image} alt='img' />
+                        <Image priority  className='object-none' sizes='(min-width:992px) , 100vw' fill src={dataDetails?.data?.image} alt={dataDetails.data.title}  />
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000">
                         <span data-aos="fade-up" data-aos-duration="1000" className='btnOrange px-5 py-2 text-white capitalize font-bold rounded-full'>{dataDetails.data.category.name}</span>
@@ -44,24 +44,9 @@ async function page({ params }) {
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="1000" className='lg:w-9/12 border mx-auto mt-10 p-8 md:p-10 rounded-2xl'>
-                    <span data-aos="fade-up" data-aos-duration="1000" className='uppercase text-amber-600 font-bold'>Maximizing Product Success: Key Strategies for Product Managers</span>
-                    <p data-aos="fade-up" data-aos-duration="1000" className='text-xs md:text-sm mt-5 text-white'>To excel in the role of Product Manager, the following education and experience are typically required:</p>
-                    <ol data-aos="fade-up" data-aos-duration="1000" className='list-disc md:ms-5 mt-3 text-xs md:text-sm'>
-                        <li className='text-white mb-1'>Bachelor&apos;s degree in Business Administration, Computer Science, Engineering, or a related field (or equivalent work experience)</li>
-                        <li className='text-white mb-1'>Proven experience of at least 3 years in product management or related roles, preferably in the technology industry</li>
-                        <li className='text-white mb-1'>Experience with Agile development methodologies and product lifecycle manageme</li>
-                    </ol>
+                <div dangerouslySetInnerHTML={{ __html: dataDetails?.data?.description }} data-aos="fade-up" data-aos-duration="1000" className={`lg:w-9/12 border mx-auto mt-10 p-8 md:p-10 rounded-2xl ${styles.description}`}>
 
-                    <span data-aos="fade-up" data-aos-duration="1000" className='capitalize mt-7 inline-block text-amber-600 font-semibold'>Develop a Strategic Product Roadmap: Guiding Your Product&apos;s Journey</span>
-                    <p data-aos="fade-up" data-aos-duration="1000" className='text-xs md:text-sm mt-5 text-white'>As a Product Manager, you should possess the following technical skills:</p>
-                    <ol data-aos="fade-up" data-aos-duration="1000" className='list-disc md:ms-5 mt-3 text-xs md:text-sm'>
-                        <li className='text-white mb-1'>Strong understanding of product development processes and principles</li>
-                        <li className='text-white mb-1'>Proficiency in using project management tools such as JIRA or Asana</li>
-                        <li className='text-white mb-1'>Familiarity with prototyping tools like Sketch, Adobe XD, or InVision</li>
-                        <li className='text-white mb-1'>Knowledge of data analysis and visualization tools (e.g., Excel, Tableau, or Google Analytics)</li>
-                        <li className='text-white mb-1'>Familiarity with software development languages and frameworks (e.g., HTML, CSS, JavaScript)</li>
-                    </ol>
+
 
                 </div>
                 {data.status && (
@@ -81,9 +66,9 @@ async function page({ params }) {
 
             </main>
         ) : (
-        <div>
-            <h1 className='text-center text-orange-600 capitalize font-bold my-20 text-xl md:text-3xl'>sorry something went wrong </h1>
-        </div>
+            <div>
+                <h1 className='text-center text-orange-600 capitalize font-bold my-20 text-xl md:text-3xl'>sorry something went wrong </h1>
+            </div>
         )
     )
 }
