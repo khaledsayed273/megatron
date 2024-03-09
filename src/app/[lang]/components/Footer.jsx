@@ -5,7 +5,7 @@ import Link from 'next/link'
 import API from '@/api/API'
 
 
-function Footer({  data, lang, navbarTranslate }) {
+function Footer({ baseUrl, lang, navbarTranslate }) {
     const nav = [
         {
             id: 1,
@@ -39,12 +39,11 @@ function Footer({  data, lang, navbarTranslate }) {
         }
     ]
 
-
     const [social , setSocial] = useState([])
 
     const getData = async () => {
         try {
-            const res = await API.get(`https://megatron.mixtesting.online/api/v1/settings`)
+            const res = await API.get(`${baseUrl}/settings`)
             setSocial(res.data)
         } catch (e) {
             console.log(e);
@@ -54,10 +53,6 @@ function Footer({  data, lang, navbarTranslate }) {
     useEffect(() => {
         getData()
     },[])
-
-
-    console.log(social);
-
 
 
     return (
