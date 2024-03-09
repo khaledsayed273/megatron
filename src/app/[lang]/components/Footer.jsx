@@ -1,9 +1,11 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import background from "../../../../public/images/footer.jpg"
 import Link from 'next/link'
+import API from '@/api/API'
 
 
-function Footer({ social , data, lang, navbarTranslate }) {
+function Footer({  data, lang, navbarTranslate }) {
     const nav = [
         {
             id: 1,
@@ -36,6 +38,26 @@ function Footer({ social , data, lang, navbarTranslate }) {
             path: `/${lang}/projects/page/all/1`,
         }
     ]
+
+
+    const [social , setSocial] = useState([])
+
+    const getData = async () => {
+        try {
+            const res = await API.get(`https://megatron.mixtesting.online/api/v1/settings`)
+            setSocial(res.data)
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    useEffect(() => {
+        getData()
+    },[])
+
+
+    console.log(social);
+
 
 
     return (
