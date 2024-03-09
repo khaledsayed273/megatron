@@ -1,15 +1,15 @@
 "use client"
 import { useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ReactPaginate from 'react-paginate';
 
 
-function Pagination({ itemsPerPage, total , numberPage  }) {
+function Pagination({ itemsPerPage, total, numberPage }) {
   const router = useRouter()
   const pageCount = Math.ceil(total / itemsPerPage);
   const handlePageClick = (event) => {
     const page = event.selected + 1
-    router.push(`${page }`)
+    router.push(`${page}`)
   };
 
 
@@ -24,7 +24,7 @@ function Pagination({ itemsPerPage, total , numberPage  }) {
         pageRangeDisplayed={2}
         pageCount={pageCount}
         previousLabel="< "
-        forcePage={numberPage -1}
+        forcePage={numberPage - 1}
         renderOnZeroPageCount={null}
       />
     </>

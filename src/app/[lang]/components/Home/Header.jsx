@@ -42,9 +42,9 @@ function Header({ translate }) {
 
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
+            {/* <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
                 <span className='btnOrange capitalize rounded-full flex mx-auto text-white font-semibold py-2 px-8'>{translate.home.features}</span>
-            </div>
+            </div> */}
         </header>
     )
 }

@@ -28,29 +28,6 @@ export default async function Home({params}) {
   const data = await getData()
 
 
-  // const data = [
-  //   {
-  //     id: 1,
-  //     title: "vintage platform",
-  //     about: "The Future of AI in Healthcare: Transforming Patient Care",
-  //     img: img
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "shahin application",
-  //     about: "The Future of AI in Healthcare: Transforming Patient Care",
-  //     img: img2
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "megatron web",
-  //     about: "The Future of AI in Healthcare: Transforming Patient Care",
-  //     img: img3
-  //   }
-  // ]
-
-
-
   return (
     <main className="container mx-auto px-5 my-10">
       <Header translate={translate} />
@@ -61,8 +38,8 @@ export default async function Home({params}) {
         <Projects data={data.data} pagination={false} />
       )}
       <GlobalCustomers />
-      <Blogs />
       <Services />
+      <Blogs />
     </main>
   );
 }

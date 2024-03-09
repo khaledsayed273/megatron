@@ -14,22 +14,26 @@ function Navbar({ lang, navbarTranslate }) {
         {
             id: 1,
             name: navbarTranslate.home,
+            active: `/${lang}`,
             path: `/${lang}`,
         },
         {
             id: 2,
-            name: navbarTranslate.service,
-            path: `/${lang}/service`,
+            name: navbarTranslate.services,
+            active: `/${lang}/services`,
+            path: `/${lang}/services`,
         },
         {
             id: 3,
             name: navbarTranslate.about,
+            active: `/${lang}/about`,
             path: `/${lang}/about`,
         },
         {
             id: 4,
             name: navbarTranslate.blogs,
-            path: `/${lang}/blogs/page/${params.blogNumber ? params.blogNumber : 1}`,
+            active: `/${lang}/blogs/page/${params.filterBlogs}/${params.blogNumber}`,
+            path: `/${lang}/blogs/page/all/1`,
         },
         // {
         //     id: 5,
@@ -39,7 +43,8 @@ function Navbar({ lang, navbarTranslate }) {
         {
             id: 6,
             name: navbarTranslate.projects,
-            path: `/${lang}/projects/page/${params.number ? params.number : 1}`,
+            active: `/${lang}/projects/page/${params.filter}/${params.number}`,
+            path: `/${lang}/projects/page/all/1`,
         }
     ]
 
@@ -85,7 +90,6 @@ function Navbar({ lang, navbarTranslate }) {
                             <path d="M174 116.733C174 119 174.933 120.867 176.133 121.4C177.467 121.933 178 123.133 177.467 125.133C177.067 126.867 177.067 127.4 177.467 126.6C178 125.267 178.667 125.267 180.133 126.733C181.2 127.8 182 129.133 182 129.8C182 130.333 183.467 132.467 185.2 134.333C187.067 136.333 190.267 141.4 192.667 145.667C194.933 149.933 197.2 153.8 197.733 154.2C198.4 154.6 200.8 158.2 203.2 162.2C205.733 166.2 208 169.8 208.533 170.2C209.733 171.133 216.667 181.933 216.667 182.867C216.667 183.267 218.133 185.533 220.133 187.933C222 190.333 223.467 192.6 223.333 193.267C223.2 196.067 240.8 208.867 244.933 208.867C245.467 208.867 246 194.067 246 175.8V142.867L239.6 140.333C236.133 139 222.267 133 208.667 127.267C195.067 121.4 181.733 115.8 179.067 114.733L174 113V116.733Z" fill="#D25100" />
                             <path d="M246 205.133C246 202.867 245.067 201 243.867 200.467C242.533 199.933 242 198.733 242.533 196.733C242.933 195 242.933 194.467 242.533 195.267C242 196.6 241.333 196.6 239.867 195.133C238.8 194.067 238 192.733 238 192.067C238 191.533 236.533 189.4 234.8 187.533C232.933 185.533 229.733 180.467 227.333 176.2C225.067 171.933 222.8 168.067 222.267 167.667C221.6 167.267 219.2 163.667 216.8 159.667C214.267 155.667 212 152.067 211.467 151.667C210.267 150.733 203.333 139.933 203.333 139C203.333 138.6 201.867 136.333 199.867 133.933C198 131.533 196.533 129.267 196.667 128.6C196.8 125.8 179.2 113 175.067 113C174.533 113 174 127.8 174 146.067V179L180.4 181.533C183.867 182.867 197.733 188.867 211.333 194.6C224.933 200.467 238.267 206.067 240.933 207.133L246 208.867V205.133Z" fill="#F16A08" />
                         </svg>
-
                     </Link>
                     <div className='block md:hidden'>
                         <button onClick={handleShow} className='border p-1'>
@@ -99,7 +103,7 @@ function Navbar({ lang, navbarTranslate }) {
                     <div className='flex justify-center grow'>
                         <ul className='flex flex-col md:flex-row mt-5 md:mt-0 items-center'>
                             {nav.map((item) => (
-                                <li className={`mx-3 my-3 md:my-0 font-semibold ${pathName === item.path || pathName === `${item.path}/${params.details}` ? "text-orange-600" : "text-white"}  capitalize`} key={item.id}>
+                                <li className={`mx-3 my-3 md:my-0 font-semibold ${pathName === item.active || pathName === `${item.active}/${params.details}` ? "text-orange-600" : "text-white"}  capitalize`} key={item.id}>
                                     <Link onClick={() => setShow(false)} href={`${item.path}`}>{item.name}</Link>
                                 </li>
                             ))}

@@ -1,14 +1,29 @@
 import Image from 'next/image'
 import React from 'react'
-import img1 from "../../../../../../public/images/single-service/1.jpg"
-import ProjectsBlogs from '../../components/ProjectsBlogs'
+import img1 from "../../../../../../../public/images/single-service/1.jpg"
+import ProjectsBlogs from '../../../components/ProjectsBlogs'
 import API from '@/api/API'
 
-async function getData(lang, pageNumber) {
-    const res = await API.get(`/blogs?page=${pageNumber}`, {
-        headers: { "X-localization": lang }
-    })
-    return res
+async function getData(lang, filterBlogs, pageNumber) {
+    try {
+        const res = await API.get(`/blogs?filter[category_id]=${filterBlogs}&page=${pageNumber}`, {
+            headers: { "X-localization": lang }
+        })
+        return res
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+async function getCategory(lang,) {
+    try {
+        const res = await API.get(`/categories`, {
+            headers: { "X-localization": lang }
+        })
+        return res.data
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 
@@ -17,7 +32,8 @@ export const revalidate = +process.env.time;
 async function page({ params }) {
 
 
-    const data = await getData(params.lang, params.blogNumber)
+    const data = await getData(params.lang, params.filterBlogs, params.blogNumber)
+    const category = await getCategory(params.lang)
 
     return (
         <main className='container mx-auto px-3'>
@@ -30,14 +46,13 @@ async function page({ params }) {
                             <Image priority className='object-none' sizes='(min-width:992px) , 100vw' fill src={img1} alt='img' />
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1000">
-                            <span data-aos="fade-up" data-aos-duration="1000" className='btnOrange px-5 py-2 text-white capitalize font-bold rounded-full'>healthcare</span>
                             <h3 data-aos="fade-up" data-aos-duration="1000" className='mt-10 text-xl lg:text-3xl text-white'>The Benefits of Email Marketing for Small Businesses</h3>
                             <p data-aos="fade-up" data-aos-duration="1000" className='text-white mt-10 text-xs md:text-sm'>In this article, we discuss how email marketing can help small businesses reach their target audience, increase brand awareness, and drive sales.</p>
                         </div>
                     </div>
 
                     {data.status && (
-                        <ProjectsBlogs data={data.data} pageNumber={params?.blogNumber} />
+                        <ProjectsBlogs category={category} data={data.data} pageNumber={params?.blogNumber} />
                     )}
                 </>
             ) : (

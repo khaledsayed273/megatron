@@ -9,7 +9,7 @@ function Projects({ data,  numberPage, pagination }) {
             <CartProjects data={data.data} />
             {pagination && data?.data.length < data?.meta?.total && (
                 <div data-aos-duration="1000" data-aos="fade-up">
-                    <Pagination numberPage={numberPage} data={data.data} itemsPerPage={data?.meta?.per_page} total={data?.meta?.total} />
+                    <Pagination  numberPage={numberPage} data={data.data} itemsPerPage={data?.meta?.per_page} total={data?.meta?.total} />
                 </div>
             )}
         </div>

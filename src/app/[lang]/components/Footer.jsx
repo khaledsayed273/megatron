@@ -13,8 +13,8 @@ function Footer({ lang, navbarTranslate }) {
         },
         {
             id: 2,
-            name: navbarTranslate.service,
-            path: `/${lang}/service`,
+            name: navbarTranslate.services,
+            path: `/${lang}/services`,
         },
         {
             id: 3,
@@ -24,7 +24,7 @@ function Footer({ lang, navbarTranslate }) {
         {
             id: 4,
             name: navbarTranslate.blogs,
-            path: `/${lang}/blogs`,
+            path: `/${lang}/blogs/page/all/1`,
         },
         // {
         //     id: 5,
@@ -34,7 +34,7 @@ function Footer({ lang, navbarTranslate }) {
         {
             id: 6,
             name: navbarTranslate.projects,
-            path: `/${lang}/projects`,
+            path: `/${lang}/projects/page/all/1`,
         }
     ]
 

@@ -1,6 +1,22 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import img from "../../../../public/images/EmailBackground.jpg"
-function EmailComponent() {
+import API from '@/api/API';
+import { toast } from 'sonner';
+function EmailComponent({baseUrl}) {
+
+    const [email , setEmail] = useState("")
+
+    const handleSend = async () => {
+        try{
+            const res = await API.post(`${baseUrl}/contact/email` , {email})
+            toast.success(res?.data?.message)
+            setEmail("")
+        }catch(e){
+            toast.error(e?.response?.data?.message)
+        }
+    }
+
     return (
         <div data-aos="fade-up" data-aos-duration="1000" className='container mx-auto p-5 my-7'>
             <div style={{ backgroundImage: `url(${img.src})` }} className='h-[400px] relative rounded-2xl p-5 bg-cover bg-center'>
@@ -22,8 +38,8 @@ function EmailComponent() {
                     </div>
 
                     <div className='flex items-center flex-col md:flex-row mt-7  md:bg-white md:rounded-xl'>
-                        <input placeholder='Enter your email' className='py-1.5 px-3 rounded-xl md:rounded-e-none md:rounded-s-xl outline-none border-0' type="email" name="email" />
-                        <button className='btnOrange px-6 py-1.5 mt-3 md:mt-0 text-white rounded-xl font-semibold capitalize'>Subscribe to newsletter</button>
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter your email' className='py-1.5 px-3 rounded-xl md:rounded-e-none md:rounded-s-xl outline-none border-0' type="email" name="email" />
+                        <button onClick={() => handleSend()} className='btnOrange px-6 py-1.5 mt-3 md:mt-0 text-white rounded-xl font-semibold capitalize'>Subscribe to newsletter</button>
                     </div>
                 </div>
                 <div className="bg-black opacity-75 absolute left-0 top-0 w-full h-full rounded-2xl">

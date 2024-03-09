@@ -18,7 +18,7 @@ async function getData(lang, slug) {
     }
 }
 
-async function getRelatedProjects(lang, slug) {
+async function getRelatedProjects(lang) {
     try {
         const res = await API.get(`/projects/latest/project`, {
             headers: { "X-localization": lang }
@@ -53,7 +53,11 @@ async function page({ params }) {
                     <SwiperImages details={details} />
                 </>
             )}
-
+            {details.link && (
+                <div className='flex justify-center mb-16 mt-5'>
+                    <Link className=' text-white bg-amber-600 py-1.5 px-6 rounded-xl font-bold capitalize' target='_blank' href={`${details.link}`}>visit website</Link>
+                </div>
+            )}
             <h3 className='text-center text-white text-xl md:text-4xl capitalize'>discover related projects</h3>
             <p className='text-center text-white mt-5 text-sm mb-10'>Experience our expansive network of offices across the world, connecting you to our exceptional services wherever you are.</p>
             {relatedProjects.status && (

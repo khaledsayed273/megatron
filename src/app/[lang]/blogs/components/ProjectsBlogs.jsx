@@ -4,13 +4,16 @@ import React from 'react'
 import NavPaginate from './NavPaginate'
 import Pagination from '@/app/shared/projects/Pagination'
 
-function ProjectsBlogs({ data, pageNumber }) {
+function ProjectsBlogs({ category, data, pageNumber }) {
 
     const dataMaping = data?.data?.data
 
     return (
         <div className='mt-10'>
-            <NavPaginate />
+            {category && (
+
+                <NavPaginate category={category} />
+            )}
 
             <div className='grid md:grid-cols-2 mt-16 lg:grid-cols-3 gap-10 mb-16'>
                 {dataMaping?.map((item) => (
@@ -27,7 +30,7 @@ function ProjectsBlogs({ data, pageNumber }) {
                     </div>
                 ))}
             </div>
-            {dataMaping.length < data?.data?.meta?.total && (
+            {dataMaping?.length < data?.data?.meta?.total && (
                 <div data-aos-duration="1000" data-aos="fade-up">
                     <Pagination numberPage={pageNumber} itemsPerPage={data?.data?.meta?.per_page} total={data?.data?.meta?.total} />
                 </div>

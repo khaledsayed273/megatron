@@ -33,7 +33,7 @@ async function page({ params: { lang } }) {
                                 <h4 className='mt-3 font-semibold capitalize'  >{item.name}</h4>
                             </div>
                             <p className='mt-3 text-xs md:text-sm text-black/85'>{item.short_descrption}</p>
-                            <Link className='ms-auto flex justify-end font-semibold capitalize mt-5 text-amber-600 underline decoration-amber-600' href={`service/${item.slug}`}>read more</Link>
+                            {/* <Link className='ms-auto flex justify-end font-semibold capitalize mt-5 text-amber-600 underline decoration-amber-600' href={`service/${item.slug}`}>read more</Link> */}
                         </div>
                     ))}
                 </div>

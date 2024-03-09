@@ -10,7 +10,6 @@ import SwiperAbout from './components/SwiperAbout'
 
 async function page({ params: { lang } }) {
   const language = await getDictionary(lang)
-  console.log(language);
 
 
   const data = [
@@ -18,13 +17,13 @@ async function page({ params: { lang } }) {
       id: 1,
       about: "During a train ride, a moment of inspiration struck Vasily. He wished for a convenient study tool on his phone to help him prepare for the LSAT. However, such an app didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
       img: firstImageAboutUs,
-      name: "aya alaa"
+      name: "Aya alaa"
     },
     {
       id: 2,
       about: "During a train ride, a moment of inspiration struck  didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
       img: secoundImageAboutUs,
-      name: "mohamed"
+      name: "Mohamed abdElmaksoud"
 
     },
     {
@@ -33,12 +32,7 @@ async function page({ params: { lang } }) {
       img: imageCover,
       name: "khaled sayed"
     },
-    {
-      id: 4,
-      about: "a train ride, a moment of inspiration struck  didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
-      img: firstImageAboutUs,
-      name: "khaled sa"
-    },
+    
   ]
 
   const data2 = [

@@ -21,9 +21,9 @@ function GlobalCustomers() {
 
     return (
         <div data-aos-duration="1000" data-aos="fade-up">
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
                 <span className='mx-auto flex my-10 capitalize text-white font-semibold btnOrange px-6 py-2 rounded-full'>testimonials</span>
-            </div>
+            </div> */}
             <h1 className='text-center  capitalize text-lg lg:text-4xl text-amber-600'>1M+ global customers</h1>
             <div className='my-10 bg-white p-6 md:p-8 lg:p-10 rounded-3xl'>
 
