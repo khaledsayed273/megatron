@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "dashboard.megatron-soft.com",
+        hostname: "megatron.mixtesting.online",
         port: "",
         pathname: "/**",
       },
