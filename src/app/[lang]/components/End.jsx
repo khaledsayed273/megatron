@@ -11,7 +11,7 @@ async function End({ lang }) {
         <>
             <Toaster richColors expand={true} position="top-right" />
             <EmailComponent baseUrl={baseUrl} />
-            <Footer lang={lang} navbarTranslate={navbarTranslate.navBar} />
+            <Footer baseUrl={baseUrl} lang={lang} navbarTranslate={navbarTranslate.navBar} />
         </>
     )
 }
