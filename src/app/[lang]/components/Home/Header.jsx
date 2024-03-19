@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import headerImg from "../../../../../public/images/header-img.jpeg"
+import homeHeader from "../../../../../public/images/homeHeader.png"
 import Link from 'next/link'
 
 function Header({ translate }) {
@@ -8,7 +8,7 @@ function Header({ translate }) {
         <header data-aos-duration="1000" data-aos="fade-up">
             {/* image */}
             <div className='relative w-full h-[388px] rounded-full overflow-hidden'>
-                <Image priority src={headerImg} fill alt='HeaderImage' sizes="(max-width: 768px) 100vw " />
+                <Image priority src={homeHeader} fill alt='HeaderImage' sizes="(max-width: 768px) 100vw " />
             </div>
             {/* center */}
             <div data-aos-duration="1000" data-aos="fade-up">

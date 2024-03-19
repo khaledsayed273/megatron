@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import img from "../../../../../public/images/header-img.jpeg"
+import discoverImage from "../../../../../public/images/discoverImage.png"
 import Link from 'next/link'
 
 function Discover({ translate }) {
@@ -65,7 +65,7 @@ function Discover({ translate }) {
                         </div>
                     </div>
                     <div data-aos-duration="1000" data-aos="fade-up" className='relative overflow-hidden mx-auto lg:ms-auto lg:mx-0 order-1 lg:order-2  rounded-3xl h-[220px] w-full sm:w-3/4 lg:h-[420px] lg:w-[440px] xl:h-[447px] xl:w-[600px]'>
-                        <Image priority sizes="(max-width: 768px) 100vw " src={img} fill alt='img' />
+                        <Image priority sizes="(max-width: 768px) 100vw " src={discoverImage} fill alt='img' />
                     </div>
                 </div>
             </div>

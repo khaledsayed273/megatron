@@ -34,7 +34,7 @@ export default async function Home({params}) {
       {data.status && (
         <Projects data={data.data} pagination={false} />
       )}
-      <GlobalCustomers />
+      {/* <GlobalCustomers /> */}
       <Services />
       <Blogs />
     </main>
