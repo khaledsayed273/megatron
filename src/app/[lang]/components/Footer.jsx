@@ -6,6 +6,7 @@ import API from '@/api/API'
 
 
 function Footer({ baseUrl, lang, navbarTranslate }) {
+    
     const nav = [
         {
             id: 1,
@@ -56,7 +57,7 @@ function Footer({ baseUrl, lang, navbarTranslate }) {
 
 
     return (
-        <div data-aos="fade-up" style={{ backgroundImage: `url(${background.src})` }} className='relative bg-cover bg-center px-5 mt-20 md:px-10 w-full h-[500px] sm:h-[300px]'>
+        <div style={{ backgroundImage: `url(${background.src})` }} className='relative bg-cover bg-center px-5 mt-20 md:px-10 w-full h-[500px] sm:h-[300px]'>
             <div className='absolute w-full h-full left-0 top-0 bg-black opacity-80'>
             </div>
             <div className='z-50 absolute left-0 top-0 right-0 bottom-0 '>
