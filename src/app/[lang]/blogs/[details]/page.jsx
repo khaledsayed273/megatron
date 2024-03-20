@@ -38,7 +38,7 @@ async function page({ params }) {
                     </div>
                 </div>
 
-                <div dangerouslySetInnerHTML={{ __html: dataDetails?.data?.description }} data-aos="fade-up" data-aos-duration="1000" className={`lg:w-9/12 border mx-auto mt-10 px-8 md:px-10 pb-8 md:pb-10 pt-0 rounded-2xl ${styles.description}`}>
+                <div dangerouslySetInnerHTML={{ __html: dataDetails?.data?.description }} data-aos="fade-up" data-aos-duration="1000" className={`lg:w-9/12 border mx-auto mt-10 px-8 md:px-10 pb-8 md:pb-10 pt-5 rounded-2xl ${styles.description}`}>
 
                 </div>
                 {details.status && (
