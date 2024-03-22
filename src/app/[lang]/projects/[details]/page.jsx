@@ -5,6 +5,7 @@ import SwiperImages from './components/SwiperImages'
 import Link from 'next/link'
 import API from '@/api/API'
 import Projects from '@/app/shared/projects/Project'
+import { notFound } from 'next/navigation'
 
 
 async function getData(lang, slug) {
@@ -14,7 +15,7 @@ async function getData(lang, slug) {
         })
         return res
     } catch (e) {
-        console.log(e);
+        notFound()
     }
 }
 
@@ -51,12 +52,11 @@ async function page({ params }) {
 
                     </div>
                     <SwiperImages details={details} />
+                    <div className='flex justify-center mb-16 mt-5'>
+                        <Link className=' text-white bg-amber-600 py-1.5 px-6 rounded-xl font-bold capitalize' target='_blank' href={`${details.link}`}>visit website</Link>
+                    </div>
                 </>
-            )}
-            {details.link && (
-                <div className='flex justify-center mb-16 mt-5'>
-                    <Link className=' text-white bg-amber-600 py-1.5 px-6 rounded-xl font-bold capitalize' target='_blank' href={`${details.link}`}>visit website</Link>
-                </div>
+
             )}
             <h3 className='text-center text-white text-xl md:text-4xl capitalize'>discover related projects</h3>
             <p className='text-center text-white mt-5 text-sm mb-10'>Experience our expansive network of offices across the world, connecting you to our exceptional services wherever you are.</p>

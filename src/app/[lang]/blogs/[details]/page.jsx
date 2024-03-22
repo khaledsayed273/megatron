@@ -5,14 +5,21 @@ import Link from 'next/link'
 import API from '@/api/API'
 import styles from './styles.module.css'
 import Related from './components/Related'
+import { notFound } from 'next/navigation'
 
 
 async function getDetails(details, lang) {
-    const res = await API.get(`/blogs/${details}`, {
-        headers: { "X-localization": lang }
-    })
+    try{
 
-    return res
+        const res = await API.get(`/blogs/${details}`, {
+            headers: { "X-localization": lang }
+        })
+        
+        return res
+    }catch(e){
+        notFound()
+
+    }
 }
 
 export const revalidate = +process.env.time;
