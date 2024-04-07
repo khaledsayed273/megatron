@@ -8,7 +8,7 @@ function Header({ translate }) {
         <header data-aos-duration="1000" data-aos="fade-up">
             {/* image */}
             <div className='relative w-full h-[388px] rounded-full overflow-hidden border-orange border'>
-                <Image priority src={homeHeader} fill alt='HeaderImage' sizes="(max-width: 768px) 100vw " />
+                <Image priority src={homeHeader} fill alt='HeaderImage' sizes="(max-width: 992px), 100vw " />
             </div>
             {/* center */}
             <div data-aos-duration="1000" data-aos="fade-up">

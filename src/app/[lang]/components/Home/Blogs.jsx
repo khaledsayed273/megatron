@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import img from "../../../../../public/images/imageBlogs.jpg"
 import API from '@/api/API'
 
 async function getLatestBlogs(lang,) {
@@ -33,7 +32,7 @@ async function Blogs() {
                     latestBlog?.data?.map((item) => (
                         <div data-aos="fade-up" data-aos-duration="1000" key={item.id} className='bg-white relative p-5 rounded-xl mx-auto w-11/12 sm:w-2/3 md:w-full'>
                             <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[230px] w-full overflow-hidden rounded-xl mb-7'>
-                                <Image sizes='(min-width:992px) , 100vw' fill src={item.image} alt={item.title} />
+                                <Image sizes='(max-width:992px) , 100vw' fill src={item.image} alt={item.title} />
                             </div>
                             <span data-aos="fade-up" data-aos-duration="1000" className='bg-yellow-600 capitalize text-white p-2 px-3 my-5 rounded-full' >
                                 {item.category.name}

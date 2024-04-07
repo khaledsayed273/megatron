@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import background from "../../../../public/images/footer.jpg"
 import Link from 'next/link'
 import API from '@/api/API'
+import Image from 'next/image'
 
 
 function Footer({ baseUrl, lang, navbarTranslate }) {
@@ -57,7 +58,8 @@ function Footer({ baseUrl, lang, navbarTranslate }) {
 
 
     return (
-        <div style={{ backgroundImage: `url(${background.src})` }} className='relative bg-cover bg-center px-5 mt-20 md:px-10 w-full h-[500px] sm:h-[300px]'>
+        <div  className='relative px-5 mt-20 md:px-10 w-full h-[500px] sm:h-[300px]'>
+        <Image style={{objectFit: "cover"}} placeholder='blur' alt='imageBg' src={background} fill/>
             <div className='absolute w-full h-full left-0 top-0 bg-black opacity-80'>
             </div>
             <div className='z-50 absolute left-0 top-0 right-0 bottom-0 '>
