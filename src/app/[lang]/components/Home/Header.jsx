@@ -7,7 +7,7 @@ function Header({ translate }) {
     return (
         <header data-aos-duration="1000" data-aos="fade-up">
             {/* image */}
-            <div className='relative w-full h-[388px] rounded-full overflow-hidden'>
+            <div className='relative w-full h-[388px] rounded-full overflow-hidden border-orange border'>
                 <Image priority src={homeHeader} fill alt='HeaderImage' sizes="(max-width: 768px) 100vw " />
             </div>
             {/* center */}

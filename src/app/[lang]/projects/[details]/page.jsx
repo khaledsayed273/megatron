@@ -1,13 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import img from "../../../../../public/images/project-details/7c9a40b581e8bd972897e8352321fe2f.jpg"
 import SwiperImages from './components/SwiperImages'
 import Link from 'next/link'
 import API from '@/api/API'
 import Projects from '@/app/shared/projects/Project'
 import { notFound } from 'next/navigation'
-
-
 async function getData(lang, slug) {
     try {
         const res = await API.get(`/projects/${slug}`, {
@@ -43,7 +40,7 @@ async function page({ params }) {
             {data?.data?.status && (
                 <>
                     <div className='relative w-full h-[220px] md:h-[300px] xl:h-[370px] overflow-hidden rounded-full'>
-                        <Image priority sizes='(min-width:992px) , 100vw' fill src={details.image} alt='img' />
+                        <Image priority sizes='(max-width:992px) , 100vw' fill src={details.image} alt='img' />
                         <div className='absolute bg-white bottom-0 left-1/2 -translate-x-1/2  px-6 py-2 font-bold md:text-xl rounded-t-xl text-orange-500'>
                             {details.name}
                         </div>

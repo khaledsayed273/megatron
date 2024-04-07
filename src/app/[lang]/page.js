@@ -1,7 +1,6 @@
 import Header from "./components/Home/Header";
 import Discover from "./components/Home/Discover";
 import Projects from "../shared/projects/Project";
-import GlobalCustomers from "./components/Home/GlobalCustomers";
 import Blogs from "./components/Home/Blogs";
 import Services from "./components/Home/Services";
 import API from "@/api/API";
@@ -15,7 +14,6 @@ async function getData(lang) {
 }
 
 export const revalidate = +process.env.time; 
-
 
 export default async function Home({params}) {
 

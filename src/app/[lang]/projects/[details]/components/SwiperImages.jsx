@@ -5,11 +5,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
-import img1 from "../../../../../../public/images/single-service/1.jpg"
-import img2 from "../../../../../../public/images/contact-us/1.jpg"
-import img3 from "../../../../../../public/images/contact-us/2.jpg"
-import img4 from "../../../../../../public/images/contact-us/3.jpg"
-import img5 from "../../../../../../public/images/contact-us/4.jpg"
+
 import Image from 'next/image';
 
 

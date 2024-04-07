@@ -180,7 +180,8 @@ async function page({ params: { lang } }) {
       </div>
 
       <SwiperAbout data={data} />
-      <div className='my-10'>
+
+      {/* <div className='my-10'>
         <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
           <span className='text-white btnOrange rounded-full px-6 py-1 capitalize font-bold mb-7'>our offices</span>
         </div>
@@ -198,7 +199,9 @@ async function page({ params: { lang } }) {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
+
+
       <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center items-center mt-5 mb-10'>
         <Link className='px-4 sm:px-6 py-1.5 text-white rounded-full font-bold capitalize btnOrange' href={"/contactUs"}>contact us</Link>
       </div>
