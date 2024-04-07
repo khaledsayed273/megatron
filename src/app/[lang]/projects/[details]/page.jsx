@@ -39,7 +39,7 @@ async function page({ params }) {
         <main className='container mx-auto px-3 mt-10'>
             {data?.data?.status && (
                 <>
-                    <div className='relative w-full h-[220px] md:h-[300px] xl:h-[370px] overflow-hidden rounded-full'>
+                    <div className='relative w-full h-[220px] md:h-[300px] xl:h-[370px] overflow-hidden rounded-full border border-orange'>
                         <Image priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw" fill src={details.image} alt='img' />
                         <div className='absolute bg-white bottom-0 left-1/2 -translate-x-1/2  px-6 py-2 font-bold md:text-xl rounded-t-xl text-orange-500'>
                             {details.name}

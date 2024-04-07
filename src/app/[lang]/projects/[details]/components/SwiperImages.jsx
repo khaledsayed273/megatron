@@ -11,11 +11,7 @@ import Image from 'next/image';
 
 function SwiperImages({details}) {
 
-    
     const data = details.images
-
-    
-    
 
     return (
         <div className='my-16'>
