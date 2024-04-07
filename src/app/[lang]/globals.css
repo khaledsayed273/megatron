@@ -9,9 +9,12 @@ body {
 main.container{
     margin-top: 150px !important;
 }
+/* #824A08 */
 
 .btnOrange {
-    background-color: rgba(239, 138, 8, 1);
+    /* background-color: rgba(239, 138, 8, 1); */
+    background-color: #A03203;
+    /* color: black; */
 }
 
 /*paginate */

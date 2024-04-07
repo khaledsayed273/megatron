@@ -28,16 +28,16 @@ function Header({ translate }) {
             <div data-aos-duration="1000" data-aos="fade-up" className='bg-white rounded-3xl grid md:grid-cols-3 py-2 px-10 md:px-5 my-10 lg:mx-16'>
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold'>100+</h1>
-                    <h5 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.newUser} </h5>
+                    <h2 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.newUser} </h2>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold'>90+</h1>
-                    <h5 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.activeUsers}</h5>
+                    <h2 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.activeUsers}</h2>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
                     <h1 className='text-3xl lg:text-5xl font-bold '>98%</h1>
-                    <h5 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.satisfiedCustomers} </h5>
+                    <h2 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.satisfiedCustomers} </h2>
                 </div>
 
             </div>

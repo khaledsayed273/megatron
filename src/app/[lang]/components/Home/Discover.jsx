@@ -53,8 +53,8 @@ function Discover({ translate }) {
             <div data-aos-duration="1000" data-aos="fade-up" className="bg-white px-7 py-12 rounded-3xl mt-10">
                 <div className='grid grid-cols-1 lg:grid-cols-2 lg:grid-flow-col gap-5'>
                     <div className='lg:mt-16 order-2 lg:order-1' data-aos-duration="1000" data-aos="fade-up" >
-                        <h4 className='text-amber-600 capitalize ms-10'>our mission statement</h4>
-                        <h1 className='font-medium sm:text-xl lg:text-4xl my-5'>Empowering the world through transformative technology solutions</h1>
+                        <h1 className='text-amber-600 capitalize ms-10'>our mission statement</h1>
+                        <h2 className='font-medium sm:text-xl lg:text-4xl my-5'>Empowering the world through transformative technology solutions</h2>
                         <p className='font-medium'>We are dedicated to empowering individuals,
                             businesses, and communities by providing innovative and cutting-edge
                             technology solutions that unlock new possibilities and drive positive change. Our mission is to make technology accessible, reliable, and impactful, enabling our customers to

@@ -50,7 +50,7 @@ async function page({ params }) {
                     </div>
                     <SwiperImages details={details} />
                     <div className='flex justify-center mb-16 mt-5'>
-                        <Link className=' text-white bg-amber-600 py-1.5 px-6 rounded-xl font-bold capitalize' target='_blank' href={`${details.link}`}>visit website</Link>
+                        <Link className=' text-white btnOrange py-1.5 px-6 rounded-xl font-bold capitalize' target='_blank' href={`${details.link}`}>visit website</Link>
                     </div>
                 </>
 

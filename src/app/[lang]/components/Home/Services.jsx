@@ -25,7 +25,7 @@ function Services() {
         return (
             <div data-aos-duration="1000" data-aos="fade-up" className=" mt-7 z-10 flex items-end justify-end gap-5 ">
                 <div className="prev-arrow cursor-pointer" onClick={handlePrev}>
-                    <button className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-stroke border-amber-500  text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:hover:drop-shadow-none">
+                    <button aria-label="prev" className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-stroke border-amber-500  text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:hover:drop-shadow-none">
                         <svg
                             width="20"
                             height="21"
@@ -42,7 +42,7 @@ function Services() {
                     </button>
                 </div>
                 <div className="next-arrow cursor-pointer" onClick={handleNext}>
-                    <button className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-stroke bg-amber-500   text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:hover:drop-shadow-none">
+                    <button aria-label="next" className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-stroke bg-amber-500   text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:hover:drop-shadow-none">
                         <svg
                             width="20"
                             height="21"
@@ -93,7 +93,7 @@ function Services() {
                                 <SwiperSlide  key={item.id}>
                                     <div className='grid md:grid-cols-2 gap-7 lg:gap-10'>
                                         <div className='py-3 '>
-                                            <h4 className='font-semibold capitalize text-lg lg:text-3xl my-4'>{item.title}</h4>
+                                            <h1 className='font-semibold capitalize text-lg lg:text-3xl my-4'>{item.title}</h1>
                                             <h2 className='text-sm font-medium capitalize  md:leading-6'>{item.describtion}</h2>
                                             {nextPrevComponent()}
                                         </div>

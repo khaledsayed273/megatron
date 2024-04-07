@@ -46,7 +46,7 @@ async function page({ params }) {
                             <Image priority className='object-none' sizes='(max-width:992px) , 100vw' fill src={img1} alt='img' />
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1000">
-                            <h3 data-aos="fade-up" data-aos-duration="1000" className='mt-10 text-xl lg:text-3xl text-white'>The Benefits of Email Marketing for Small Businesses</h3>
+                            <h1 data-aos="fade-up" data-aos-duration="1000" className='mt-10 text-xl lg:text-3xl text-white'>The Benefits of Email Marketing for Small Businesses</h1>
                             <p data-aos="fade-up" data-aos-duration="1000" className='text-white mt-10 text-xs md:text-sm'>In this article, we discuss how email marketing can help small businesses reach their target audience, increase brand awareness, and drive sales.</p>
                         </div>
                     </div>

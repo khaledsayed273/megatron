@@ -37,7 +37,7 @@ function EmailComponent({baseUrl}) {
                     </svg>
                     <div>
                         <h1 className='text-center text-white text-xl md:text-3xl my-3'>Do cool things with us.</h1>
-                        <h3 className='text-center text-white text-xs md:text-sm my-3'>Stay in the loop with updates from our team and community. Once a month.</h3>
+                        <h2 className='text-center text-white text-xs md:text-sm my-3'>Stay in the loop with updates from our team and community. Once a month.</h2>
                     </div>
 
                     <div className='flex items-center flex-col md:flex-row mt-7  md:bg-white md:rounded-xl'>
