@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-[#0F1428]`}>
         <Header lang={params.lang} />
         {children}
         <End lang={params.lang} />
