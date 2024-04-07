@@ -77,7 +77,7 @@ async function page({ params: { lang } }) {
       <div data-aos="zoom-in"
         data-aos-easing="linear"
         data-aos-duration="1500" className='relative w-full h-[250px] sm:h-[400px] overflow-hidden rounded-2xl md:h-[500px]  xl:h-[750px] '>
-        <Image priority fill sizes='(max-width:992px) , 100vw' alt='imageCover' src={imageCover} />
+        <Image priority fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw" alt='imageCover' src={imageCover} />
       </div>
 
       <div data-aos="fade-up"
