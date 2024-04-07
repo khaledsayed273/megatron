@@ -43,7 +43,7 @@ async function page({ params }) {
                     <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-white/70 text-xs md:text-sm mb-10 md:mb-16'>Explore our captivating blog filled with thought-provoking articles and inspiring content that will ignite your creativity and expand your knowledge.</p>
                     <div className="grid md:grid-cols-2 gap-10">
                         <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[200px] md:h-[300px] w-full xl:w-5/6 mx-auto rounded-ss-[100px]  md:rounded-ss-[200px] rounded-ee-[100px] md:rounded-ee-[200px] overflow-hidden'>
-                            <Image priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw" fill src={img1} alt='img' />
+                            <Image priority className='md:object-none' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw" fill src={img1} alt='img' />
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1000">
                             <h1 data-aos="fade-up" data-aos-duration="1000" className='mt-10 text-xl lg:text-3xl text-white'>The Benefits of Email Marketing for Small Businesses</h1>
