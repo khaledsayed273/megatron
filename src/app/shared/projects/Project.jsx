@@ -5,7 +5,7 @@ import CartProjects from './CartProjects'
 function Projects({ data,  numberPage, pagination }) {
 
     return (
-        <div className='mt-10'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
             <CartProjects data={data.data} />
             {pagination && data?.data.length < data?.meta?.total && (
                 <div data-aos-duration="1000" data-aos="fade-up">

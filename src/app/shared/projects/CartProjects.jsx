@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function CartProjects({ data }) {
     return (
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16'>
+        <div  className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16'>
             {data.map((item) => (
                 <div data-aos="fade-up" data-aos-duration="1000" key={item.id} className='bg-white relative p-5 rounded-xl mx-auto w-11/12 sm:w-2/3 md:w-full'>
                     <div className='relative h-[230px] w-full overflow-hidden rounded-xl mb-7'>
