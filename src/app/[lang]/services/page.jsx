@@ -27,14 +27,14 @@ async function page({ params: { lang } }) {
                         <div data-aos-duration="1000" data-aos="fade-up" key={item.id} className="bg-white p-5 rounded-lg">
                             <div className='flex flex-col justify-center items-center'>
                                 <Image width={40} height={40} src={item.image} alt={item.name}/>
-                                <h1 className='mt-3 font-semibold capitalize'  >{item.name}</h1>
+                                <h2 className='mt-3 font-semibold capitalize'  >{item.name}</h2>
                             </div>
                             <p className='mt-3 text-xs md:text-sm text-black/85'>{item.short_descrption}</p>
                             {/* <Link className='ms-auto flex justify-end font-semibold capitalize mt-5 text-amber-600 underline decoration-amber-600' href={`service/${item.slug}`}>read more</Link> */}
                         </div>
                     ))}
                 </div>
-            ) : <h1 className='text-center mt-16 font-bold text-orange-600'>Something wrong is happend please try again later</h1>
+            ) : <h2 className='text-center mt-16 font-bold text-orange-600'>Something wrong is happend please try again later</h2>
             }
 
         </main>

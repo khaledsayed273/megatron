@@ -13,9 +13,9 @@ function Header({ translate }) {
             {/* center */}
             <div data-aos-duration="1000" data-aos="fade-up">
                 <div className='mt-5 text-center text-white p-3'>
-                    <h3 className='text-lg sm:text-2xl lg:text-3xl xl:text-4xl '>
+                    <h1 className='text-lg sm:text-2xl lg:text-3xl xl:text-4xl '>
                         {translate.home.header.title}
-                    </h3>
+                    </h1>
                     <p className='mt-4 text-xs md:text-sm text-white/70'>
                         {translate.home.header.subTitle}
                     </p>
@@ -27,17 +27,17 @@ function Header({ translate }) {
             {/* End */}
             <div data-aos-duration="1000" data-aos="fade-up" className='bg-white rounded-3xl grid md:grid-cols-3 py-2 px-10 md:px-5 my-10 lg:mx-16'>
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
-                    <h1 className='text-3xl lg:text-5xl font-bold'>100+</h1>
-                    <h2 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.newUser} </h2>
+                    <h2 className='text-3xl lg:text-5xl font-bold'>100+</h2>
+                    <h3 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.newUser} </h3>
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
-                    <h1 className='text-3xl lg:text-5xl font-bold'>90+</h1>
-                    <h2 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.activeUsers}</h2>
+                    <h2 className='text-3xl lg:text-5xl font-bold'>90+</h2>
+                    <h3 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.activeUsers}</h3>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" className='text-amber-500 text-center my-7'>
-                    <h1 className='text-3xl lg:text-5xl font-bold '>98%</h1>
-                    <h2 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.satisfiedCustomers} </h2>
+                    <h2 className='text-3xl lg:text-5xl font-bold '>98%</h2>
+                    <h3 className='text-lg md:text-xl lg:text-2xl '>{translate.home.cart.satisfiedCustomers} </h3>
                 </div>
 
             </div>

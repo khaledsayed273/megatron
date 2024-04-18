@@ -24,7 +24,7 @@ function ProjectsBlogs({ category, data, pageNumber }) {
                         <Link href={`/blogs/${item.slug}`} data-aos="fade-up" data-aos-duration="1000" className='btnOrange capitalize text-white p-2 px-3 my-5 rounded-full' >
                             {item.category.name}
                         </Link>
-                        <h1 data-aos="fade-up" data-aos-duration="1000" className='mt-7  font-bold lg:text-base '>{item.title}</h1>
+                        <h2 data-aos="fade-up" data-aos-duration="1000" className='mt-7  font-bold lg:text-base '>{item.title}</h2>
                         <p data-aos="fade-up" data-aos-duration="1000" className='mt-5 text-sm overflow-auto max-h-[130px] mb-10'>{item.short_description}</p>
                         <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-orange text-orange font-bold capitalize' href={`/blogs/${item.slug}`}>read more</Link>
                     </div>

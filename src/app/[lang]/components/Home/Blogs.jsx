@@ -26,7 +26,7 @@ async function Blogs() {
             {/* <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
                 <span className='btnOrange text-white flex mx-auto font-bold px-12 py-2 rounded-full capitalize'>blogs</span>
             </div> */}
-            <h1 data-aos="fade-up" data-aos-duration="1000" className='capitalize text-center text-white my-10 text-xl lg:text-4xl'>from our latest blogs</h1>
+            <h2 data-aos="fade-up" data-aos-duration="1000" className='capitalize text-center text-white my-10 text-xl lg:text-4xl'>from our latest blogs</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 xl:gap-9">
                 {latestBlog.status && (
                     latestBlog?.data?.map((item) => (
@@ -37,7 +37,7 @@ async function Blogs() {
                             <span data-aos="fade-up" data-aos-duration="1000" className='btnOrange capitalize text-white p-2 px-3 my-5 rounded-full' >
                                 {item.category.name}
                             </span>
-                            <h1 data-aos="fade-up" data-aos-duration="1000" className='mt-7  font-bold lg:text-base '>{item.title}</h1>
+                            <h2 data-aos="fade-up" data-aos-duration="1000" className='mt-7  font-bold lg:text-base '>{item.title}</h2>
                             <p data-aos="fade-up" data-aos-duration="1000" className='mt-5 text-sm overflow-auto max-h-[130px] mb-10'>{item.short_description}</p>
                             <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-amber-600 text-amber-600 font-bold capitalize' href={`/blogs/${item.slug}`}>read more</Link>
                         </div>

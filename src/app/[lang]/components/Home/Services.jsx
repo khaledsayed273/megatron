@@ -93,8 +93,8 @@ function Services() {
                                 <SwiperSlide  key={item.id}>
                                     <div className='grid md:grid-cols-2 gap-7 lg:gap-10'>
                                         <div className='py-3 '>
-                                            <h1 className='font-semibold capitalize text-lg lg:text-3xl my-4'>{item.title}</h1>
-                                            <h2 className='text-sm font-medium capitalize  md:leading-6'>{item.describtion}</h2>
+                                            <h2 className='font-semibold capitalize text-lg lg:text-3xl my-4'>{item.title}</h2>
+                                            <h3 className='text-sm font-medium capitalize  md:leading-6'>{item.describtion}</h3>
                                             {nextPrevComponent()}
                                         </div>
                                         <div className='relative overflow-hidden mx-auto rounded-xl w-full xl:w-10/12 h-[200px] sm:h-[250px] md:h-[300px]'>

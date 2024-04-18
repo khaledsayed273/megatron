@@ -173,7 +173,7 @@ async function page({ params: { lang } }) {
       <div data-aos="fade-up" data-aos-duration="1000" className='my-7'>
         <div className='flex items-center flex-col'>
           <span className='capitalize btnOrange px-7 py-1 rounded-full font-bold text-white'>our team</span>
-          <h1 className='text-white mt-5 text-xl md:text-3xl capitalize font-bold'>meet our team</h1>
+          <h2 className='text-white mt-5 text-xl md:text-3xl capitalize font-bold'>meet our team</h2>
           <p className='text-white mt-3 text-center text-sm'>Meet our passionate and talented team, committed to delivering exceptional results, driving innovation, and transforming your vision into reality.</p>
         </div>
 
@@ -185,7 +185,7 @@ async function page({ params: { lang } }) {
         <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
           <span className='text-white btnOrange rounded-full px-6 py-1 capitalize font-bold mb-7'>our offices</span>
         </div>
-        <h1 data-aos="fade-up" data-aos-duration="1000" className='text-xl lg:text-4xl font-bold text-white capitalize text-center'>Discover Our Global Network of Offices</h1>
+        <h2 data-aos="fade-up" data-aos-duration="1000" className='text-xl lg:text-4xl font-bold text-white capitalize text-center'>Discover Our Global Network of Offices</h2>
         <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-white text-xs md:text-sm my-5'>Experience our expansive network of offices across the world, connecting you to our exceptional services wherever you are.</p>
         <div data-aos="fade-up" data-aos-duration="1000" className='bg-white p-7  grid md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl'>
           {data2.map((item) => (

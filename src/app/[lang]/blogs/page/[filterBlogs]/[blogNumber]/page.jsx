@@ -46,7 +46,7 @@ async function page({ params }) {
                             <Image priority style={{objectFit: "cover"}} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw" fill src={img1} alt='img' />
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1000">
-                            <h1 data-aos="fade-up" data-aos-duration="1000" className='mt-10 text-xl lg:text-3xl text-white'>The Benefits of Email Marketing for Small Businesses</h1>
+                            <h2 data-aos="fade-up" data-aos-duration="1000" className='mt-10 text-xl lg:text-3xl text-white'>The Benefits of Email Marketing for Small Businesses</h2>
                             <p data-aos="fade-up" data-aos-duration="1000" className='text-white mt-10 text-xs md:text-sm'>In this article, we discuss how email marketing can help small businesses reach their target audience, increase brand awareness, and drive sales.</p>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ async function page({ params }) {
                 </>
             ) : (
                 <div className='inline-flex my-20 w-full justify-center'>
-                    <h1 className='text-center text-orange-700 text-xl md:text-2xl xl:text-3xl font-bold capitalize '>sorry there is no data</h1>
+                    <h3 className='text-center text-orange-700 text-xl md:text-2xl xl:text-3xl font-bold capitalize '>sorry there is no data</h3>
                 </div>
             )}
 

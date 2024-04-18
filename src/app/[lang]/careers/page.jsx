@@ -67,7 +67,7 @@ function page() {
                 </div>
                 <div>
                     <span className='btnOrange px-5 py-2 text-white capitalize font-bold rounded-full'>perks</span>
-                    <h1 className='mt-10 text-xl lg:text-4xl text-white'>Perks That Go Beyond Borders</h1>
+                    <h2 className='mt-10 text-xl lg:text-4xl text-white'>Perks That Go Beyond Borders</h2>
                     <p className='text-white mt-10 text-xs md:text-sm leading-7 md:leading-7 lg:leading-7 xl:leading-8'>opportunities, travel adventures, global networking, and competitive compensation.&quot;Experience a world of benefits with our global presence. Enjoy flexible work environments, cultural diversity, professional development opportunities, travel adventures, global networking, and competitive compens</p>
                 </div>
             </div>

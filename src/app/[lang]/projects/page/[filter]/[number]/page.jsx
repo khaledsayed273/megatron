@@ -42,7 +42,7 @@ async function page({ params }) {
                 </>
             ) : (
                 <div className='inline-flex my-20 w-full justify-center'>
-                    <h1 className='text-center text-orange-700 text-xl md:text-2xl xl:text-3xl font-bold capitalize '>sorry there is no data</h1>
+                    <h2 className='text-center text-orange-700 text-xl md:text-2xl xl:text-3xl font-bold capitalize '>sorry there is no data</h2>
                 </div>
             )}
         </main>
