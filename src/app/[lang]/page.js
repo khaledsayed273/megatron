@@ -17,11 +17,9 @@ export const revalidate = +process.env.time;
 
 export default async function Home({params}) {
 
-
   const translate = await getDictionary(params.lang)
 
   const data = await getData()
-
 
   return (
     <main className="container mx-auto px-5 my-10">
