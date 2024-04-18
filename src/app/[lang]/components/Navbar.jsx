@@ -103,7 +103,7 @@ function Navbar({ lang, navbarTranslate }) {
                     <div className='flex justify-center grow'>
                         <ul className='flex flex-col md:flex-row mt-5 md:mt-0 items-center'>
                             {nav.map((item) => (
-                                <li className={`mx-3 my-3 md:my-0 font-semibold ${pathName === item.active || pathName === `${item.active}/${params.details}` ? "text-orange" : "text-white"}  capitalize`} key={item.id}>
+                                <li className={`mx-3 my-3 md:my-0 font-semibold ${pathName === item.active || pathName === `${item.active}/${params.details}` ? "text-[#ff6400]" : "text-white"} capitalize`} key={item.id}>
                                     <Link onClick={() => setShow(false)} href={`${item.path}`}>{item.name}</Link>
                                 </li>
                             ))}
