@@ -21,12 +21,12 @@ function ProjectsBlogs({ category, data, pageNumber }) {
                         <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[230px] w-full overflow-hidden rounded-xl mb-7'>
                             <Image sizes='(min-width:992px) , 100vw' fill src={item.image} alt={item.title} />
                         </div>
-                        <span data-aos="fade-up" data-aos-duration="1000" className='btnOrange capitalize text-white p-2 px-3 my-5 rounded-full' >
+                        <Link href={`/blogs/${item.slug}`} data-aos="fade-up" data-aos-duration="1000" className='btnOrange capitalize text-white p-2 px-3 my-5 rounded-full' >
                             {item.category.name}
-                        </span>
+                        </Link>
                         <h1 data-aos="fade-up" data-aos-duration="1000" className='mt-7  font-bold lg:text-base '>{item.title}</h1>
                         <p data-aos="fade-up" data-aos-duration="1000" className='mt-5 text-sm overflow-auto max-h-[130px] mb-10'>{item.short_description}</p>
-                        <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-amber-600 text-amber-600 font-bold capitalize' href={`/blogs/${item.slug}`}>read more</Link>
+                        <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-orange text-orange font-bold capitalize' href={`/blogs/${item.slug}`}>read more</Link>
                     </div>
                 ))}
             </div>
