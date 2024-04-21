@@ -28,7 +28,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       `}
       </Script>
 
-
       <body className={`${inter.className} bg-[#0F1428]`}>
         <noscript
           dangerouslySetInnerHTML={{

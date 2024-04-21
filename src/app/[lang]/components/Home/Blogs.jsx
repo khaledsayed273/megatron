@@ -46,7 +46,7 @@ async function Blogs() {
             </div>
 
             <div data-aos-duration="1000" data-aos="fade-up" className='flex justify-center mt-7'>
-                <Link className='text-white btnOrange py-2 px-9 capitalize font-bold rounded-full' href={"/blogs/page/all/1"}>view all</Link>
+                <Link className='text-white btnOrange py-2 px-9 capitalize font-bold rounded-full' href={"/blogs"}>view all</Link>
             </div>
         </div>
     )

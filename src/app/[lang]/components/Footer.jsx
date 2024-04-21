@@ -27,7 +27,7 @@ function Footer({ baseUrl, lang, navbarTranslate }) {
         {
             id: 4,
             name: navbarTranslate.blogs,
-            path: `/${lang}/blogs/page/all/1`,
+            path: `/${lang}/blogs`,
         },
         // {
         //     id: 5,
@@ -37,7 +37,7 @@ function Footer({ baseUrl, lang, navbarTranslate }) {
         {
             id: 6,
             name: navbarTranslate.projects,
-            path: `/${lang}/projects/page/all/1`,
+            path: `/${lang}/projects`,
         }
     ]
 
