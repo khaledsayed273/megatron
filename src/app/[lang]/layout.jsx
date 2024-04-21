@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import End from "./components/End";
 import Script from "next/script";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
@@ -36,8 +37,9 @@ height="0" width="0" style="display:none;visibility:hidden">`,
           }}
         />
 
-
-        <Header lang={params.lang} />
+        <Suspense>
+          <Header lang={params.lang} />
+        </Suspense>
         {children}
         <End lang={params.lang} />
       </body>
