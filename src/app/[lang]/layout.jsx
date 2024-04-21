@@ -37,7 +37,9 @@ height="0" width="0" style="display:none;visibility:hidden">`,
           }}
         />
 
+        <Suspense>
           <Header lang={params.lang} />
+        </Suspense>
         {children}
         <End lang={params.lang} />
       </body>
