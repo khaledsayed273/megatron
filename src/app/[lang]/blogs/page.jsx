@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
-import img1 from "../../../../../../../public/images/single-service/1.jpg"
-import ProjectsBlogs from '../../../components/ProjectsBlogs'
+import img1 from "../../../../public/images/single-service/1.jpg"
+import ProjectsBlogs from './components/ProjectsBlogs'
 import API from '@/api/API'
 
-async function getData(lang, filterBlogs, pageNumber) {
+async function getData(lang, category, page) {
     try {
-        const res = await API.get(`/blogs?filter[category_id]=${filterBlogs}&page=${pageNumber}`, {
+        const res = await API.get(`/blogs?filter[category_id]=${category ? category : "all"}&page=${page}`, {
             headers: { "X-localization": lang }
         })
         return res
@@ -29,10 +29,9 @@ async function getCategory(lang,) {
 
 export const revalidate = +process.env.time;
 
-async function page({ params }) {
+async function page( params ) {
 
-
-    const data = await getData(params.lang, params.filterBlogs, params.blogNumber)
+    const data = await getData(params.params.lang, params.searchParams.category, params.searchParams.page)
     const category = await getCategory(params.lang)
 
     return (
@@ -52,7 +51,7 @@ async function page({ params }) {
                     </div>
 
                     {data.status && (
-                        <ProjectsBlogs category={category} data={data.data} pageNumber={params?.blogNumber} />
+                        <ProjectsBlogs category={category} data={data.data} pageNumber={params?.searchParams.page ? params?.searchParams.page : 1} />
                     )}
                 </>
             ) : (

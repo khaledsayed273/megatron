@@ -6,12 +6,12 @@ import Pagination from '@/app/shared/projects/Pagination'
 
 function ProjectsBlogs({ category, data, pageNumber }) {
 
+
     const dataMaping = data?.data?.data
 
     return (
         <div className='mt-10'>
             {category && (
-
                 <NavPaginate category={category} />
             )}
 

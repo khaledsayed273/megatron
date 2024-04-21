@@ -3,8 +3,8 @@ import React from 'react'
 import API from '@/api/API'
 import NavProjects from './components/NavProjects'
 
-async function getData(lang, filter, number) {
-    const res = await API.get(`projects?filter[service_id]=${filter}&page=${number}`, {
+async function getData(lang, category, page) {
+    const res = await API.get(`projects?filter[service_id]=${category ? category : "all"}&page=${page}`, {
         headers: { "X-localization": lang }
     })
     return res
@@ -19,10 +19,10 @@ async function getServices(lang) {
 
 export const revalidate = +process.env.time;
 
-async function page({ params }) {
+async function page( params ) {
 
 
-    const data = await getData(params.lang, params.filter, params.number)
+    const data = await getData(params.lang, params.searchParams.category, params.searchParams.page)
     const services = await getServices(params.lang)
 
     return (
@@ -37,7 +37,7 @@ async function page({ params }) {
                     )}
 
                     {data.status && (
-                        <Projects data={data.data.data} title={true} numberPage={params.number} pagination={true} />
+                        <Projects data={data.data.data} title={true} numberPage={params?.searchParams.page ? params?.searchParams.page : 1} pagination={true} />
                     )}
                 </>
             ) : (

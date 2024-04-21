@@ -1,13 +1,14 @@
 "use client"
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { useParams, usePathname } from 'next/navigation'
+import { useParams, usePathname, useSearchParams } from 'next/navigation'
 import dynamic from 'next/dynamic';
 const AosInit = dynamic(() => import('../../shared/AosInit'), { ssr: true });
 
 function Navbar({ lang, navbarTranslate }) {
     const pathName = usePathname()
     const params = useParams()
+    const searchParams = useSearchParams()
 
 
     const nav = [
@@ -32,8 +33,8 @@ function Navbar({ lang, navbarTranslate }) {
         {
             id: 4,
             name: navbarTranslate.blogs,
-            active: `/${lang}/blogs/page/${params.filterBlogs}/${params.blogNumber}`,
-            path: `/${lang}/blogs/page/all/1`,
+            active: `/${lang}/blogs?${searchParams.toString()}`,
+            path: `/${lang}/blogs`,
         },
         // {
         //     id: 5,
@@ -43,8 +44,8 @@ function Navbar({ lang, navbarTranslate }) {
         {
             id: 6,
             name: navbarTranslate.projects,
-            active: `/${lang}/projects/page/${params.filter}/${params.number}`,
-            path: `/${lang}/projects/page/all/1`,
+            active: `/${lang}/projects?${searchParams.toString()}`,
+            path: `/${lang}/projects`,
         }
     ]
 
@@ -103,7 +104,7 @@ function Navbar({ lang, navbarTranslate }) {
                     <div className='flex justify-center grow'>
                         <ul className='flex flex-col md:flex-row mt-5 md:mt-0 items-center'>
                             {nav.map((item) => (
-                                <li className={`mx-3 my-3 md:my-0 font-semibold ${pathName === item.active || pathName === `${item.active}/${params.details}` ? "text-[#ff6400]" : "text-white"} capitalize`} key={item.id}>
+                                <li className={`mx-3 my-3 md:my-0 font-semibold ${pathName === item.active || pathName === `${item.active}/${params.details}` || `${pathName}?${searchParams.toString()}` === item.active ? "text-[#ff6400]" : "text-white"} capitalize`} key={item.id}>
                                     <Link onClick={() => setShow(false)} href={`${item.path}`}>{item.name}</Link>
                                 </li>
                             ))}
