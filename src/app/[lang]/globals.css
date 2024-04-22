@@ -122,3 +122,33 @@ main.container{
 .swiperProjectsImages .swiper-pagination-bullet{
     background-color: #da9835;
 }
+
+
+/* slick */
+
+.slick-list{
+    height: 100px;
+    align-items: center !important;
+}
+.slick-next{
+    top: 90% !important;
+    right: 40% !important;
+    z-index: 5;
+}
+.slick-prev{
+    top: 90% !important;
+    left: 40% !important;
+    z-index: 5;
+
+
+}
+.slick-next::before ,
+.slick-prev::before{
+    color: rgba(239, 138, 8, 1) !important;
+    font-size: 30px !important;
+}
+
+.slick-track{
+    gap: 15px ;
+    display: flex !important;
+}
