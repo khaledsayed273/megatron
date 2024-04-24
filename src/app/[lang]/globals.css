@@ -151,4 +151,6 @@ main.container{
 .slick-track{
     gap: 15px ;
     display: flex !important;
+    justify-content: center !important;
+    transform: none ;
 }

@@ -25,6 +25,7 @@ async function page( params ) {
     const data = await getData(params.lang, params.searchParams.category, params.searchParams.page)
     const services = await getServices(params.lang)
 
+
     return (
         <main className='container mx-auto px-3'>
             {data.data.data.data.length > 0 ? (

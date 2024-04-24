@@ -22,7 +22,6 @@ function CartProjects({ data }) {
             ? Buffer.from(str).toString('base64')
             : window.btoa(str);
 
-
     return (
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16'>
             {data.map((item) => (
@@ -36,7 +35,6 @@ function CartProjects({ data }) {
                     <Link href={`/projects/${item.slug}`} className='btnOrange capitalize text-white p-2 px-3 my-5 rounded-full' >
                         {item.name}
                     </Link>
-                    {/* <h2 className='mt-7  font-bold lg:text-base '>{item.title}</h2> */}
                     <p className='mt-5 text-sm overflow-auto max-h-[130px] mb-10'>{item.services[0].short_descrption}</p>
                     <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-orange text-orange font-bold capitalize' href={`/projects/${item.slug}`}>read more</Link>
                 </div>

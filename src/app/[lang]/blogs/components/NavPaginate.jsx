@@ -21,7 +21,7 @@ function NavPaginate({ category }) {
         centerPadding: 100,
         infinite: false,
         speed: 500,
-        variableWidth: true,
+        // variableWidth: true,
         slidesToShow: 7,
         responsive: [
 
@@ -58,7 +58,7 @@ function NavPaginate({ category }) {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
                 }
             }
         ]

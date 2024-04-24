@@ -23,8 +23,9 @@ function NavProjects({ services }) {
         centerPadding: 100,
         infinite: false,
         speed: 500,
-        variableWidth: true,
-        slidesToShow: 7,
+        // variableWidth: true,
+        slidesToShow: 6,
+
         responsive: [
 
             {
@@ -53,14 +54,15 @@ function NavProjects({ services }) {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
-
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    variableWidth: true,
+
                 }
             }
         ]
