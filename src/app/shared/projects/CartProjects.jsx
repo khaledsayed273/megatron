@@ -32,11 +32,13 @@ function CartProjects({ data }) {
                         )}`}
                             placeholder='blur' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw" fill src={item.image} alt={item.name} />
                     </div>
-                    <Link href={`/projects/${item.slug}`} className='btnOrange capitalize text-white p-2 px-3 my-5 rounded-full' >
-                        {item.name}
-                    </Link>
-                    <p className='mt-5 text-sm overflow-auto max-h-[130px] mb-10'>{item.services[0].short_descrption}</p>
-                    <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-orange text-orange font-bold capitalize' href={`/projects/${item.slug}`}>read more</Link>
+                    <div className='flex justify-center'>
+                        <Link href={`/projects/${item.slug}`} className='btnOrange capitalize text-white p-2 px-3  rounded-full' >
+                            {item.name}
+                        </Link>
+                    </div>
+                    {/* <p className='mt-5 text-sm overflow-auto max-h-[130px] mb-10'>{item.services[0].short_descrption}</p> */}
+                    {/* <Link className='flex justify-end underline mt-3 bottom-4 right-4 absolute  decoration-orange text-orange font-bold capitalize' href={`/projects/${item.slug}`}>read more</Link> */}
                 </div>
             ))}
         </div>
