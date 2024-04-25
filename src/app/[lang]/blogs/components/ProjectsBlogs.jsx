@@ -18,7 +18,7 @@ function ProjectsBlogs({ category, data, pageNumber }) {
             <div className='grid md:grid-cols-2 mt-16 lg:grid-cols-3 gap-10 mb-16'>
                 {dataMaping?.map((item) => (
                     <div data-aos="fade-up" data-aos-duration="1000" key={item.id} className='bg-white relative  rounded-xl mx-auto w-11/12 sm:w-2/3 md:w-full'>
-                        <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[230px] w-full overflow-hidden rounded-xl mb-7'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[230px] w-full overflow-hidden rounded-t-xl mb-7'>
                             <Image sizes='(min-width:992px) , 100vw' fill src={item.image} alt={item.title} />
                         </div>
 
