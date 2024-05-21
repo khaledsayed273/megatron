@@ -109,7 +109,7 @@ function page() {
         </div>
       </div>
 
-      <div data-aos="fade-up" className='my-8'>
+      {/* <div data-aos="fade-up" className='my-8'>
         <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
           <span className='capitalize font-bold text-orange-600 bg-white px-8 py-1.5 rounded-full'>our offices</span>
         </div>
@@ -127,7 +127,7 @@ function page() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div data-aos="fade-up" className="my-16">
         <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center'>
