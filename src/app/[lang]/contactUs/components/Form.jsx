@@ -42,6 +42,10 @@ function Form({ baseUrl }) {
 
     }
 
+    const classVar = "block px-2 w-full rounded-md  py-1.5 text-gray-900 shadow-sm outline-0 border-2 border-gray-300 placeholder:text-gray-400 focus:border-amber-500 sm:text-sm sm:leading-6"
+
+
+
     return (
         <>
             <div data-aos="fade-up" className="bg-white  rounded-xl p-5 md:p-7">
@@ -50,13 +54,13 @@ function Form({ baseUrl }) {
                         <div >
                             <label htmlFor="firstName" className="inline-block text-sm font-medium leading-6 text-gray-900 capitalize">first name</label>
                             <div className="mt-2">
-                                <input value={firstName} onChange={(e) => setFirstName(e.target.value)} id="firstName" name="firstName" type="text" autoComplete="firstName" required className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-500 sm:text-sm sm:leading-6" />
+                                <input value={firstName} onChange={(e) => setFirstName(e.target.value)} id="firstName" name="firstName" type="text" autoComplete="firstName" required className={classVar} />
                             </div>
                         </div>
                         <div>
                             <label htmlFor="lastName" className="inline-block text-sm font-medium leading-6 text-gray-900 capitalize">last name</label>
                             <div className="mt-2">
-                                <input value={lastName} onChange={(e) => setLastName(e.target.value)} id="lastName" name="lastName" type="text" autoComplete="lastName" className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-500 sm:text-sm sm:leading-6" />
+                                <input value={lastName} onChange={(e) => setLastName(e.target.value)} id="lastName" name="lastName" type="text" autoComplete="lastName" className={classVar}/>
                             </div>
                         </div>
                     </div>
@@ -64,18 +68,18 @@ function Form({ baseUrl }) {
                         <div>
                             <label htmlFor="email" className="inline-block text-sm font-medium leading-6 text-gray-900 capitalize">email</label>
                             <div className="mt-2">
-                                <input value={email} onChange={(e) => setEmail(e.target.value)} id="email" name="email" type="email" autoComplete="email" required className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-500 sm:text-sm sm:leading-6" />
+                                <input value={email} onChange={(e) => setEmail(e.target.value)} id="email" name="email" type="email" autoComplete="email" required className={classVar} />
                             </div>
                         </div>
                         <div>
                             <label htmlFor="phone" className="inline-block text-sm font-medium leading-6 text-gray-900 capitalize">phone number</label>
                             <div className="mt-2">
-                                <input value={phone} onChange={(e) => setPhone(e.target.value)} id="phone" name="phone" type="number" autoComplete="phone" required className="block px-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-amber-500 sm:text-sm sm:leading-6" />
+                                <input value={phone} onChange={(e) => setPhone(e.target.value)} id="phone" name="phone" type="number" autoComplete="phone" required className={classVar} />
                             </div>
                         </div>
                     </div>
                     <label data-aos="fade-up" data-aos-duration="1000" className='inline-block text-sm font-medium leading-6 text-gray-900 capitalize' htmlFor="messages">messages</label>
-                    <textarea data-aos="fade-up" data-aos-duration="1000" value={message} onChange={(e) => setMessage(e.target.value)} id="messages" className="resize-none rounded-md w-full h-[200px] mt-5  p-3 block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"></textarea>
+                    <textarea data-aos="fade-up" data-aos-duration="1000" value={message} onChange={(e) => setMessage(e.target.value)} id="messages" className="resize-none rounded-md w-full h-[200px] mt-5  p-3 block outline-0 border-2 border-gray-300 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 focus:border-amber-600 sm:text-sm sm:leading-6"></textarea>
 
                     <div data-aos="fade-up" data-aos-duration="1000" className='flex flex-col sm:flex-row items-center justify-between mt-5'>
                         <div data-aos="fade-up" data-aos-duration="1000" className="flex h-6 items-center ">
