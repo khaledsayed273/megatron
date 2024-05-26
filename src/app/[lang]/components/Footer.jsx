@@ -68,7 +68,7 @@ function Footer({ baseUrl, lang, navbarTranslate }) {
                         <div className='flex items-center flex-col sm:flex-row sm:items-center justify-between w-full sm:border-t sm:border-b'>
                             <div className='mx-auto mb-5 sm:mb-0 sm:me-auto sm:ms-0'>
                                 <Link aria-label="logoFooter" href={`/`} className='relative inline-block px-2 py-1 mt-1'>
-                                    <svg width="60" height="60" viewBox="0 0 909 609" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg className='w-[90px] h-[90px] sm:w-[60px] md:h-[60px]' viewBox="0 0 909 609" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M771.334 508L838.334 556.5L771.334 605" stroke="#D25100" strokeWidth="8" />
                                         <path d="M771.334 508L838.334 556.5L771.334 605" stroke="#D25100" strokeWidth="8" />
                                         <path d="M771.334 508L838.334 556.5L771.334 605" stroke="#D25100" strokeWidth="8" />

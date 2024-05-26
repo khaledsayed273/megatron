@@ -35,8 +35,8 @@ async function page({ params }) {
         dataDetails.status ? (
             <main className='container mx-auto px-3 mt-7'>
                 <div className="grid md:grid-cols-2 gap-10">
-                    <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[200px] md:h-[300px] w-full xl:w-5/6 mx-auto rounded-ss-[100px]  md:rounded-ss-[200px] rounded-ee-[100px] md:rounded-ee-[200px] overflow-hidden'>
-                        <Image priority className='object-none' sizes='(min-width:992px) , 100vw' fill src={dataDetails?.data?.image} alt={dataDetails.data.title} />
+                    <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[250px] sm:h-[300px] w-full xl:w-5/6 mx-auto rounded-xl   md:rounded-ss-[150px]  md:rounded-ee-[150px] overflow-hidden'>
+                        <Image priority className='object-cover' sizes='(min-width:992px) 100vw' fill src={dataDetails?.data?.image} alt={dataDetails.data.title} />
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000">
                         <span data-aos="fade-up" data-aos-duration="1000" className='btnOrange px-5 py-2 text-white capitalize font-bold rounded-full'>{dataDetails.data.category.name}</span>
