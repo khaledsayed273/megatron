@@ -35,6 +35,7 @@ async function page({ params }) {
     const relatedProjects = await getRelatedProjects(params.lang, params.details)
     const details = await data?.data?.data
 
+
     return (
         <main className='container mx-auto px-3 mt-10'>
             {data?.data?.status && (
