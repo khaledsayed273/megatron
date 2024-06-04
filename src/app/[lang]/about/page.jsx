@@ -32,7 +32,7 @@ async function page({ params: { lang } }) {
       img: imageCover,
       name: "khaled sayed"
     },
-    
+
   ]
 
   const data2 = [
@@ -200,7 +200,6 @@ async function page({ params: { lang } }) {
           ))}
         </div>
       </div> */}
-
 
       <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center items-center mt-5 mb-10'>
         <Link className='px-4 sm:px-6 py-1.5 text-white rounded-full font-bold capitalize btnOrange' href={"/contactUs"}>contact us</Link>
