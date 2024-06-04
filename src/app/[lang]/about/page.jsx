@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { getDictionary } from '../dictionaries'
 import SwiperAbout from './components/SwiperAbout'
 
+
 async function page({ params: { lang } }) {
   const language = await getDictionary(lang)
 
