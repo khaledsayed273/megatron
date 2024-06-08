@@ -9,15 +9,13 @@ function NavProjects({ services }) {
     const router = useRouter()
     const searchParams = useSearchParams()
     const pathname = usePathname()
-
+    
     const handleParams = (name) => {
         const query = new URLSearchParams(searchParams);
         query.set("category", name)
-        window.location.href = `?category=${query.get("category")}`
-        console.log(name);
+        router.push(`?category=${query.get("category")}`)
+        
     }
-
-
 
     const settings = {
         className: "center",
@@ -26,9 +24,7 @@ function NavProjects({ services }) {
         speed: 500,
         // variableWidth: true,
         slidesToShow: 6,
-
         responsive: [
-
             {
                 breakpoint: 1400,
                 settings: {
@@ -63,7 +59,6 @@ function NavProjects({ services }) {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     variableWidth: true,
-
                 }
             }
         ]
@@ -76,9 +71,7 @@ function NavProjects({ services }) {
                     {services.map((item) => (
                         <button onClick={() => handleParams(item.slug)} key={item.id} className={`me-2 whitespace-nowrap text-xs md:text-sm capitalize ${searchParams.get("category") === `${item.slug}` ? "bg-amber-700 text-white" : "bg-white text-yellow-700"}  font-bold px-3 py-1.5 rounded-full mt-3`}>{item.name}</button>
                     ))}
-
                 </Slider>
-
             </div>
         </div>
     )

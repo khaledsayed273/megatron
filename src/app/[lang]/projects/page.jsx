@@ -4,13 +4,13 @@ import API from '@/api/API'
 import NavProjects from './components/NavProjects'
 
 async function getData(lang, category, page) {
-    try{
-        const res = await API.get(`projects?filter[servicee_id]=${category ? category : "all"}&page=${page}`, {
-        headers: { "X-localization": lang }
-    })
-    return res
-    }catch(e){
-       return e
+    try {
+        const res = await API.get(`projects?filter[service_id]=${category ? category : "all"}&page=${page}`, {
+            headers: { "X-localization": lang }
+        })
+        return res
+    } catch (e) {
+        return e
     }
 }
 
@@ -25,11 +25,8 @@ export const revalidate = +process.env.time;
 
 async function page(params) {
 
-
     const data = await getData(params.lang, params.searchParams.category, params.searchParams.page)
     const services = await getServices(params.lang)
-
-
     return (
         <main className='container mx-auto px-3'>
 
@@ -40,16 +37,14 @@ async function page(params) {
                 <NavProjects params={params} services={services} />
             )}
 
+            {data.data.data.data.length > 0 ? (
+                <Projects data={data.data.data} title={true} numberPage={params?.searchParams.page ? params?.searchParams.page : 1} pagination={true} />
 
-
-
-                {data.data.data.data.length > 0 ? (
-                    <Projects data={data.data.data} title={true} numberPage={params?.searchParams.page ? params?.searchParams.page : 1} pagination={true} />
-                ) : (
-                    <div className='inline-flex my-20 w-full justify-center'>
-                        <h2 className='text-center text-orange text-xl md:text-2xl xl:text-3xl font-bold capitalize '>sorry there is no data</h2>
-                    </div>
-                )}
+            ) : (
+                <div className='inline-flex my-20 w-full justify-center'>
+                    <h2 className='text-center text-orange text-xl md:text-2xl xl:text-3xl font-bold capitalize '>sorry there is no data</h2>
+                </div>
+            )}
         </main>
     )
 }

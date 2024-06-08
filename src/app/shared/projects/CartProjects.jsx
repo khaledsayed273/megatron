@@ -21,7 +21,6 @@ function CartProjects({ data }) {
         typeof window === 'undefined'
             ? Buffer.from(str).toString('base64')
             : window.btoa(str);
-
     return (
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16'>
             {data.map((item) => (

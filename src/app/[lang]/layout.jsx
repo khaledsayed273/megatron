@@ -39,7 +39,7 @@ height="0" width="0" style="display:none;visibility:hidden">`,
         <Suspense>
           <Header lang={params.lang} />
         </Suspense>
-        {children}
+          {children}
         <End lang={params.lang} />
       </body>
     </html>

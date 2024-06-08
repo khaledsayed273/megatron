@@ -2,7 +2,7 @@ import React from 'react'
 import Pagination from './Pagination'
 import CartProjects from './CartProjects'
 
-function Projects({ data,  numberPage, pagination }) {
+function Projects({ data, numberPage, pagination }) {
 
     return (
         <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
