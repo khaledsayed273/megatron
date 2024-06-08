@@ -13,7 +13,8 @@ function NavProjects({ services }) {
     const handleParams = (name) => {
         const query = new URLSearchParams(searchParams);
         query.set("category", name)
-        router.push(`?category=${query.get("category")}`)
+        window.location.href = `?category=${query.get("category")}`
+        console.log(name);
     }
 
 
