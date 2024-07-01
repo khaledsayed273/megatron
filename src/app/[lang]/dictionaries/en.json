@@ -19,18 +19,34 @@
             "activeUsers": "Number Of Clients",
             "satisfiedCustomers": "Satisfied Customers"
         },
-        "features": "features",
         "discover":{
-            "title": "Discover the Tools that Drive Success",
-            "subTitle": "Unleash innovation and accelerate growth with our dynamic product.",
+            "title": "We create custom software that users love to use",
+            "subTitle": "Over the past 4 years, we've refined our process for custom software development to help achieve our clients' business goals",
             "cart": {
-                "titleCuttingEdge": "Cutting-Edge Innovation",
-                "subTitleCuttingEdge": "Experience groundbreaking technological advancements that push the boundaries of whats possible, revolutionizing industries and transforming the way we live and work.",
-                "titleSeamlessConnectivity": "Seamless Connectivity",
-                "subTitleSeamlessConnectivity": "Stay connected anytime, anywhere with our robust and reliable network infrastructure, ensuring uninterrupted communication and effortless access to the digital world.",
-                "titleIntuitiveUserInterface": "Intuitive User Interface",
-                "subTitleIntuitiveUserInterface": "Enjoy a seamless and intuitive user experience with our sleek and user-friendly interface, designed to simplify complex tasks and enhance productivity."
+                "titleCuttingEdge": "Assessment",
+                "subTitleCuttingEdge": "We conduct a thorough analysis of your current infrastructure to diagnose and document your existing tech environment.",
+                "titleSeamlessConnectivity": "Objectives",
+                "subTitleSeamlessConnectivity": "We then assist you in defining your technology goals and establishing objectives to achieve throughout our collaboration.",
+                "titleIntuitiveUserInterface": "Implementation",
+                "subTitleIntuitiveUserInterface": "We bridge the gap between your current state and desired outcomes with a dedicated team of experienced developers."
             }
+        },
+        "sdlc": {
+            "sdlc": "Software Development life cycle",
+            "gatheringTitle": "Requirements Gathering",
+            "gatheringDescription": "In this stage, we engage with you to understand your needs and expectations from the software system. We identify both functional and non-functional requirements to ensure the final product aligns with your vision.",
+            "analysisTitle": "System Analysis",
+            "analysisDescription": "We analyze the gathered requirements to define the scope of work and develop a detailed development plan. This includes setting timelines, identifying necessary resources, and estimating costs.",
+            "designTitle": "Design",
+            "designDescription": "We design the system architecture and various components, focusing on performance, security, and usability. The design is documented to guide the development process and ensure smooth project execution.",
+            "implementationTitle": "Implementation",
+            "implementationDescription": "We start coding and developing the software components according to the specified design. We use the latest technologies and best practices to ensure quality and efficiency.",
+            "testingTitle": "Testing",
+            "testingDescription": "We thoroughly test the system to ensure it is free from bugs and functions as expected. This stage includes unit testing, integration testing, and acceptance testing to ensure optimal performance.",
+            "integrationTitle": "Integration and Deployment",
+            "integrationDescription": "We integrate all the components and the complete system, then deploy it to the production environment. We ensure the system operates correctly and is ready for end-user use.",
+            "maintenance": "Maintenance",
+            "maintenanceDescription": "After deployment, we provide continuous technical support to address any issues that arise and make necessary improvements and updates to ensure the system's optimal performance."
         }
     }
 }

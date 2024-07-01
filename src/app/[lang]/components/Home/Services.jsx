@@ -3,11 +3,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import Image from 'next/image'
 import React, { useCallback, useRef } from 'react'
-import img from "../../../../../public/images/imageBlogs.jpg"
-import img2 from "../../../../../public/images/imageGlobalCustomer.jpg"
-import Link from "next/link";
+import img1 from "../../../../../public/images/sdlc/1.jpg"
+import img2 from "../../../../../public/images/sdlc/2.jpg"
+import img3 from "../../../../../public/images/sdlc/3.jpg"
+import img4 from "../../../../../public/images/sdlc/4.jpg"
+import img5 from "../../../../../public/images/sdlc/5.jpg"
+import img6 from "../../../../../public/images/sdlc/6.jpg"
+import img7 from "../../../../../public/images/sdlc/7.jpg"
 
-function Services() {
+import Link from "next/link";
+import { Navigation } from 'swiper/modules';
+import 'swiper/css/navigation';
+
+function Services({translate}) {
+    const sdlc = translate.home.sdlc
     const sliderRef = useRef(null);
 
     const handlePrev = useCallback(() => {
@@ -21,10 +30,11 @@ function Services() {
     }, []);
 
 
-    const nextPrevComponent = () => {
+    const nextPrevComponent = (data , index) => {
+
         return (
             <div data-aos-duration="1000" data-aos="fade-up" className=" mt-7 z-10 flex items-end justify-end gap-5 ">
-                <div className="prev-arrow cursor-pointer" onClick={handlePrev}>
+                <div className={`prev-arrow cursor-pointer ${data.indexOf(index) === 0 && "opacity-50"}`} onClick={handlePrev}>
                     <button aria-label="prev" className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-stroke border-amber-500  text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:hover:drop-shadow-none">
                         <svg
                             width="20"
@@ -41,7 +51,7 @@ function Services() {
                         </svg>
                     </button>
                 </div>
-                <div className="next-arrow cursor-pointer" onClick={handleNext}>
+                <div className={`next-arrow cursor-pointer ${data.indexOf(index) === data.length -1&& "opacity-50"}`} onClick={handleNext}>
                     <button aria-label="next" className="flex h-[40px] w-[40px] items-center justify-center rounded-full border border-stroke bg-orange   text-dark transition-all hover:border-transparent hover:drop-shadow-testimonial dark:border-dark-3 dark:bg-dark-2 dark:text-white dark:hover:drop-shadow-none">
                         <svg
                             width="20"
@@ -65,37 +75,63 @@ function Services() {
 
     const data = [
         {
-            id: 1,
-            title: "streamlined business operations",
-            image: img,
-            describtion: "Our technology solutions streamline and optimize business operations, automating processes, enhancing efficiency, and improving overall productivity. From seamless inventory management to streamlined customer relationship management, our solutions empower businesses to operate at their peak potential, saving time and resources while maximizing profitability."
+            title: sdlc.gatheringTitle,
+            image: img1,
+            describtion: sdlc.gatheringDescription
         },
         {
-            id: 2,
-            title: "streamlined business operations",
+            title: sdlc.analysisTitle,
             image: img2,
-            describtion: "Our technology solutions streamline and optimize business operations, automating processes, enhancing efficiency, and improving overall productivity. From seamless inventory management to streamlined customer relationship management, our solutions empower businesses to operate at their peak potential, saving time and resources while maximizing profitability."
+            describtion: sdlc.analysisDescription
         },
+        {
+            title: sdlc.designTitle,
+            image: img3,
+            describtion: sdlc.designDescription
+        },
+        {
+            title: sdlc.implementationTitle,
+            image: img4,
+            describtion: sdlc.implementationDescription
+        },
+        {
+            title: sdlc.testingTitle,
+            image: img5,
+            describtion: sdlc.testingDescription
+        },
+        {
+            title: sdlc.integrationTitle,
+            image: img6,
+            describtion: sdlc.integrationDescription
+        },
+        {
+            title: sdlc.maintenance,
+            image: img7,
+            describtion: sdlc.maintenanceDescription
+        },
+        
     ]
 
 
     return (
         <div>
             <div data-aos="fade-up" data-aos-duration="1000" className='my-10 bg-white p-6 md:p-8 lg:p-10 rounded-3xl'>
-
                 <section className="pb-5 pt-5 dark:bg-dark lg:pb-[20px] lg:pt-[5px]">
                     <div data-aos-duration="1000" data-aos="fade-up" className="mb-5">
-                        <Link className="capitalize text-white btnOrange py-2 px-6 rounded-full" href={"/services"}>services</Link>
+                        <Link className="capitalize text-white btnOrange py-2 px-6 rounded-full" href={"/services"}>{sdlc.sdlc}</Link>
                     </div>
                     <div data-aos-duration="1000" data-aos="fade-up" className="container mx-auto">
-                        <Swiper slidesPerView={1} ref={sliderRef}>
-                            {data.map((item) => (
-                                <SwiperSlide  key={item.id}>
+                        <Swiper className="SwiperSdlc" navigation={true} modules={[Navigation]} slidesPerView={1} ref={sliderRef}>
+                            {data.map((item  , index) => (
+                                <SwiperSlide key={index}>
                                     <div className='grid md:grid-cols-2 gap-7 lg:gap-10'>
-                                        <div className='py-3 '>
-                                            <h2 className='font-semibold capitalize text-lg lg:text-3xl my-4'>{item.title}</h2>
-                                            <h3 className='text-sm font-medium capitalize  md:leading-6'>{item.describtion}</h3>
-                                            {nextPrevComponent()}
+                                        <div className='py-3 flex flex-col justify-between'>
+                                            <div className="flex items-center">
+                                                <p className="me-2 md:text-3xl font-bold text-orange">{index + 1}-</p>
+                                                <h2 className='font-semibold capitalize text-lg lg:text-3xl my-4'>{item.title}</h2>
+                                            </div>
+                                            <h3 className='text-sm font-medium capitalize  md:leading-6 overflow-y-auto max-h-[140px]'>{item.describtion}</h3>
+                                            {nextPrevComponent(data ,item)}
                                         </div>
                                         <div className='relative overflow-hidden mx-auto rounded-xl w-full xl:w-10/12 h-[200px] sm:h-[250px] md:h-[300px]'>
                                             <Image fill sizes='(max-width:992px) , 100vw' src={item.image} alt="image" />
@@ -103,7 +139,6 @@ function Services() {
                                     </div>
                                 </SwiperSlide>
                             ))}
-
                         </Swiper>
                     </div>
                 </section>

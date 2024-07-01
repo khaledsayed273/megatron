@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import discoverImage from "../../../../../public/images/discoverImage.png"
+import discoverImage from "../../../../../public/images/Our Missions.png"
 import Link from 'next/link'
 
 function Discover({ translate }) {

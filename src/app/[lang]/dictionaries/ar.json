@@ -19,18 +19,34 @@
             "activeUsers": "عدد العملاء",
             "satisfiedCustomers": "نسبة الرضاء"
         },
-        "features": "مميزات",
         "discover": {
-            "title": "Discover the Tools that Drive Success",
-            "subTitle": "Unleash innovation and accelerate growth with our dynamic product.",
+            "title": "نطور برمجيات مخصصة تجذب المستخدمين",
+            "subTitle": "على مدار السنوات الأربع الماضية، قمنا بتحسين عمليات تطوير البرمجيات المخصصة لدينا لمساعدة عملائنا في تحقيق أهدافهم التجارية.",
             "cart": {
-                "titleCuttingEdge": "Cutting-Edge Innovation",
-                "subTitleCuttingEdge": "Experience groundbreaking technological advancements that push the boundaries of whats possible, revolutionizing industries and transforming the way we live and work.",
-                "titleSeamlessConnectivity": "Seamless Connectivity",
-                "subTitleSeamlessConnectivity": "Stay connected anytime, anywhere with our robust and reliable network infrastructure, ensuring uninterrupted communication and effortless access to the digital world.",
-                "titleIntuitiveUserInterface": "Intuitive User Interface",
-                "subTitleIntuitiveUserInterface": "Enjoy a seamless and intuitive user experience with our sleek and user-friendly interface, designed to simplify complex tasks and enhance productivity."
+                "titleCuttingEdge": "دراسة وتحليل",
+                "subTitleCuttingEdge": "نقوم بتحليل كامل للبنية التحتية الحالية لتشخيص وتوثيق البيئة التقنية الموجودة.",
+                "titleSeamlessConnectivity": "الأهداف التقنية",
+                "subTitleSeamlessConnectivity": "ثم نساعدك في تحديد أهداف تقنية ووضع أهداف لتحقيقها من خلال تعاوننا.",
+                "titleIntuitiveUserInterface": "تنفيذ",
+                "subTitleIntuitiveUserInterface": "نقوم بسد الفجوة بين الحالة الحالية والمخرجات المطلوبة باستخدام فريق من المطورين ذوي الخبرة."
             }
+        },
+        "sdlc": {
+            "sdlc": "مراحل تطوير البرمجيات",
+            "gatheringTitle": "جمع المتطلبات",
+            "gatheringDescription": "في هذه المرحلة، نتواصل معكم لفهم احتياجاتكم وتوقعاتكم من النظام البرمجي المطلوب. نحدد المتطلبات الوظيفية وغير الوظيفية لضمان توافق المنتج النهائي مع رؤيتكم.",
+            "analysisTitle": "تحليل النظام",
+            "analysisDescription": "نقوم بتحليل المتطلبات المجمعة لتحديد نطاق العمل ووضع خطة تفصيلية للتطوير. يشمل ذلك تحديد الجدول الزمني، الموارد المطلوبة، وتقدير التكلفة.",
+            "designTitle": "التصميم",
+            "designDescription": "نصمم البنية المعمارية للنظام والمكونات المختلفة، مع التركيز على الأداء، الأمان، وسهولة الاستخدام. يتم توثيق التصميم لتوجيه عملية التطوير وتنفيذ المشروع بسلاسة.",
+            "implementationTitle": "التنفيذ",
+            "implementationDescription": "نبدأ بكتابة الأكواد وتطوير المكونات البرمجية وفقاً للتصميم المحدد. نستخدم أحدث التقنيات وأفضل الممارسات لضمان الجودة والكفاءة.",
+            "testingTitle": "الاختبار",
+            "testingDescription": "نختبر النظام بشكل شامل للتأكد من خلوه من الأخطاء وأنه يعمل كما هو متوقع. تشمل هذه المرحلة اختبارات الوحدة، التكامل، والقبول لضمان الأداء الأمثل",
+            "integrationTitle": "التكامل والنشر",
+            "integrationDescription": "قوم بدمج جميع المكونات والنظام بشكل كامل، ثم ننشره في بيئة الإنتاج. نتأكد من أن النظام يعمل بشكل صحيح وأنه جاهز للاستخدام من قبل المستخدمين النهائيين",
+            "maintenance": "الصيانة",
+            "maintenanceDescription": "بعد نشر النظام، نقدم دعماً فنياً مستمراً للتعامل مع أي مشاكل قد تطرأ وإجراء التحسينات والتحديثات اللازمة لضمان استمرارية الأداء الأمثل."
         }
     }
 }

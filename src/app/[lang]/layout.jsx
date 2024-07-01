@@ -7,7 +7,7 @@ import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-  title: "Megatron",
+  title: "Megatron-soft",
   description: "Megatron software",
 };
 

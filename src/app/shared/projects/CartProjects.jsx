@@ -22,7 +22,7 @@ function CartProjects({ data }) {
             ? Buffer.from(str).toString('base64')
             : window.btoa(str);
     return (
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10'>
             {data.map((item) => (
                 <div data-aos="fade-up" data-aos-duration="1000" key={item.id} className='bg-white p-2 md:p-4 relative rounded-xl mx-auto w-full sm:w-2/3 md:w-full'>
                     <div className='relative h-[230px] w-full overflow-hidden rounded-xl'>

@@ -47,6 +47,34 @@ a:hover{
     display: flex;
 }
 
+/* Swiper Home SDLC */
+.SwiperSdlc .swiper-button-prev , .SwiperSdlc .swiper-button-next{
+   display: none;
+}
+
+/* @media (min-width: 767px) {
+
+    .SwiperSdlc .swiper-button-prev , .SwiperSdlc .swiper-button-next{
+    position: absolute;
+    top: 85% !important;
+}
+}
+
+.SwiperSdlc .swiper-button-prev , .SwiperSdlc .swiper-button-next{
+    position: absolute;
+    top: 40% ;
+
+} */
+
+
+/* .SwiperSdlc .swiper-button-prev {
+    left: 35%;
+}
+.SwiperSdlc .swiper-button-next {
+    left: 45%;
+} */
+
+
 /* Swiper in about page*/
 .mySwiperAbout {
     margin-top: 100px;
