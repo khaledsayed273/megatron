@@ -28,8 +28,6 @@ function Checked({ lang }) {
                 router.push(`/en`)
             }
         }
-
-
     }
 
     return (

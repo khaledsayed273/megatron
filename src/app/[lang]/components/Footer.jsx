@@ -145,8 +145,6 @@ function Footer({ baseUrl, lang, navbarTranslate }) {
                                 )}
                             </div>
                         )}
-
-
                     </div>
 
                 </div>

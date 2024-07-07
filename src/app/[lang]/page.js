@@ -8,10 +8,14 @@ import { getDictionary } from "./dictionaries";
 import Link from "next/link";
 
 async function getData(lang) {
-  const res = await API.get(`/projects/latest/project`, {
-    headers: { "X-localization": lang }
-  })
-  return res
+  try {
+    const res = await API.get(`/projects/latest/project`, {
+      headers: { "X-localization": lang }
+    })
+    return res
+  }catch(e){
+    return e
+  } 
 }
 
 export const revalidate = +process.env.time;

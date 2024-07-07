@@ -28,7 +28,7 @@ async function Blogs() {
             </div> */}
             <h2 data-aos="fade-up" data-aos-duration="1000" className='capitalize text-center text-white my-10 text-xl lg:text-4xl'>from our latest blogs</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 xl:gap-9">
-                {latestBlog.status && (
+                {latestBlog?.status && (
                     latestBlog?.data?.map((item) => (
                         <div data-aos="fade-up" data-aos-duration="1000" key={item.id} className='bg-white relative p-5 rounded-xl mx-auto w-11/12 sm:w-2/3 md:w-full'>
                             <div data-aos="zoom-in" data-aos-duration="1000" className='relative h-[230px] w-full overflow-hidden rounded-xl mb-7'>
