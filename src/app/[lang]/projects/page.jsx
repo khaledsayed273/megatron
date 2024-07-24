@@ -21,7 +21,7 @@ async function getServices(lang) {
     return res?.data?.data
 }
 
-export const revalidate = +process.env.time;
+export const revalidate = +process.env.time; 
 
 async function page(params) {
 
